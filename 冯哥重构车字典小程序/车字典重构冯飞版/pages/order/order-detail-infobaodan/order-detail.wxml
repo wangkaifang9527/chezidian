@@ -1,0 +1,797 @@
+
+<view class='kf_weixin'>
+    <view class='left' catchtap='fanhui'>
+        <image src='/images/chonggou/fanhui.png'></image>
+    </view>
+    <view class='right'>
+        <button open-type="share">
+            <image src='/images/chonggou/zhuanfa.png'></image>
+        </button>
+    </view>
+</view> 
+<view wx:if='{{infoflag && baodanflag}}' class='container'>
+        <view class='title'>车辆信息</view>
+        <view class='box car_detail'>
+            <view class='line top'>
+                <text>{{vehicleInfo.data.itemData[4].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[4].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[11].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[11].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[5].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[5].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[13].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[13].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[10].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[10].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[9].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[9].itemPropValue}}</text>
+            </view>
+            
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[6].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[6].itemPropValue}}</text>
+            </view>
+        </view>
+        <view class='box car_detail'>
+            <view class='line top'>
+                <text>{{vehicleInfo.data.itemData[14].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[14].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[8].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[8].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[3].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[3].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[12].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[12].itemPropValue}}</text>
+            </view>
+          
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[7].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[7].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[2].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[2].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[16].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[16].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[15].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[15].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[1].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[1].itemPropValue}}</text>
+            </view>
+            <!-- <view class='line top'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[1].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[1].itemPropValue}}</text>
+            </view> -->
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[10].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[10].itemPropValue}}</text>
+            </view>
+            <!-- <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[26].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[26].itemPropValue}}</text>
+            </view> -->
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[14].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[14].itemPropValue}}</text>
+            </view>
+            
+            <!-- <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[8].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[8].itemPropValue}}</text>
+            </view> -->
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[27].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[27].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[6].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[6].itemPropValue}} 元</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[11].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[11].itemPropValue}}</text>
+            </view>
+          
+        </view>
+        <view class='box car_detail'>
+            <view class='line top'>
+                <text>附属参数</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[0].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[0].itemPropValue}}</text>
+            </view> 
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[16].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[16].itemPropValue}}</text>
+            </view>
+            
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[12].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[12].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[15].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[15].itemPropValue}} 座</text>
+            </view>
+            
+            <!-- <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[18].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[18].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[4].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[4].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[5].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[5].itemPropValue}}色</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[21].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[21].itemPropValue}}</text>
+            </view> -->
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[2].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[2].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[13].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[13].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[3].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[3].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[9].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[9].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[7].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[7].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[24].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[24].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[22].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[22].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[20].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[20].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[19].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[19].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[17].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[17].itemPropValue}}</text>
+            </view> 
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[18].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[18].itemPropValue}}</text>
+            </view> 
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[19].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[19].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[20].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[20].itemPropValue}}</text>
+            </view>  
+            
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[21].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[21].itemPropValue}}</text>
+            </view> 
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[22].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[22].itemPropValue}}</text>
+            </view>
+              <view class='line'>
+                <text>{{vehicleInfo.data.itemData[23].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[23].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[24].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[24].itemPropValue}}</text>
+            </view>
+        </view>
+
+    <!-- 车辆投保 -->
+        
+        <view class='box car_detail'>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[23].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[23].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[16].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[16].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[28].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[28].itemPropValue}}</text>
+            </view>
+        </view>
+        <view class='box car_detail'>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[25].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[25].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[17].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[17].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[0].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[0].itemPropValue}}</text>
+            </view>
+        </view>
+        <view class='title'>保险公司信息</view>
+        <view class='box car_detail'>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[1].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[1].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[21].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[21].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[3].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[3].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[12].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[12].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[18].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[18].itemPropValue}}</text>
+            </view>
+    
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[22].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[22].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[5].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[5].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[9].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[9].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[10].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[10].itemPropValue}}</text>
+            </view>
+
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[11].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[11].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[14].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[14].itemPropValue}}</text>
+            </view>
+        </view>
+        <view class='box car_detail'>
+            <view class='line'>
+                <text>不计免赔险(车损)保额</text>
+                <text wx:if="{{insureInfo.data.itemData[0].itemPropValue[16].itemPropValue==1}}">是</text>
+                <text wx:else>否</text>
+            </view>
+            <view class='line'>
+                <text>不计免赔险(三者)保额</text>
+                <text wx:if="{{insureInfo.data.itemData[0].itemPropValue[20].itemPropValue==1}}">是</text>
+                <text wx:else>否</text>
+            </view>
+            <view class='line'>
+                <text>不计免赔险(盗抢)保额</text>
+                <text wx:if="{{insureInfo.data.itemData[0].itemPropValue[15].itemPropValue==1}}">是</text>
+                <text wx:else>否</text>
+            </view>
+            <view class='line'>
+                <text>不计免司机保额</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[13].itemPropValue}}</text>
+                
+            </view>
+            <view class='line'>
+                <text>不计免乘客保额</text>
+                <text wx:if="{{insureInfo.data.itemData[0].itemPropValue[17].itemPropValue==1}}">是</text>
+                <text wx:else>否</text>
+            </view>
+            <view class='line'>
+                <text>不计免划痕保额</text>
+                <text wx:if="{{insureInfo.data.itemData[0].itemPropValue[8].itemPropValue==1}}">是</text>
+                <text wx:else>否</text>
+            </view>
+            <view class='line'>
+                <text>不计免涉水保额</text>
+                <text wx:if="{{insureInfo.data.itemData[0].itemPropValue[2].itemPropValue==1}}">是</text>
+                <text wx:else>否</text>
+            </view>
+            <view class='line'>
+                <text>不计免自燃保额</text>
+                <text wx:if="{{insureInfo.data.itemData[0].itemPropValue[25].itemPropValue==1}}">是</text>
+                <text wx:else>否</text>
+            </view>
+            <view class='line'>
+                <text>不计免精神损失保额</text>
+                <text wx:if="{{insureInfo.data.itemData[0].itemPropValue[19].itemPropValue==1}}">是</text>
+                <text wx:else>否</text>
+            </view>
+            <view class='line'>
+                <text>不计免设备损失险保额</text>
+                <text wx:if="{{insureInfo.data.itemData[0].itemPropValue[23].itemPropValue==1}}">是</text>
+                <text wx:else>否</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[0].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[0].itemPropValue}}</text>
+            </view>
+        </view>
+        <view class='box car_detail'>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[4].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[4].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[26].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[26].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[24].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[24].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[6].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[6].itemPropValue}} 天</text>
+            </view>
+        </view>
+
+
+</view>
+
+
+
+<view wx:else class='container'>
+        <!-- 车辆状态 -->
+    <view wx:if='{{infoflag}}' >
+        <view class='title'>车辆信息</view>
+        <view class='box car_detail'>
+
+            <view class='line top'>
+                <text>{{vehicleInfo.data.itemData[4].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[4].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[11].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[11].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[5].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[5].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[13].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[13].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[10].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[10].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[9].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[9].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[22].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[22].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[6].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[6].itemPropValue}}</text>
+            </view>
+        </view>
+        <view class='box car_detail'>
+            <view class='line top'>
+                <text>{{vehicleInfo.data.itemData[14].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[14].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[8].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[8].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[3].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[3].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[12].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[12].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[23].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[23].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[7].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[7].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[2].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[2].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[16].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[16].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[15].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[15].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[1].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[1].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[19].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[19].itemPropValue}}</text>
+            </view>
+          
+        </view>
+        <view class='box car_detail'>
+            <view class='line top'>
+                <text>附属参数</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[16].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[16].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[20].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[20].itemPropValue}}</text>
+            </view>  
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[24].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[24].itemPropValue}}</text>
+            </view>
+           
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[18].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[18].itemPropValue}}</text>
+            </view> 
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[17].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[17].itemPropValue}}</text>
+            </view> 
+            <view class='line'>
+                <text>{{vehicleInfo.data.itemData[0].itemPropLabel}}</text>
+                <text>{{vehicleInfo.data.itemData[0].itemPropValue}}</text>
+            </view> 
+        </view>
+    </view>
+
+    <!-- 车辆投保 -->
+    <view wx:if='{{baodanflag}}'>
+        <view class='title'>车辆信息</view>
+        <view class='box car_detail'>
+            <view class='line top'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[1].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[1].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[10].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[10].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[26].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[26].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[14].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[14].itemPropValue}}</text>
+            </view>
+            
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[8].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[8].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[27].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[27].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[6].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[6].itemPropValue}} 元</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[11].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[11].itemPropValue}}</text>
+            </view>
+        </view>
+        <view class='box car_detail'>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[12].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[12].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[15].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[15].itemPropValue}} 座</text>
+            </view>
+            
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[18].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[18].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[4].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[4].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[5].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[5].itemPropValue}}色</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[21].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[21].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[2].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[2].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[13].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[13].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[3].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[3].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[9].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[9].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[7].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[7].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[24].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[24].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[22].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[22].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[20].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[20].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[19].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[19].itemPropValue}}</text>
+            </view>
+
+        </view>
+        <!-- <view class='title'>保险信息</view>
+        <view class='box car_detail'>
+            <view class='line'>
+                <text>被保险人</text>
+                <text>{{insureInfo.result.userinfo.insuredname}}</text>
+            </view>
+            <view class='line'>
+                <text>被保人手机号</text>
+                <text>{{insureInfo.result.userinfo.insuredmobile}}</text>
+            </view>
+            <view class='line'>
+                <text>被保人证件类型</text>
+                <text>{{insureInfo.result.userinfo.insuredidtype}}</text>
+            </view>
+            <view class='line'>
+                <text>被保人证件号</text>
+                <text>{{insureInfo.result.userinfo.insuredidcard}}</text>
+            </view>
+        </view>
+        <view class='box car_detail'>
+            <view class='line'>
+                <text>投保人</text>
+                <text>{{insureInfo.result.userinfo.postedname}}</text>
+            </view>
+            <view class='line'>
+                <text>投保人联系方式</text>
+                <text>{{insureInfo.result.userinfo.holdermobile}}</text>
+            </view>
+            <view class='line'>
+                <text>投保人证件类型</text>
+                <text>{{insureInfo.result.userinfo.holderidtype}}</text>
+            </view>
+            <view class='line'>
+                <text>投保人证件号</text>
+                <text>{{insureInfo.result.userinfo.holderidcard}}</text>
+            </view>
+        </view> -->
+        <view class='box car_detail'>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[23].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[23].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[16].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[16].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[28].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[28].itemPropValue}}</text>
+            </view>
+        </view>
+        <view class='box car_detail'>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[25].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[25].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[17].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[17].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[0].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[1].itemPropValue[0].itemPropValue}}</text>
+            </view>
+        </view>
+        <view class='title'>保险公司信息</view>
+        <view class='box car_detail'>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[1].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[1].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[21].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[21].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[3].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[3].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[12].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[12].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[18].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[18].itemPropValue}}</text>
+            </view>
+    
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[22].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[22].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[5].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[5].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[9].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[9].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[10].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[10].itemPropValue}}</text>
+            </view>
+
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[11].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[11].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[14].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[14].itemPropValue}}</text>
+            </view>
+        </view>
+        <view class='box car_detail'>
+            <view class='line'>
+                <text>不计免赔险(车损)保额</text>
+                <text wx:if="{{insureInfo.data.itemData[0].itemPropValue[16].itemPropValue==1}}">是</text>
+                <text wx:else>否</text>
+            </view>
+            <view class='line'>
+                <text>不计免赔险(三者)保额</text>
+                <text wx:if="{{insureInfo.data.itemData[0].itemPropValue[20].itemPropValue==1}}">是</text>
+                <text wx:else>否</text>
+            </view>
+            <view class='line'>
+                <text>不计免赔险(盗抢)保额</text>
+                <text wx:if="{{insureInfo.data.itemData[0].itemPropValue[15].itemPropValue==1}}">是</text>
+                <text wx:else>否</text>
+            </view>
+            <view class='line'>
+                <text>不计免司机保额</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[13].itemPropValue}}</text>
+                
+            </view>
+            <view class='line'>
+                <text>不计免乘客保额</text>
+                <text wx:if="{{insureInfo.data.itemData[0].itemPropValue[17].itemPropValue==1}}">是</text>
+                <text wx:else>否</text>
+            </view>
+            <view class='line'>
+                <text>不计免划痕保额</text>
+                <text wx:if="{{insureInfo.data.itemData[0].itemPropValue[8].itemPropValue==1}}">是</text>
+                <text wx:else>否</text>
+            </view>
+            <view class='line'>
+                <text>不计免涉水保额</text>
+                <text wx:if="{{insureInfo.data.itemData[0].itemPropValue[2].itemPropValue==1}}">是</text>
+                <text wx:else>否</text>
+            </view>
+            <view class='line'>
+                <text>不计免自燃保额</text>
+                <text wx:if="{{insureInfo.data.itemData[0].itemPropValue[25].itemPropValue==1}}">是</text>
+                <text wx:else>否</text>
+            </view>
+            <view class='line'>
+                <text>不计免精神损失保额</text>
+                <text wx:if="{{insureInfo.data.itemData[0].itemPropValue[19].itemPropValue==1}}">是</text>
+                <text wx:else>否</text>
+            </view>
+            <view class='line'>
+                <text>不计免设备损失险保额</text>
+                <text wx:if="{{insureInfo.data.itemData[0].itemPropValue[23].itemPropValue==1}}">是</text>
+                <text wx:else>否</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[0].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[0].itemPropValue}}</text>
+            </view>
+        </view>
+        <view class='box car_detail'>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[4].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[4].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[26].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[26].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[24].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[24].itemPropValue}}</text>
+            </view>
+            <view class='line'>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[6].itemPropLabel}}</text>
+                <text>{{insureInfo.data.itemData[0].itemPropValue[6].itemPropValue}} 天</text>
+            </view>
+        </view>
+    </view>
+
+</view>
+

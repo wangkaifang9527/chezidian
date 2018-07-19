@@ -1,0 +1,297 @@
+<view class='kf_weixin'>
+    <view class='left' catchtap='fanhui'>
+        <image src='/images/chonggou/fanhui.png'></image>
+    </view>
+    <view class='right'>
+        <button open-type="share">
+            <image src='/images/chonggou/zhuanfa.png'></image>
+        </button>
+    </view>
+</view> 
+<view class="top_tips">{{car.result.statusmessage}}</view>
+<view class='container'>
+    <!-- 车辆信息 -->
+    <view class='title'>车辆信息</view>
+    <view class='box car_detail'>
+        <view class='line top'>
+            <text>车牌号码</text>
+            <text>{{car.result.userinfo.licenseno}}</text>
+        </view>
+        <view class='line'>
+            <text>品牌型号</text>
+            <text>{{car.result.userinfo.modlename}}</text>
+        </view>
+        <view class='line'>
+            <text>车主姓名</text>
+            <text>{{car.result.userinfo.licenseowner}}</text>
+        </view>
+        <view class='line'>
+            <text>证件类型</text>
+            <text>{{car.result.userinfo.idtype}}</text>
+        </view>
+        <view class='line'>
+            <text>证件号码</text>
+            <text>{{car.result.userinfo.credentislasnum}}</text>
+        </view>
+        <view class='line'>
+            <text>车辆识别代号</text>
+            <text>{{car.result.userinfo.carvin}}</text>
+        </view>
+        <view class='line'>
+            <text>车辆类型</text>
+            <text>{{car.result.userinfo.ispublic}}</text>
+        </view>
+        <view class='line'>
+            <text>新车购置价格</text>
+            <text>{{car.result.userinfo.purchaseprice}} 元</text>
+        </view>
+        <view class='line'>
+            <text>车辆注册日期</text>
+            <text>{{car.result.userinfo.registerdate}}</text>
+        </view>
+    </view>
+    <view class='box car_detail'>
+        <view class='line'>
+            <text>发动机号</text>
+            <text>{{car.result.userinfo.engineno}}</text>
+        </view>
+        <view class='line'>
+            <text>座位数量</text>
+            <text>{{car.result.userinfo.seatcount}} 座</text>
+        </view>
+        <view class='line'>
+            <text>燃料种类</text>
+            <text>{{car.result.userinfo.fueltype}}</text>
+        </view>
+        <view class='line'>
+            <text>条款种类</text>
+            <text>{{car.result.userinfo.prooftype}}</text>
+        </view>
+        <view class='line'>
+            <text>号牌底色</text>
+            <text>{{car.result.userinfo.licensecolor}}色</text>
+        </view>
+        <view class='line'>
+            <text>条款类型</text>
+            <text>{{car.result.userinfo.clausetype}}</text>
+        </view>
+        <view class='line'>
+            <text>城市</text>
+            <text>{{car.result.userinfo.citycode}}</text>
+        </view>
+        <view class='line'>
+            <text>行驶区域</text>
+            <text>{{car.result.userinfo.runregion}}</text>
+        </view>
+        <view class='line'>
+            <text>使用性质</text>
+            <text>{{car.result.userinfo.carusedtype}}</text>
+        </view>
+        <view class='line'>
+            <text>排量信息</text>
+            <text>{{car.result.userinfo.exhaustscale}}</text>
+        </view>
+        <view class='line'>
+            <text>精友码</text>
+            <text>{{car.result.userinfo.automoldcode}}</text>
+        </view>
+        <view class='line'>
+            <text>无赔款系数</text>
+            <text>{{car.result.userinfo.ratefactor1}}</text>
+        </view>
+        <view class='line'>
+            <text>自主渠道系数</text>
+            <text>{{car.result.userinfo.ratefactor2}}</text>
+        </view>
+        <view class='line'>
+            <text>自主核保系数</text>
+            <text>{{car.result.userinfo.ratefactor3}}</text>
+        </view>
+        <view class='line'>
+            <text>交通违法浮动系数</text>
+            <text>{{car.result.userinfo.ratefactor4}}</text>
+        </view>
+
+    </view>
+    <view class='title'>保险信息</view>
+    <view class='box car_detail'>
+        <view class='line'>
+            <text>被保险人</text>
+            <text>{{car.result.userinfo.insuredname}}</text>
+        </view>
+        <view class='line'>
+            <text>被保人手机号</text>
+            <text>{{car.result.userinfo.insuredmobile}}</text>
+        </view>
+        <view class='line'>
+            <text>被保人证件类型</text>
+            <text>{{car.result.userinfo.insuredidtype}}</text>
+        </view>
+        <view class='line'>
+            <text>被保人证件号</text>
+            <text>{{car.result.userinfo.insuredidcard}}</text>
+        </view>
+    </view>
+    <view class='box car_detail'>
+        <view class='line'>
+            <text>投保人</text>
+            <text>{{car.result.userinfo.postedname}}</text>
+        </view>
+        <view class='line'>
+            <text>投保人联系方式</text>
+            <text>{{car.result.userinfo.holdermobile}}</text>
+        </view>
+        <view class='line'>
+            <text>投保人证件类型</text>
+            <text>{{car.result.userinfo.holderidtype}}</text>
+        </view>
+        <view class='line'>
+            <text>投保人证件号</text>
+            <text>{{car.result.userinfo.holderidcard}}</text>
+        </view>
+    </view>
+    <view class='box car_detail'>
+        <view class='line'>
+            <text>交强险保单号</text>
+            <text>{{car.result.userinfo.forceno}}</text>
+        </view>
+        <view class='line'>
+            <text>交强险到期时间</text>
+            <text>{{car.result.userinfo.forceexpiredate}}</text>
+        </view>
+        <view class='line'>
+            <text>下年的交强起保日期</text>
+            <text>{{car.result.userinfo.nextforcestartdate}}</text>
+        </view>
+    </view>
+    <view class='box car_detail'>
+        <view class='line'>
+            <text>商业险保单号</text>
+            <text>{{car.result.userinfo.bizno}}</text>
+        </view>
+        <view class='line'>
+            <text>商业险到期时间</text>
+            <text>{{car.result.userinfo.businessexpiredate}}</text>
+        </view>
+        <view class='line'>
+            <text>下年的商业险起保日期</text>
+            <text>{{car.result.userinfo.nextbusinessstartdate}}</text>
+        </view>
+    </view>
+    <view class='title'>保险公司信息</view>
+    <view class='box car_detail'>
+        <view class='line'>
+            <text>上年保险公司</text>
+            <text>{{car.result.savequote.source}}</text>
+        </view>
+        <view class='line'>
+            <text>车损保额</text>
+            <text>{{car.result.savequote.chesun}}</text>
+        </view>
+        <view class='line'>
+            <text>第三方责任险保额</text>
+            <text>{{car.result.savequote.sanzhe}}</text>
+        </view>
+        <view class='line'>
+            <text>全车盗抢保险保额</text>
+            <text>{{car.result.savequote.daoqiang}}</text>
+        </view>
+        <view class='line'>
+            <text>车上人员责任险(司机)保额</text>
+            <text>{{car.result.savequote.siji}}</text>
+        </view>
+        <view class='line'>
+            <text>车上人员责任险(乘客)保额</text>
+            <text>{{car.result.savequote.sanzhe}}</text>
+        </view>
+        <view class='line'>
+            <text>车身划痕损失险保额</text>
+            <text>{{car.result.savequote.huahen}}</text>
+        </view>
+        <view class='line'>
+            <text>涉水行驶损失险保额</text>
+            <text>{{car.result.savequote.sheshui}}</text>
+        </view>
+        <view class='line'>
+            <text>自燃损失险保额</text>
+            <text>{{car.result.savequote.ziran}}</text>
+        </view>
+        <view class='line'>
+            <text>精神损失险保额</text>
+            <text>{{car.result.savequote.hcjingshensunshi}}</text>
+        </view>
+        <view class='line'>
+            <text>玻璃单独破碎险保额</text>
+            <text>{{car.result.savequote.boli}}</text>
+        </view>
+    </view>
+    <view class='box car_detail'>
+        <view class='line'>
+            <text>不计免赔险(车损)保额</text>
+            <text wx:if="{{car.result.savequote.bujimianchesun==1}}">是</text>
+            <text wx:else>否</text>
+        </view>
+        <view class='line'>
+            <text>不计免赔险(三者)保额</text>
+            <text wx:if="{{car.result.savequote.bujimiansanzhe==1}}">是</text>
+            <text wx:else>否</text>
+        </view>
+        <view class='line'>
+            <text>不计免赔险(盗抢)保额</text>
+            <text wx:if="{{car.result.savequote.bujimiandaoqiang==1}}">是</text>
+            <text wx:else>否</text>
+        </view>
+        <view class='line'>
+            <text>不计免司机保额</text>
+            <text wx:if="{{car.result.savequote.bujimiansiji==1}}">是</text>
+            <text wx:else>否</text>
+        </view>
+        <view class='line'>
+            <text>不计免乘客保额</text>
+            <text wx:if="{{car.result.savequote.bujimianchengke==1}}">是</text>
+            <text wx:else>否</text>
+        </view>
+        <view class='line'>
+            <text>不计免划痕保额</text>
+            <text wx:if="{{car.result.savequote.bujimianhuahen==1}}">是</text>
+            <text wx:else>否</text>
+        </view>
+        <view class='line'>
+            <text>不计免涉水保额</text>
+            <text wx:if="{{car.result.savequote.bujimiansheshui==1}}">是</text>
+            <text wx:else>否</text>
+        </view>
+        <view class='line'>
+            <text>不计免自燃保额</text>
+            <text wx:if="{{car.result.savequote.bujimianziran==1}}">是</text>
+            <text wx:else>否</text>
+        </view>
+        <view class='line'>
+            <text>不计免精神损失保额</text>
+            <text wx:if="{{car.result.savequote.bujimianjingshensunshi==1}}">是</text>
+            <text wx:else>否</text>
+        </view>
+        <view class='line'>
+            <text>机动车无法找到三方特约险保额</text>
+            <text>{{car.result.savequote.hcsanfangteyue}}</text>
+        </view>
+    </view>
+    <view class='box car_detail'>
+        <view class='line'>
+            <text>指定修理厂险</text>
+            <text>{{car.result.savequote.hcxiulichang}}</text>
+        </view>
+        <view class='line'>
+            <text>指定专修厂类型</text>
+            <text>{{car.result.savequote.hcxiulichangtype}}</text>
+        </view>
+        <view class='line'>
+            <text>修理期间每天补偿</text>
+            <text>{{car.result.savequote.fybc}}</text>
+        </view>
+        <view class='line'>
+            <text>天数</text>
+            <text>{{car.result.savequote.fybcdays}} 天</text>
+        </view>
+    </view>
+</view>

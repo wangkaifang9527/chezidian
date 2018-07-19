@@ -1,0 +1,447 @@
+
+.his{
+  color: #fff;
+  letter-spacing: 2rpx;
+}
+.kf_one{
+  margin-top: 60rpx;
+  margin-bottom: 30rpx;
+  text-align: center;
+}
+.kf_one image{
+  height: 160rpx;
+  width: 160rpx;
+  border-radius: 100rpx;
+}
+.kf_one_huiyuan{
+    margin-top: -55rpx;
+    margin-left: 100rpx;
+}
+.kf_one_huiyuan image{
+  height: 50rpx;
+  width: 50rpx;
+}
+.kf_one_nickName{
+  margin: 10rpx auto;
+  font-size: 35rpx;
+}
+
+.three{
+  margin-top: 60rpx;
+}
+.feisiyuguanzhu{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+  width: 60%;
+  margin: 0 auto;
+  font-size: 25rpx;
+  text-align: center;
+}
+.feisiyuguanzhu text{
+  padding: 0 10rpx;
+}
+
+.guanzhuyusixin{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+  width: 70%;
+  margin: 0 auto;
+}
+.guanzhuyusixin .yu{
+  border: 1px solid rgba(255, 255, 255, 0.6); 
+  padding: 10rpx 20rpx; 
+  text-align: center;
+  width: 35%;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+}
+
+.yu view{
+  text-align: center;
+}
+.guanzhuyusixin image{
+  height: 35rpx;
+  width: 35rpx;
+}
+.yu_image{
+  margin-top: 10rpx;
+}
+
+
+
+
+button::after{
+  border: none;  
+}
+.market_title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 20rpx 25rpx;
+  border-bottom: 1rpx solid  rgba(255, 255, 255, 0.35)
+}
+.market_title image{
+  width: 35rpx;
+  height: 35rpx;
+}
+.left{
+  font-size: 20rpx;
+}
+.left view{
+  text-align: center;
+  letter-spacing:2rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;   
+  max-width: 100rpx;
+  margin: 0 auto;
+
+}
+.left_image{
+  text-align: center;
+}
+.right{
+  display: flex;
+  flex-direction: row;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  text-align: center;
+  padding: 0 170rpx;
+}
+.right_image{
+  margin-top: 10rpx;
+  margin-right: 10rpx;
+}
+.right_image image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+/* 导航栏 */
+.shichang_list{
+  letter-spacing: 2rpx;
+}
+.market_tab{
+  border-top: 1rpx solid  rgba(255, 255, 255, 0.35);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 10rpx 0rpx;
+  margin-top:40rpx;
+  border-bottom: 1rpx solid  rgba(255, 255, 255, 0.35);
+}
+.market_tab view{
+  text-align: center;
+  font-size: 30rpx;
+}
+.market_tab_view{
+    width: 18%;
+}
+.market_tab image{
+  width: 40rpx;
+  height: 40rpx;
+
+}
+.tw{
+  margin-top: 10rpx;
+}
+
+/* 图文列表样式*/
+.xiangqing{
+  border-bottom: 1rpx solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 25rpx;
+}
+.content{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+}
+.content_one{
+  font-size: 40rpx;
+  font-weight: bolder;
+}
+.content_two{
+  font-size: 20rpx;
+}
+.che_details{
+  /* background: rgba(255, 255, 255, 0.2); */
+  background-image: linear-gradient(  
+    to top,   
+    rgba(0,0,0,0) 0%,   
+    rgba(0,0,0,0.1) 10%,   
+    rgba(0,0,0,0.2) 20%, 
+    rgba(0,0,0,0.3) 30%, 
+    rgba(0,0,0,0.4) 40%, 
+    rgba(0,0,0,0.5) 50%, 
+    
+    rgba(0,0,0,0.6) 100%); 
+  width: 95.4%;
+  margin-left: 2.3%;
+  position:  relative;
+  top: 22rpx;
+  z-index: 10;
+  padding: 5rpx 0rpx;
+  height: 80rpx;
+}
+.content_left{
+  margin-left: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;    
+  max-width: 560rpx;
+}
+.content_right{
+  margin-right: 10rpx;
+}
+
+.lbt{
+   margin-top: -65rpx; 
+}
+.nickname{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;    
+  max-width: 300rpx;
+}
+.swiper-box image{
+   padding: 0 10rpx; 
+}
+.bofang{
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  width: 100%;
+  text-align: center;
+  height:500rpx;
+  line-height: 550rpx; 
+  position: relative;
+  top: -510rpx;
+  margin-left: 10rpx;
+}
+.bofang image{
+  height: 80rpx;
+  width: 80rpx;
+}
+
+.user_details{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 94.6%;
+  margin-left: 2.6%;
+  margin-top:20rpx;
+}
+.user_left{
+
+}
+.user_left image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 100rpx;
+}
+.user_right{
+  width:86%;
+}
+.user_right_top{
+  font-size: 25rpx;
+}
+.user_right_top image{
+  width: 20rpx;
+  height: 20rpx;
+}
+.user_right_bottom{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.user_right_bottom_right image{
+  width: 28rpx;
+  height: 28rpx;
+}
+.user_right_bottom_right{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 28rpx;
+}
+.share{
+  background: rgba(255, 255, 255, 0);
+  padding: 0;
+  height: 40rpx;
+  width: 40rpx;
+  margin: 0 15rpx;
+}
+.share_image{
+  margin-top: -28rpx;
+}
+.pinglun_view{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.xiaosanjiao1{
+  width: 95%;
+  text-align: right;
+  margin-right: 20rpx;
+}
+.xiaosanjiao1 image{
+  height: 35rpx;
+  width: 35rpx;
+}
+.market_tuwenliebiao_pinglunqu{
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15rpx;
+  margin-top: -12rpx;
+}
+.market_tuwenliebiao_pinglunqu view{
+  margin-top: 5rpx;
+}
+
+
+/* 遮罩 */
+.kf_zhezhao{
+    position:fixed;
+    width:100%;
+    height:100%;
+    bottom:0px;
+    background:rgba(0,0,0,0.8);
+    overflow: hidden;
+    z-index: 999;
+}
+.zhezhao_one{
+  height: 30%;
+}
+.zhezhao_two{
+  height: 40%;
+  margin: 0 auto;
+  width: 100%;
+}
+.zhezhao_two video{
+  margin: 0 auto;
+  width: 100%;
+}
+.zhezhao_three{
+  height: 30%;
+}
+.pinglun_input{
+  width: 100%;
+  position: fixed;
+  top: 50%;  
+  background: #fff;
+  color: #000;
+  padding:20rpx;
+  border-radius: 10rpx;
+  z-index: 11
+}
+.content_left image{
+  width: 25rpx;
+  height: 25rpx;                     
+}
+
+/*9宫格重构 2018-7-3*/
+.market_jiugongge{
+  overflow: hidden;
+  padding:0 0rpx;
+}
+.market_list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20rpx 20rpx;
+  border-bottom: 1rpx solid rgba(255, 255, 255, 0.35);
+  
+}
+.list_left image{
+  width: 226rpx;
+  height: 159rpx;
+  z-index: 1;
+}
+.list_right{
+  margin-left: 31rpx;
+  height: 159rpx;
+  max-width: 450rpx;
+  width: 450rpx;
+}
+.list_right_yi{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+  font-size: 30rpx;
+  margin-top: -10rpx;
+}
+.list_right_er{
+  margin-top: 15rpx;
+  font-size: 24rpx;
+  opacity: 0.4;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.list_right_san{
+  margin-top: 35rpx;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+}
+.location{
+  font-size: 24rpx;
+  opacity: 0.4
+}
+
+.list_right_san image{
+  width: 58rpx;
+  height: 58rpx;
+}
+/*车辆遮罩*/
+.car_zhezhao{
+  position:fixed;
+  width:100%;
+  background:rgba(0,0,0,0.8);
+  z-index: 999;
+  height: 200rpx;
+  margin-top: -200rpx; 
+}
+.car_close{
+  text-align: right;
+  padding-right: 19rpx;
+  padding-top: 19rpx;
+}
+.car_close image{
+  width: 34rpx;
+  height: 34rpx;
+}
+.car_caozuo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 0 85rpx;
+  text-align: center;
+  margin-top: -15rpx;
+  font-size: 20rpx;
+}
+.car_caozuo image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.car_caozuo_two{
+  margin-top: 10rpx;
+}

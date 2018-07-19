@@ -1,0 +1,662 @@
+/* pages/market/market.wxss */
+.market{
+  color: #fff;
+z-index: 0;
+letter-spacing: 2rpx;
+}
+button::after{
+  border: none;  
+}
+.budong{
+  top: 0rpx;
+  overflow: hidden; 
+  background-attachment: fixed;
+  color: #fff;
+  background: #1c2b3c;
+  z-index: 100;
+  width: 100%;
+}
+.market_title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 20rpx 25rpx;
+  border-bottom: 1rpx solid  rgba(255, 255, 255, 0.35);
+  color:#fff
+}
+.market_title image{
+  width: 35rpx;
+  height: 35rpx;
+}
+.left{
+  font-size: 20rpx;
+  width: 100rpx;
+}
+.left view{
+  text-align: center;
+  letter-spacing:2rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;   
+  max-width: 100rpx;
+  margin: 0 auto;
+
+}
+.left_image{
+  text-align: center;
+}
+.right{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; 
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  text-align: center;
+  width: 600rpx;
+}
+.right_image{
+  margin-top: 20rpx;
+  margin-right: 10rpx;
+}
+.right_image image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.market_tab{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 20rpx 0rpx;
+  border-bottom: 1rpx solid  rgba(255, 255, 255, 0.35);
+}
+.market_tab view{
+  text-align: center;
+  font-size: 30rpx;
+}
+.market_tab_view{
+    width: 18%;
+}
+.market_tab image{
+  width: 25rpx;
+  height: 25rpx;
+
+}
+.saixuan{
+  width: 25%;
+}
+.picker view{
+  text-align: center
+}
+.market_tab_one{
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+}
+.chengshi{
+  text-align: right;
+  font-size: 26rpx;
+}
+.market_tab_one view{
+  width: 50%;
+  height: 40rpx;
+  text-align: center;
+  margin-top: -2rpx;
+}
+.market_tab_four{
+  width:20%;
+}
+.market_tab_one image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+/*图文样式*/
+.market_tuwenliebiao{
+  padding: 20rpx 0rpx;
+  border-bottom: 1rpx solid rgba(255, 255, 255, 0.35);
+  padding-bottom: 30rpx;
+}
+.market_tuwenliebiao_title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+  margin-top: 10rpx;
+  padding: 0 20rpx;
+}
+.tuwenliebiao_title_left{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+}
+.tuwenliebiao_title_left image{
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 100rpx;
+  
+}
+.title_left_two{
+  margin-left: 20rpx;
+  /* line-height: 60rpx; */
+  padding-top: 20rpx;
+   letter-spacing:2rpx;
+}
+.tuwenliebiao_title_wai{
+  margin-bottom: -30rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;   
+  max-width: 400rpx;
+}
+.tuwenliebiao_title_in{
+  font-size: 20rpx;
+  display: flex;
+  flex-direction: row;
+  line-height: 60rpx;
+  text-align: center;
+  margin-top: 25rpx;
+}
+.tuwenliebiao_title_in image{
+  height: 30rpx; 
+  width: 30rpx;
+}
+.tuwenliebiao_title_right{
+  text-align: center;
+  
+}
+.tuwenliebiao_title_shang{
+  font-size: 50rpx;
+  font-weight: bolder;
+  letter-spacing:2rpx;
+  /* border:1px solid red; */
+  /* width: 150%; */
+
+}
+.tuwenliebiao_title_xia{
+  border-radius: 100rpx;
+  border: 1rpx solid rgba(255, 255, 255, 1);
+  height: 30rpx;
+  width:30rpx;
+  font-size: 20rpx;
+  padding: 0rpx;
+  text-align: center;
+}
+.quanquan{
+    text-align: right;
+    max-width: 200rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;  
+    font-size: 20rpx;
+}
+.quanquan image{
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.market_tuwenliebiao_image{
+  margin-top: 20rpx;
+}
+.market_tuwenliebiao_carname{
+  margin-top: 20rpx;
+  font-size: 42rpx;
+  font-weight: bolder;
+  letter-spacing:2rpx;
+  padding: 0 20rpx;
+}
+.market_tuwenliebiao_pinglun{
+  display: flex;
+  flex-direction: row;
+  justify-content:  space-between;
+  margin-top: 20rpx;
+  padding: 0 20rpx;
+
+}
+.swiper-box image{
+   padding: 0 10rpx; 
+}
+.pinglun_right{
+  display: flex;
+  flex-direction: row;
+  justify-content:  space-between;
+}
+.pinglun_right image{
+  height: 30rpx;
+  width: 30rpx;
+}
+.pinglun_right view{
+  margin-left: 0rpx;
+}
+.pinglun_right button{
+  background: rgba(255, 255, 255, 0);
+  color: #fff;
+  font-size: 25rpx;
+  height: 50rpx;
+  margin-top: -14rpx;
+}
+.share_image{
+  margin-top: 4rpx;
+}
+.dian{
+  line-height: 28rpx;
+  font-size: 50rpx;
+}
+.dian_left{
+  padding-left: 20rpx;
+}
+.dian_right{
+  padding-right: 20rpx;
+  
+}
+.shuzi{
+  padding-left: 20rpx;
+}
+.dian image{
+  height: 10rpx;
+  width: 10rpx;
+}
+.share_button{
+
+}
+.title_dian{
+  line-height: 58rpx;
+  margin: 0 10rpx;
+  font-size: 50rpx;
+}
+.title_dian image{
+  height: 10rpx;
+  width: 10rpx;
+
+}
+.pinglun_view{
+  display: flex;
+  flex-direction: row;
+  justify-content:  space-between;
+  font-size: 20rpx;
+}
+
+.market_tuwenliebiao_pinglunqu{
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15rpx;
+  margin-top: -12rpx;
+}
+.market_tuwenliebiao_pinglunqu view{
+  margin-top: 5rpx;
+}
+.xiaosanjiao1{
+  width: 95%;
+  text-align: right;
+  margin-right: 20rpx;
+}
+.xiaosanjiao1 image{
+  height: 35rpx;
+  width: 35rpx;
+}
+
+.kongbai{
+  height: 150rpx;
+}
+
+/* 九宫格列表*/
+.market_jiugongge{
+  overflow: hidden;
+  padding: 20rpx;
+}
+.market_jiugongge .jiugongge_image{
+  width: 50%;
+  height: 450rpx;
+  float: left;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.market_jiugongge image{
+  width: 93%;
+  height: 425rpx;
+}
+.market_jiugongge_title{
+  font-size: 25rpx;
+  text-align: left;
+  margin-top: -92rpx;
+  background: rgba(0, 0, 0, 0.7);
+  position:  relative;
+  width: 93%;
+  margin-left: 3.5%;
+  padding: 10rpx 0rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;  
+  
+}
+.market_jiugongge_title view{
+  padding-left: 10rpx;
+}
+
+
+.jiahao{
+  position:  fixed;
+  bottom: 20rpx;
+  text-align: center;
+  width: 100%;
+}
+
+.jiahao image{
+  
+  height: 120rpx;
+  width:120rpx;
+}
+
+.pinglun_input{
+  width: 100%;
+  position: fixed;
+  top: 50%;  
+  background: #fff;
+  color: #000;
+  padding:20rpx;
+  border-radius: 10rpx;
+}
+.shichang_list{
+  /* border: 11px solid red; */
+   
+}
+.tip_center{
+  padding-top: 20rpx;
+}
+.market_tuwenliebiao_carname{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+}
+.market_tuwenliebiao_carname image{
+  width: 35rpx;
+  height: 35rpx;
+}
+
+
+
+
+
+/* 图文列表样式*/
+.xiangqing{
+  border-bottom: 1rpx solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 25rpx;
+}
+.content{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+}
+.content_one{
+  font-size: 40rpx;
+  font-weight: bolder;
+}
+.content_two{
+  font-size: 20rpx;
+}
+.che_details{
+  /* background: rgba(255, 255, 255, 0.2); */
+  /* background-image: linear-gradient(  
+    to top,   
+    rgba(0,0,0,0) 0%,   
+    rgba(0,0,0,0.1) 10%,   
+    rgba(0,0,0,0.2) 20%, 
+    rgba(0,0,0,0.3) 30%, 
+    rgba(0,0,0,0.4) 40%, 
+    rgba(0,0,0,0.5) 50%, 
+    rgba(0,0,0,0.6) 100%);  */
+  width: 95.4%;
+  margin-left: 2.3%;
+  /* position:  relative; */
+  top: 22rpx;
+  z-index: 10;
+  /* padding: 5rpx 0rpx;  */
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  height: 80rpx;
+}
+.content_left{
+  margin-left: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;    
+  max-width: 480rpx;
+}
+.content_right{
+  margin-right: 10rpx;
+}
+
+.lbt{
+   /* margin-top: -65rpx;  */
+}
+.nickname{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;    
+  max-width: 300rpx;
+}
+.swiper-box image{
+   padding: 0 10rpx; 
+}
+.bofang{
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  width: 100%;
+  text-align: center;
+  height:500rpx;
+  line-height: 380rpx; 
+  position: relative;
+  top: -510rpx;
+  margin-left: 10rpx;
+}
+.bofang image{
+  height: 80rpx;
+  width: 80rpx;
+}
+
+/*已售 图文*/
+.yishou{
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 101;
+  width: 100%;
+  text-align: center;
+  height:500rpx;
+  line-height: 380rpx; 
+  top: -510rpx;
+  font-size: 113rpx;
+  position: relative;
+  letter-spacing: 40rpx;
+}
+/*已售 9宫格*/
+.yishou_jiugongge{
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 101;
+  width: 100%;
+  text-align: center;
+  height:200rpx;
+  line-height: 200rpx; 
+  margin-top: -200rpx;
+  font-size: 60rpx;
+  letter-spacing: 40rpx;
+  position: absolute
+}
+
+.user_details{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 94.6%;
+  margin-left: 2.6%;
+  margin-top:20rpx;
+}
+
+.user_left image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 100rpx;
+}
+.user_right{
+  width:86%;
+}
+.user_right_top{
+  font-size: 25rpx;
+}
+.user_right_top image{
+  width: 20rpx;
+  height: 20rpx;
+}
+.user_right_bottom{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.user_right_bottom_right image{
+  width: 28rpx;
+  height: 28rpx;
+}
+.user_right_bottom_right{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 28rpx;
+}
+.share{
+  background: rgba(255, 255, 255, 0);
+  padding: 0;
+  height: 40rpx;
+  width: 40rpx;
+  margin: 0 15rpx;
+}
+.share_image{
+  margin-top: -28rpx;
+}
+.pinglun_view{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.xiaosanjiao1{
+  width: 95%;
+  text-align: right;
+  margin-right: 20rpx;
+}
+.xiaosanjiao1 image{
+  height: 35rpx;
+  width: 35rpx;
+}
+.market_tuwenliebiao_pinglunqu{
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15rpx;
+  margin-top: -12rpx;
+}
+.market_tuwenliebiao_pinglunqu view{
+  margin-top: 5rpx;
+}
+/* 遮罩 */
+.kf_zhezhao{
+    position:fixed;
+    width:100%;
+    height:100%;
+    bottom:0px;
+    background:rgba(0,0,0,0.8);
+    overflow: hidden;
+    z-index: 999;
+}
+.zhezhao_one{
+  height: 30%;
+}
+.zhezhao_two{
+  height: 40%;
+  margin: 0 auto;
+  width: 100%;
+}
+.zhezhao_two video{
+  margin: 0 auto;
+  width: 100%;
+}
+.zhezhao_three{
+  height: 30%;
+}
+.content_left image{
+  width: 25rpx;
+  height: 25rpx;
+}
+
+
+.topnav{
+    position: fixed;
+    top: 85rpx;
+    z-index:99;
+    background: #fff;
+    width: 100%;
+
+}
+
+
+/*9宫格重构 2018-7-3*/
+.market_jiugongge{
+  overflow: hidden;
+  padding:0 20rpx;
+}
+.market_list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10rpx 0rpx; 
+  border-bottom: 1rpx solid rgba(255, 255, 255, 0.35);
+}
+
+.list_left image{
+  width: 226rpx;
+  height: 159rpx;
+  margin-top: 10rpx;
+}
+.list_right{
+  margin-left: 31rpx;
+  height: 159rpx;
+  max-width: 450rpx;
+  width: 450rpx;
+}
+.list_right_yi{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+  font-size: 30rpx;
+  margin-top: -5rpx;
+}
+.list_right_er{
+  margin-top: 15rpx;
+  font-size: 24rpx;
+  opacity: 0.4;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.list_right_san{
+  margin-top: 40rpx;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+}
+.location{
+  font-size: 24rpx;
+  opacity: 0.4
+}

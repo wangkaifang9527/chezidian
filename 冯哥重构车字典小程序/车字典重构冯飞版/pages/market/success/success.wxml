@@ -1,0 +1,27 @@
+<!--pages/market/success/success.wxml-->
+<view class='success'>
+    <view class='image'>
+        <image src='/images/chonggou/shichang/success.png'></image>
+    </view>
+
+    <view class='fabuchenggong'>发布成功</view>
+
+    <view>分享给朋友或发到朋友圈尽快卖出</view>
+
+    <view class='wx_pyq'>
+        <view>
+          <button class='share' open-type="share" >
+            <image src='/images/chonggou/shichang/wx.png'></image>
+            <view class='share_view'>
+              分享给朋友
+            </view>
+          </button>
+        </view>
+        <view class='pyq' catchtap='pyq'>
+            <image src='/images/chonggou/shichang/pyq.png'></image>
+            <view class='share_pyq'>分享到朋友圈</view>
+        </view>
+    </view>
+    
+    <view class='fanhuishouye' catchtap='fanhuishouye'>返回首页</view>
+</view>

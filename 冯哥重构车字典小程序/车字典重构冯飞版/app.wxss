@@ -1,0 +1,77 @@
+/**app.wxss**/
+
+
+page {
+    font-size: 14px;
+    /* background: url("http://www.levau.com/banner/beijing5.png") ;
+    background-size: 100% 100%;
+    background-attachment: fixed;  */
+    /* font-family:PingFangSC-Medium; */
+    background: #123149
+
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; *//* justify-content: space-between; */
+    box-sizing: border-box;
+}
+
+button:active {
+    opacity: 0.8;
+}
+
+.btn_blue, .btn_gary {
+    height: 94rpx;
+    line-height: 94rpx;
+    margin: 0 30rpx;
+    border-radius: 5px;
+}
+
+.btn_blue {
+    background: #3b416c;
+    color: #fff;
+}
+
+.btn_gary {
+    background: #d8d5d5;
+    font-size: #333;
+}
+
+/* tips */
+
+.tip_left {
+    width: 100%;
+    color: #999;
+    font-size: 14px;
+}
+
+.tip_center {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+}
+
+.tip_rule {
+    font-size: 12px;
+    text-align: center;
+    color: #0068d4;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.tip_rule image {
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+.hidden {
+    display: none;
+}

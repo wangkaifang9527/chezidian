@@ -1,0 +1,252 @@
+/* page {
+    background: #f8f8f8;
+    background: url("http://www.levau.com/banner/beijing4.png") no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+} */
+
+.container {
+    position: relative;
+}
+
+.promote_top {
+    text-align: center;
+    margin: 0px 0;
+   
+}
+
+.promote_top .p {
+    color: #696b7b;
+}
+
+.promote_top .h1 {
+    font-size: 24px;
+}
+.promote_top image{
+  width: 100%;
+  height: 400rpx;
+}
+
+.promote_bill {
+    
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.bill_top {
+    height: 92rpx;
+    line-height: 92rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* border-bottom: 1px solid #eee; */
+    font-size: 32rpx;
+    padding: 2% 0;
+    overflow: hidden;
+    
+}
+
+.bill_top image {
+    width: 80rpx;
+    height: 80rpx;
+    margin: 0 20rpx;
+    border-radius: 100%;
+    /* display:  inline; */
+}
+
+
+.text_yi{
+  font-size: 38rpx;
+  font-weight:  bolder;
+  max-width: 60rpx;
+  min-width: 20rpx;
+  text-align: center;
+  width: 60rpx;
+}
+.text_er{
+  max-width: 200rpx;
+  min-width: 200rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.text_san{
+  margin-left: 10%;
+
+}
+.view_yi{
+  float: right;
+  margin-left: 20%;
+}
+.view_yi view{
+    /* border: 1px solid red;  */
+  text-align: center;
+  height: 10rpx;
+   margin-bottom: 100rpx; 
+  /* line-height: 50rpx; */
+}
+.view_yi image{
+    width: 25rpx;
+    height: 25rpx;
+    /* border: 1px solid red; */
+    margin-top: 30rpx;
+}
+
+.bill_li {
+    height: 130rpx;
+    border-top: 1px solid #efeff4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bill_li .bill_li_h1 {
+    width: 100%;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bill_li .bill_li_p {
+    width: 100%;
+    color: #696b7b;
+    margin-top: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.onPhoneCall{
+  background-color: #fff;
+  border:0;
+}
+.kf_paihang image {
+    width: 45rpx;
+    height: 45rpx;
+    margin-right: 15rpx;
+    border-radius: 100%;
+     display:  inline;
+}
+.kf_paihang{
+    background: rgba(255, 255, 255, 0);
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* border-bottom: 1px solid #eee; */
+    font-size: 30rpx;
+    padding: 2% 0;
+    overflow: hidden;
+}
+.kf_paihang image{
+  margin-top: 50%;
+ 
+}
+.kf_hidder{
+  color: red;
+}
+
+.ziji{
+  
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 20rpx;
+  width: 100%;
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+
+}
+
+/* 重构排行榜的css*/
+page {
+    background: #f8f8f8;
+    background: url("http://www.levau.com/banner/beijing4.png") no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.container {
+    position: relative;
+    padding: 50rpx 20rpx;
+    color: #fff;
+}
+.kf_top{
+  margin: 0 auto;
+}
+.kf_top text{
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 50%;
+  padding: 20rpx 30rpx;
+}
+.kf_top_weibao{
+  border-right: 0px;
+}
+.kf_diyi{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 100rpx;
+}
+.kf_diyi view{
+  width: 33.33%;
+}
+.kf_diyi_left{
+  font-size: 100rpx;
+  font-weight: bolder;
+}
+.kf_diyi_left image{
+  height: 80rpx;
+  width:80rpx;
+}
+
+.kf_diyi_right{
+  margin-top: -40rpx;
+  line-height: 10rpx;
+}
+.kf_diyi_right button{
+  background: rgba(255, 255, 255, 0);
+  border: 0;
+  color: #fff;
+  font-size: 30rpx;
+}
+button::after{
+  border: none;  
+}
+.kf_diyi_right view{
+  margin: 0 auto;
+}
+.kf_diyi_right image{
+  height: 40rpx;
+  width: 40rpx;
+}
+.kf_diyi_zhong view{
+  width: 100%;
+  text-align: center;
+}
+.kf_diyi_zhong image{
+  height: 120rpx;
+  width: 120rpx;
+  border-radius: 100rpx;
+}
+.nickname{
+  max-width: 300rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-top:20rpx;
+    font-size: 30rpx;
+    text-align: center;
+}
+.avatarurl1{
+ 
+  height: 40rpx;
+}
+.fenxiang{
+  margin-top: -40rpx;
+}
+.huangguan{
+  
+  position:  absolute;
+  left: 51%;
+  top: 150rpx;
+}

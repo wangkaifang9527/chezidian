@@ -1,0 +1,111 @@
+<view class='container'>
+    <!-- <view class='my_money'>
+        <view class='text_small'>可用余额</view>
+        <view class='text_big'>{{money}}
+            <text>元</text>
+        </view>
+        <view class="btn_li" catchtap='onBill'>
+            <text>资金明细</text>
+            <image mode='aspectFit' src='/images/ico/jt_right.png'></image>
+        </view>
+        <button catchtap='onWithdraw'>提现</button>
+        
+    </view> -->
+    <view class='kf'>
+        <view class='kf_view kf_image'>
+            <image  src='/images/chonggou/jinqian.png'></image>
+        </view>
+        <view class='kf_view kf_tuiguang'>
+            <text>账户余额</text>
+        </view>
+        <view class='kf_view kf_money'>
+            <text>{{balence}}</text>
+        </view>
+        <view class='kf_view kf_button' catchtap='onWithdraw'>
+            <view>提现</view>
+        </view>
+    </view>
+   
+    <view class='my_list'>
+         <view class='my_list_li' catchtap='onHrefOrder'>
+            <view class='my_list_left'>
+                <image mode='aspectFit' src='/images/chonggou/houtai/dingdanguanli.png'></image>
+                <text>订单管理</text>
+            </view>
+            <view class='my_list_right'>
+                <text>{{order}}个</text>
+                <image mode='aspectFit' src='/images/chonggou/houtai/right.png'></image>
+            </view>
+        </view>
+         <view class='my_list_li'>
+            <view class='my_list_left' catchtap='onWithdrawAudit'>
+                <image mode='aspectFit' src='/images/chonggou/houtai/tixianshenhe.png'></image>
+                <text>提现审核</text>
+            </view>
+            <view class='my_list_right'>
+                <text class="red_cir">{{withdrawCount}}</text>
+                <image mode='aspectFit' src='/images/chonggou/houtai/right.png'></image>
+            </view>
+        </view> 
+        <view class='my_list_li' catchtap='onPromotersAudit'>
+            <view class='my_list_left'>
+                <image mode='aspectFit' src='/images/chonggou/houtai/dailishangshenhe.png'></image>
+                <text>推广人审核</text>
+            </view>
+            <view class='my_list_right'>
+                 <text class="red_cir">{{promoterCountToAudit}}</text> 
+                <image mode='aspectFit' src='/images/chonggou/houtai/right.png'></image>
+            </view>
+        </view>
+        <view class='my_list_li' catchtap='onPromoters'>
+            <view class='my_list_left'>
+                <image mode='aspectFit' src='/images/chonggou/houtai/dailishangshenhe.png'></image>
+                <text>推广人</text>
+            </view>
+            <view class='my_list_right'>
+                <!-- <text class="red_cir">{{agent_apply}}</text> -->
+                <image mode='aspectFit' src='/images/chonggou/houtai/right.png'></image>
+            </view>
+        </view>
+        <view class='my_list_li' catchtap='onAgentAudit'>
+            <view class='my_list_left'>
+                <image mode='aspectFit' src='/images/chonggou/houtai/dailishangshenhe.png'></image>
+                <text>代理商审核</text>
+            </view>
+            <view class='my_list_right'>
+                <text class="red_cir">{{agent_apply}}</text>
+                <image mode='aspectFit' src='/images/chonggou/houtai/right.png'></image>
+            </view>
+        </view>
+        <view class='my_list_li' catchtap='onAgent'>
+            <view class='my_list_left'>
+                <image mode='aspectFit' src='/images/chonggou/houtai/dailishang.png'></image>
+                <text>代理商</text>
+            </view>
+            <view class='my_list_right'>
+                <text>{{agent}}个</text>
+                <image mode='aspectFit' src='/images/chonggou/houtai/right.png'></image>
+            </view>
+        </view>
+        <view class='my_list_li' catchtap='onHrefOrderDetails'>
+            <view class='my_list_left'>
+                <image mode='aspectFit' src='/images/chonggou/houtai/shujutongji.png'></image>
+                <text>数据统计</text>
+            </view>
+            <view class='my_list_right'>
+                <image mode='aspectFit' src='/images/chonggou/houtai/right.png'></image>
+            </view>
+        </view>
+        <view class='my_list_li' catchtap='onBill'>
+            <view class='my_list_left'>
+                <image mode='aspectFit' src='/images/chonggou/houtai/tixianshenhe.png'></image>
+                <text>资金明细</text>
+            </view>
+            <view class='my_list_right'>
+                <image mode='aspectFit' src='/images/chonggou/houtai/right.png'></image>
+            </view>
+        </view>
+    </view>
+
+    <view class='kongbai'></view>
+</view>

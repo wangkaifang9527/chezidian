@@ -1,0 +1,189 @@
+<import src="../../template/t-phone/t-phone.wxml" />
+<view class='kf_zhezhao' hidden="{{!flag}}">
+    <template is="t-order-list" data='{{flag}}' /> 
+</view>
+
+<view class='container'>
+    <view class='kf_one'>
+        <view class='kf_one_avatarUrl'>
+            <image wx:if="{{avatarUrl}}" src='{{avatarUrl}}'></image>
+            <image wx:else src='/images/bg_gary.png'></image>
+        </view>
+        <view wx:if='{{ismember == 1}}' class='kf_one_huiyuan'>
+            <image  src='/images/chonggou/huiyuan/putong.png'></image>
+        </view>
+        <view wx:if='{{ismember == 2}}' class='kf_one_huiyuan'>
+            <image  src='/images/chonggou/huiyuan/huangjin.png'></image>
+        </view>
+        <view wx:if='{{ismember == 3}}' class='kf_one_huiyuan'>
+            <image  src='/images/chonggou/huiyuan/zhuanshi.png'></image>
+        </view>
+        <view wx:if='{{ismember == 4}}' class='kf_one_huiyuan'>
+            <image  src='/images/chonggou/huiyuan/zhuanshi.png'></image>
+        </view>
+        <view wx:if='{{ismember == 5}}' class='kf_one_huiyuan'>
+            <image  src='/images/chonggou/huiyuan/heikahuiyuan.png'></image>
+        </view>
+        <view class="kf_one_nickName">{{nickName}}</view>
+    </view>
+
+    <view class='kf_two'>
+        <view class='kf_two_view'>
+            <view class='kf_two_left' catchtap='onWithdrawLog'>
+                <view>
+                    <image mode='aspectFit' src='/images/chonggou/zhanghuyue.png'></image>
+                </view>
+                <view>余额</view>
+                <view>{{balence}}元</view>
+            </view>
+            <view wx:if='{{ismember==0}}' class='kf_two_right' catchtap='wodehuiyuan'>
+                <view>
+                    <image mode='aspectFit' src='/images/chonggou/wodehuiyuan.png'></image>
+                </view>
+                <view>开通会员</view>
+                <view>(开通会员尊享查询折扣)</view>
+            </view>
+            <view wx:else class='kf_two_right' catchtap='wodehuiyuan'>
+                <view>
+                    <image mode='aspectFit' src='/images/chonggou/wodehuangguan.png'></image>
+                </view>
+                <view>我的会员</view>
+                <view>尊享会员卡权益</view>
+            </view>
+        </view>
+    </view>
+
+    <view class='kf_three'>
+        <view class='kf_three_view'>
+            <view class='kf_left' catchtap='wodedingdan'>
+                <view>
+                    <image mode='aspectFit' src='/images/chonggou/wodedingdan.png'></image>
+                </view>
+                <view>我的订单</view>
+            </view>
+            <view class='kf_left' catchtap='wodefabu'>
+                <view>
+                    <image mode='aspectFit' src='/images/chonggou/wodefabu.png'></image>
+                </view>
+                <view>我的发布</view>
+            </view>
+            <view class='kf_left' catchtap='shichangshoucang'>
+                <view>
+                    <image mode='aspectFit' src='/images/chonggou/shichangshoucang.png'></image>
+                </view>
+                <view>市场收藏</view>
+            </view>
+        </view>
+    </view>
+
+
+
+     <view catchtap='onGirls'>
+        <view class='kf_girls_image'>
+            <image mode='aspectFit' src='/images/chonggou/my/girls.png' style='height: 150rpx;width: 150rpx;'></image>
+        </view>
+        <view class='my_list_li kf_girls'>
+            <view class='my_list_left ' >
+                <text>我有 <text style='color:#F26E09;font-size:38rpx;'>{{modelCarCount}}</text> 个车模</text>
+            </view>
+            <view class='my_list_right'>
+                <text>赚车模换免费查询</text>
+                <image mode='aspectFit' src='/images/chonggou/right.png'></image>
+            </view>
+        </view>
+    </view> 
+
+    <view class='my_list'>
+       
+        <view class='my_list_li'>
+            <view class='my_list_left' catchtap='onFache'>
+                <image mode='aspectFit' src='/images/chonggou/qianwangfache.png'></image>
+                <text>前往发车</text>
+            </view>
+            <view class='my_list_right'>
+                <text></text>
+                <image mode='aspectFit' src='/images/chonggou/right.png'></image>
+            </view>
+        </view>
+        <view class='my_list_li'>
+            <view class='my_list_left' catchtap='onMyPromotion'>
+                <image mode='aspectFit' src='/images/chonggou/wodetuiguan.png'></image>
+                <text>我要推广</text>
+            </view>
+            <view class='my_list_right'>
+                <text>{{totalIncome}}元</text>
+                <image mode='aspectFit' src='/images/chonggou/right.png'></image>
+            </view>
+        </view>
+        <!-- <view class='my_list_li'>
+            <view class='my_list_left' catchtap='quanwangfengsha'>
+                <image mode='aspectFit' src='/images/chonggou/quanwangfengsha.png'></image>
+                <text>全网封杀</text>
+            </view>
+            <view class='my_list_right'>
+                <text></text>
+                <image mode='aspectFit' src='/images/chonggou/right.png'></image>
+            </view>
+        </view>   -->
+        
+        <view class='my_list_li' data-tel="15800636267" bindtap="onPhoneCall">
+          <view class='my_list_left'>
+              <image mode='aspectFit' src='/images/chonggou/lianxikefu.png'></image>
+              <text>联系客服</text>
+          </view>
+          <view class='my_list_right' >
+              <image mode='aspectFit' src='/images/chonggou/right.png'></image>
+          </view>
+        </view>
+
+        <!-- <view class='my_list_li' catchtap='onRegionalAgents'>
+            <view class='my_list_left'>
+                <image mode='aspectFit' src='/images/chonggou/dailishangguanli.png'></image>
+                <text>区域代理</text>
+            </view>
+            <view class='my_list_right'>
+                <text></text>
+                <image mode='aspectFit' src='/images/chonggou/right.png'></image>
+            </view>
+        </view>  -->
+
+        <view wx:if='{{promoteStatus == 2}}' class='my_list_li'  catchtap='erjidaili'>
+          <view class='my_list_left'>
+              <image mode='aspectFit' src='/images/chonggou/xianxiaguanli.png'></image>
+              <text>推广管理</text>
+          </view>
+          <view class='my_list_right' >
+              <image mode='aspectFit' src='/images/chonggou/right.png'></image>
+          </view>
+        </view>
+
+        <view wx:if="{{citys.length>0}}" class='my_list_li'  catchtap='yijidaili'>
+          <view class='my_list_left kf_citys'>
+              <image mode='aspectFit' src='/images/chonggou/dailishangguanli.png'></image>
+              <text>代理管理</text>
+              <image class='dai' mode='aspectFit' src='/images/chonggou/dai.png'></image>
+              <block wx:for="{{citys}}" wx:key="item" >
+                <text class="citys">{{item}}</text>
+              </block>
+          </view>
+          <view class='my_list_right' >
+              <image mode='aspectFit' src='/images/chonggou/right.png'></image>
+          </view>
+        </view>
+
+        <view wx:if="{{isadmin}}" data-balence="{{balence}}" class='my_list_li' catchtap='onHrefMGR' >
+            <view class='my_list_left'>
+                <image mode='aspectFit' src='/images/chonggou/houtaiguanli.png'></image>
+                <text>后台管理</text>
+            </view>
+            <view class='my_list_right'>
+                <text></text>
+                <image mode='aspectFit' src='/images/chonggou/right.png'></image>
+            </view>
+        </view>
+    </view>
+ 
+</view>
+
+
+

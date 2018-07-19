@@ -1,0 +1,99 @@
+.order_li {
+    width: 94%;
+    background: rgba(0, 0, 0, 0) ;
+    border-radius: 5px;
+    /* display: flex;
+    flex-direction: column; */
+    padding: 0 20rpx;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+.order_head {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50rpx;
+
+    
+}
+
+.head_left {
+    flex: 1;
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.head_left view{
+    max-width:220rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.head_left text {
+    font-size: 20rpx;
+    color: #fff;
+    padding: 2px 5px;
+    background: #f0f0f2;
+    border-radius: 2px;
+    margin-left: 5px;
+    max-width: 120rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.head_right text {
+    font-size: 22rpx;
+    color: #fff;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 2px;
+    margin-left: 15px;
+    max-width: 120rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: 1px solid #fff;
+    padding: 5rpx 15rpx;
+}
+
+.head_right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.head_right image {
+    width: 24rpx;
+    height: 24rpx;
+    margin-right: 5px;
+}
+
+.chassis_number {
+    font-size: 25rpx;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.order_time {
+    height: 40px;
+    line-height: 40px;
+    border-top: 1px solid #e6e6e6;
+    color: #333;
+    width: 100%;
+    /* background: #ffe226;
+    margin-left: -6.6%;
+    padding: 0 40rpx;
+    border-bottom-left-radius: 10rpx;
+    border-bottom-right-radius: 10rpx; */
+}
+
+.order_time text {
+    float: right;
+    color: #333;
+}

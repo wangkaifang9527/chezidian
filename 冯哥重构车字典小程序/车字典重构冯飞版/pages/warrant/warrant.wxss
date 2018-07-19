@@ -1,0 +1,97 @@
+/* pages/warrant/warrant.wxss */
+
+.warrant{
+  color: #fff;
+  letter-spacing: 2rpx;
+  padding: 20rpx;
+}
+.title{
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10rpx;
+  padding: 20rpx;
+}
+.title_yi{
+  font-size: 44rpx;
+  text-align: center;
+  
+}
+.title_er{
+  font-size: 24rpx;
+  margin-top: 20rpx;
+}
+.title_san{
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+.title_si{
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  text-align: center
+}
+.title_wu{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 24rpx;
+  margin-top: 15rpx;
+}
+.title_wu_left{
+  border: 1rpx dashed #fff;
+  letter-spacing: 10rpx;
+  color: #1c2b3c;
+  padding: 5rpx;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+}
+.title_wu_content{
+  margin-left: 30rpx;
+}
+.title_wu_right{
+  margin-left: 30rpx;
+}
+
+.warrant_price{
+  margin: 100rpx 0rpx;
+  text-align: center;
+  font-size: 40rpx;
+  padding: 0 20rpx;
+}
+.price{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1rpx solid rgba(255, 255, 255, 0.2);
+  font-size: 47rpx;
+  padding: 20rpx 40rpx;
+  text-align: center;
+}
+.input-placeholder{
+  color: #fff;
+  text-align: center;
+  
+}
+
+.ispingtai{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 28rpx;
+  margin-top: 48rpx;
+  padding: 0 20rpx;
+}
+.image2{
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.quding{
+  padding: 0 20rpx;
+}
+.quding view{
+  border: 1rpx solid #fff;
+  padding: 29rpx 0rpx;
+  text-align: center;
+  font-size: 25rpx;
+  margin-top: 175rpx;
+  border-radius: 10rpx;
+}

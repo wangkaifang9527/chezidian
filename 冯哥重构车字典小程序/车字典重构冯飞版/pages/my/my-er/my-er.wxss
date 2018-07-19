@@ -1,0 +1,64 @@
+
+
+/* page {
+    background: #f8f8f8;
+} */
+
+.container {
+    margin: 30px 30rpx;
+}
+.er{
+  color: #fff;
+}
+.kf-view{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20rpx 20rpx;
+  padding-right: 30rpx;
+  overflow: hidden
+}
+.kf-image{
+  width:80rpx;
+  height: 80rpx;
+  border-radius: 80rpx;
+  float: left;
+}
+.kf-nickname{
+  float: left;
+  margin-left: 5%;
+}
+.kf-image1{
+  width:60rpx;
+  height: 60rpx;
+  float: right;
+  margin-top: 10rpx; 
+}
+
+.title image{
+  width: 100%;
+}
+.zhong{
+  background: rgba(255, 255, 255, 0.2);
+  width: 94%;
+  margin:20rpx auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+  border-radius: 10rpx;
+}
+.pj{
+  font-size: 35rpx;
+  text-align: center;
+  width: 33.33%;
+  padding: 20rpx 0rpx;
+}
+.pj view{
+  padding: 20rpx 0rpx;
+}
+.order_box{
+  background: rgba(255, 255, 255, 0.2);
+  width: 94%;
+  margin:20rpx auto;
+  border-radius: 10rpx;
+  color: #fff;
+}

@@ -1,0 +1,15 @@
+<!--pages/index/doc-chassis-number/doc-chassis-number.wxml-->
+<view class='container'>
+    <view class='title'>车架号在哪？</view> 
+ <view class='intr'>a.车架号一般位于前挡风玻璃左下角（驾驶员一侧）。</view> 
+   <image src='/images/chassis-number/01.png' mode='aspectFit' style='width:450rpx;height:298rpx'></image> 
+  <view class='intr'>b.机动车行驶证、保险保单等上边也可以找到车辆的车架号。</view>
+  <!-- <view class='intr'>拍摄行驶证、铭牌、前窗VIN时不可颠倒。</view> -->
+  <view class='intr'>参考下方示例正确拍摄行驶证</view>
+  <!-- <image src='/images/chassis-number/02.jpg' mode='aspectFit' style='width:457rpx;height:310rpx'></image>
+  <view class='center'>（示例）</view> -->
+  <image src='/images/chassis-number/03.jpg' mode='aspectFit' style='width:451rpx;height:318rpx'></image>
+  <view class='center'>（示例）</view>
+  <!-- <image src='/images/chassis-number/04.jpg' mode='aspectFit' style='width:312rpx;height:65rpx'></image>
+  <view class='center'>（示例）</view> -->
+</view>

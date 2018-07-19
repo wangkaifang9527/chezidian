@@ -1,0 +1,39 @@
+.er{
+  color: #fff;
+}
+.title image{
+  width: 100%;
+}
+.zhong{
+  background: rgba(255, 255, 255, 0.2);
+  width: 94%;
+  margin:20rpx auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+  border-radius: 10rpx;
+}
+.pj{
+  font-size: 35rpx;
+  text-align: center;
+  width: 33.33%;
+  padding: 20rpx 0rpx;
+}
+.pj view{
+  padding: 20rpx 0rpx;
+}
+
+.apply_button{
+  border: 1rpx solid rgba(255, 255, 255, 0.2);
+  width: 96%;
+  
+  padding: 30rpx 0;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+  position:  fixed;
+  bottom: 100rpx;
+  left: 1.5%;
+}

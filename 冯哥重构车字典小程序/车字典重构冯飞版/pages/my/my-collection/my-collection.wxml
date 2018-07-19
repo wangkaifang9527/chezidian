@@ -1,0 +1,139 @@
+<!--pages/my/my-collection/my-collection.wxml-->
+<view class='collection'>
+    <view class='tab'>
+        <view>
+            <view catchtap='tuwen'><image src='{{tuwen_url}}'></image></view>
+        </view>
+    </view>
+
+
+    <view wx:if='{{change_flag}}' class='shichang_list' style='margin-top:{{mar_top}}'>
+        <block wx:for="{{list}}" wx:key="" wx:for-index="i">
+            <view  catchtap='xiangqing' data-id='{{item.id}}' class='xiangqing'>
+                <view class='che_details'>
+                    <view class='content content_one'>
+                        <view class='content_left'>{{item.title}}</view>
+                        <view class='content_right'>{{item.price}}万</view>
+                    </view>
+                    <view class='content content_two'>
+                        <view class='content_left'>
+                          {{item.xz[0]}} {{item.xz[1]}}
+                          <image wx:if='{{item.property==1}}'  src='/images/chonggou/shichang/fei.png'></image>
+                          <image wx:else  src='/images/chonggou/shichang/ying.png'></image>
+                        </view>
+                        <view class='content_right'>{{item.location}}</view>
+                    </view>
+                </view>
+
+                <view class='lbt'>
+                    <swiper class='swiper-box'  indicator-color="#fff" indicator-active-color="#bfbfbf" previous-margin='10rpx' next-margin='20rpx' style=' height:380rpx' bindchange='bindchange' data-i='{{i}}'>
+                        <block wx:for="{{item.images}}" wx:key="" wx:for-item="item1" wx:for-index="ii"> 
+                            <swiper-item>
+                                  <image  data-images='{{item.images}}' data-i='{{ii}}' catchtap='lookImg' src='{{item1}}'mode="aspectFill" style='width:100%;' ></image> 
+                                  <view wx:if='{{item1.length==69}}'   class='bofang' catchtap='bofangshipin' data-name='{{item1}}' >
+                                    <image src='/images/chonggou/shichang/bofang.png'></image>  
+                                </view> 
+                            </swiper-item>
+                        </block>
+                    </swiper>
+                </view>
+
+                <view class='user_details'>
+                    <view class='user_left'>
+                        <image src='{{item.avatarUrl}}' catchtap='zhuye' data-openid='{{item.openId}}'></image>
+                    </view>
+                    <view class='user_right'>
+                        <view class='user_right_top'>
+                            <image src='/images/chonggou/shichang/yanjing.png'></image>
+                            {{item.visitCount}}
+                            <image src='/images/chonggou/shichang/shijian.png'></image>
+                            {{item.createTime}}
+                            <image src='/images/chonggou/shichang/xingzhuang.png'></image>
+                            {{item.distance}}km
+                        </view>
+                        <view class='user_right_bottom'>
+                            <view class='nickname'>{{item.nickName}}</view>
+                            <view class='user_right_bottom_right'>
+                                <view class='pinglun_view' data-favorite='{{item.favorite}}' data-i='{{i}}' catchtap='shoucang'>
+                                    <image wx:if='{{item.favorite}}'  src='/images/chonggou/shichang/dianjishoucang.png'></image>
+                                    <image wx:else src='/images/chonggou/shichang/quxiaoshoucang.png'></image>
+                                    <view style='margin:0rpx 10rpx'>{{item.collectCount}}</view>
+                                    
+                                </view>
+                                <view></view>
+                                <button class='share' open-type="share" data-id='{{item.id}}'>
+                                    <view  class='share_image'>
+                                        <image src='/images/chonggou/shichang/zhuanfa.png'></image>
+                                    </view>
+                                </button>
+                                <view style='margin-right:10rpx'></view>
+                                <view class='pinglun_view' catchtap='pinglun' data-vehicleid='{{item.id}}' data-i='{{i}}' data-pinglun='{{item.commentCount}}' data-flag='{{item.flag}}'>
+                                    <image src='/images/chonggou/shichang/pinglun.png'></image>
+                                    <view  style='margin:0rpx 15rpx'>{{item.commentCount}}</view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+
+                <!-- 评论区-->
+                <view wx:if='{{item.comments.length>0}}'  catchtap='pinglunqu' data-vehicleid='{{item.id}}' data-i='{{i}}' style='padding:0rpx 20rpx;'>
+                    <view class='xiaosanjiao1'>
+                        <image src='/images/chonggou/shichang/xiaosanjiao.png'></image>
+                    </view>
+                    <view  class='market_tuwenliebiao_pinglunqu'>
+                        <block wx:for="{{item.comments}}" wx:key="" wx:for-item="comment" wx:for-index="ii">
+                            <view>
+                              <text>{{comment.nickName}}: </text>
+                              <text>{{comment.content}}</text>
+                            </view>
+                        </block>
+
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+
+
+    <view wx:else class='market_jiugongge' style='margin-top:{{mar_top1}}'>
+        <block wx:for="{{list}}" wx:key="" wx:for-index="i">
+            <!-- <view class='jiugongge_image' catchtap='jiugonggetupian' data-openid='{{item.openId}}' data-id='{{item.id}}'>
+              <image src='{{item.images[0]}}' mode="aspectFill"></image>
+              <view class='market_jiugongge_title'>
+                  <view>{{item.title}}</view>
+                  <view>{{item.price}}万元</view> 
+              </view>
+            </view> -->
+            <view class='market_list' catchtap='jiugonggetupian' data-openid='{{item.openId}}' data-id='{{item.id}}'>
+                <view class='list_left'>
+                    <image src='{{item.images[0]}}' mode="aspectFill"></image>
+                </view>
+                <view class='list_right'>
+                    <view class='list_right_yi'>{{item.title}}</view>
+                    <view class='list_right_er'>
+                         <view>{{item.licenseDate}} ·</view>
+                         <view style='margin:0 8rpx;'>{{item.mileage}}万公里</view> 
+                         <view wx:if='{{item.xz.length!=0}}'>
+                            <block wx:for="{{item.xz}}" wx:key="" wx:for-item="xz">
+                              <view wx:if='{{xz=="抵押车"}}'>· {{xz}}</view>
+                            </block>
+                         </view>
+                    </view>    
+                    <view class='list_right_san'>
+                        <view>{{item.price}}万元</view>
+                        <view class='location'>{{item.location}}</view>
+                    </view> 
+                </view>
+                
+            </view>
+
+
+        </block>   
+    </view>
+
+    <view wx:if="{{isloadover}}" class='tip_center' style='margin-bottom:30px'>别拉了，没有啦</view>
+
+
+    <input class='pinglun_input' confirm-type='send' bindblur='bindblur' bindconfirm='bindconfirm' focus='{{focus}}' value='{{pinglun_value}}' placeholder='说说您的看法'  adjust-position='true' bindinput='bindinput' hidden='{{hidden}}'></input>
+</view>

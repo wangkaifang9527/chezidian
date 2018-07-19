@@ -1,0 +1,104 @@
+/* pages/my/memberopening/memberopening.wxss */
+/* page {
+   background: #f8f8f8;
+   background: url("http://www.levau.com/banner/beijing4.png") ;
+   background-size: 100% 100%;
+   background-attachment: fixed;
+} */
+@import "../../../template/t-phone/t-phone.wxss"; 
+.container{
+  padding: 40rpx 20rpx;
+  color: #fff;
+  
+}
+.kf_image image{
+  width: 100%;
+  height: 300rpx;
+}
+.kf_danxuan{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 50rpx 0rpx;
+  font-size: 28rpx;
+  
+}
+.kf_danxuan text{
+  line-height: 90rpx;
+}
+.kf_danxuan view{
+  padding-top: 5rpx;
+}
+.kf_danxuan image{
+  height: 100rpx;
+  width: 100rpx;
+}
+.kf_danxuan .image2{
+  height: 50rpx;
+  width: 50rpx;
+  margin-top: 20rpx;
+}
+.duijiaoxian{
+  transform: rotate（90deg）;
+  color: #999;
+}
+.duijiaoxian image{
+  width: 130rpx;
+  height: 40rpx;
+}
+.quedingkaitong{
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 35rpx;
+  text-align: center;
+  padding: 25rpx 0rpx;
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+}
+.kf_1{
+  color: #D0D3D9
+}
+.kf_2{
+  color: #F9C64E
+}
+.kf_3{
+  color: #AAC8FA
+}
+.kf_4{
+  color: #AAC8FA
+}
+.kf_5{
+  color: #FEE76F
+}
+.kf_6{
+  color: #FC6767
+}
+.kf_7{
+  color: #FC6767
+}
+.kf_8{
+  color: #FC6767
+}
+.kf_9{
+  color: #FC6767
+}
+
+/*充值*/
+.input{
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+  padding:15rpx;
+}
+.list_jinqian{
+  overflow: hidden;
+}
+.list_jinqian view{
+  float: left;
+  width: 23%;
+  background: rgba(255, 255, 255, 0.2);
+  margin-right: 2.66%;
+  margin-top: 20rpx;
+  text-align: center;
+  padding: 20rpx 0rpx;
+  border-radius: 10rpx;
+}

@@ -1,0 +1,184 @@
+<!-- <view class='container'>
+    <view class='promote_top'>
+        <image src='{{maxQueryUser.avatarUrl}}'></image>
+        <text>{{maxQueryUser.nickName}}</text>
+    </view>
+
+    <view wx:if='{{myRanking!=0}}' class='bill_top bill_li_h1 ziji'>
+        <text class='text_yi'>{{myRanking.currentRanking}}</text>
+        <image wx:if="{{myRanking.avatarUrl}}" src='{{myRanking.avatarUrl}}'></image>
+        <image wx:else src='/images/bg_gary.png'></image>
+        <text class='text_er'>{{myRanking.nickName}}</text>
+        <text class='text_san'>{{myRanking.remainTimes}}</text>
+        <view class='view_yi'>
+          <view wx:if='{{myRanking.risefall!=0}}'>{{myRanking.rise_fall}}</view>
+          <image wx:if='{{myRanking.risefall<0}}' src='/images/xia.png'></image>
+          <image wx:if='{{myRanking.risefall==0}}' src='/images/zhong.png'></image>
+          <image wx:if='{{myRanking.risefall>0}}' src='/images/shang.png'></image>
+        </view>
+    </view>
+    <view wx:else class='bill_top bill_li_h1 ziji' style=' text-align: center '>
+        <text>未进排行榜</text>
+    </view>
+
+    <view class='promote_bill'>
+        <view class='bill_box'>
+            <view class='bill_top bill_li_h1 kf_paihang'>
+                  <view>排名/头像</view>
+                  <text>昵称</text>
+                  <text>离免费查询(次)</text>
+                  <text>浮动</text>
+                </view>
+             <block wx:for="{{orders}}" wx:for-item="order" wx:key="" wx:for-index="i">
+                <view wx:if="{{i==0}}" class='bill_top bill_li_h1 ' style='color:red'>
+                    <text class='text_yi'>{{order.currentRanking}}</text>
+                    <image wx:if="{{order.avatarUrl}}" src='{{order.avatarUrl}}'></image>
+                    <image wx:else src='/images/bg_gary.png'></image>
+                    <text class='text_er'>{{order.nickName}}</text>
+                    <text class='text_san'>{{order.remainTimes}}</text>
+                    <view class='view_yi'>
+                      <view  wx:if='{{order.risefall!=0}}'>{{order.rise_fall}}</view>
+                      <image wx:if='{{order.risefall<0}}' src='/images/xia.png'></image>
+                      <image wx:if='{{order.risefall==0}}' src='/images/zhong.png'></image>
+                      <image wx:if='{{order.risefall>0}}' src='/images/shang.png'></image>
+                    </view>
+                </view>
+                <view wx:elif="{{i==1}}" class='bill_top bill_li_h1 ' style='color:yellow'>
+                    <text class='text_yi'>{{order.currentRanking}}</text>
+                    <image wx:if="{{order.avatarUrl}}" src='{{order.avatarUrl}}'></image>
+                    <image wx:else src='/images/bg_gary.png'></image>
+                    <text class='text_er'>{{order.nickName}}</text>
+                    <text class='text_san'>{{order.remainTimes}}</text>
+                    <view class='view_yi'>
+                      <view  wx:if='{{order.risefall!=0}}'>{{order.rise_fall}}</view>
+                      <image wx:if='{{order.risefall<0}}' src='/images/xia.png'></image>
+                      <image wx:if='{{order.risefall==0}}' src='/images/zhong.png'></image>
+                      <image wx:if='{{order.risefall>0}}' src='/images/shang.png'></image>
+                    </view>
+                </view>
+                <view wx:elif="{{i==2}}" class='bill_top bill_li_h1 ' style='color:blue'>
+                    <text class='text_yi'>{{order.currentRanking}}</text>
+                    <image wx:if="{{order.avatarUrl}}" src='{{order.avatarUrl}}'></image>
+                    <image wx:else src='/images/bg_gary.png'></image>
+                    <text class='text_er'>{{order.nickName}}</text>
+                    <text class='text_san'>{{order.remainTimes}}</text>
+                    <view class='view_yi'>
+                      <view  wx:if='{{order.risefall!=0}}'>{{order.rise_fall}}</view>
+                      <image wx:if='{{order.risefall<0}}' src='/images/xia.png'></image>
+                      <image wx:if='{{order.risefall==0}}' src='/images/zhong.png'></image>
+                      <image wx:if='{{order.risefall>0}}' src='/images/shang.png'></image>
+                    </view>
+                </view>
+                <view wx:else class='bill_top bill_li_h1 '>
+                    <text class='text_yi'>{{order.currentRanking}}</text>
+                    <image wx:if="{{order.avatarUrl}}" src='{{order.avatarUrl}}'></image>
+                    <image wx:else src='/images/bg_gary.png'></image>
+                    <text class='text_er'>{{order.nickName}}</text>
+                    <text class='text_san'>{{order.remainTimes}}</text>
+                    <view class='view_yi'>
+                      <view  wx:if='{{order.risefall!=0}}'>{{order.rise_fall}}</view>
+                      <image wx:if='{{order.risefall<0}}' src='/images/xia.png'></image>
+                      <image wx:if='{{order.risefall==0}}' src='/images/zhong.png'></image>
+                      <image wx:if='{{order.risefall>0}}' src='/images/shang.png'></image>
+                    </view>
+                </view>
+             
+              
+               
+            </block> 
+            
+            
+
+        </view>
+    </view>
+
+    <view wx:if="{{isloadover}}" class='tip_center' style='margin-bottom:30px'>别拉了，没有啦</view>
+</view> -->
+
+<view class='container'>
+
+    <view class='kf_top'>
+        <text class='kf_top_weibao' style='background:rgba(255,255,255,0.3);'>维保免费排行榜</text>
+        <text class='kf_top_dingsun' style='background: rgba(255,255,255,0);' catchtap='dingsunmianfeipaihangbang'>定损免费排行榜</text>
+    </view>
+
+    <view class='kf_diyi'>
+        <view class='kf_diyi_left'>
+            <!-- <image src='/images/chonggou/yi.png'></image> -->
+            <image src='/images/chonggou/huangguan.png' class='huangguan'></image>
+        </view>
+        <view class='kf_diyi_zhong'>
+            <view class='avatarurl'>
+              <image src='{{maxQueryUser.avatarUrl}}'></image>
+              
+            </view>
+            <view class='nickname'>{{maxQueryUser.nickName}}</view>
+        </view>
+        <view class='kf_diyi_right'>
+            
+            <!-- <view>分享</view> -->
+            <button open-type="share" >
+              <view class='avatarurl1'>
+                <image src='/images/chonggou/fenxiang.png'></image>
+              </view>
+              <text class='fenxiang'>分享</text>
+            </button>
+        </view>
+    </view>
+
+    <view wx:if='{{myRanking!=0}}' class='bill_top bill_li_h1 ziji'>
+        <text class='text_yi'>{{myRanking.currentRanking}}</text>
+        <image wx:if="{{myRanking.avatarUrl}}" src='{{myRanking.avatarUrl}}'></image>
+        <image wx:else src='/images/bg_gary.png'></image>
+        <text class='text_er'>{{myRanking.nickName}}</text>
+        <text class='text_san'>{{myRanking.remainTimes}}</text>
+        <view class='view_yi'>
+          <view wx:if='{{order.risefall==0}}' >-</view>
+          <view wx:if='{{order.risefall<0}}' style='color:#69ff4b'>{{order.rise_fall}}</view>
+          <view wx:if='{{order.risefall>0}}' style='color:#ff2424'>{{order.rise_fall}}</view>
+        </view>
+    </view>
+    <view wx:else class='bill_top bill_li_h1 ziji' style=' text-align: center '>
+        <text>未进排行榜</text>
+    </view>
+
+    <view class='promote_bill1'>
+        <view class='bill_box'>
+            <view class=' kf_paihang'>
+                  <view>排名</view>
+                  <text>昵称</text>
+                  <text>距离免费次数</text>
+                  <text></text>
+            </view>
+        </view>
+    </view>
+    <view class='promote_bill'>
+        <view class='bill_box'>
+            
+             <block wx:for="{{orders}}" wx:for-item="order" wx:key="" wx:for-index="i">
+                
+                <view  class='bill_top bill_li_h1 '>
+                    <text class='text_yi'>{{order.currentRanking}}</text>
+                    <image wx:if="{{order.avatarUrl}}" src='{{order.avatarUrl}}'></image>
+                    <image wx:else src='/images/bg_gary.png'></image>
+                    <text class='text_er'>{{order.nickName}}</text>
+                    <text class='text_san'>{{order.remainTimes}}</text>
+                    <view class='view_yi'>
+                      <view wx:if='{{order.risefall==0}}' >-</view>
+                      <view wx:if='{{order.risefall<0}}' style='color:green'>{{order.rise_fall}}</view>
+                      <view wx:if='{{order.risefall>0}}' style='color:red'>{{order.rise_fall}}</view>
+                    </view>
+                </view>
+             
+              
+               
+            </block> 
+            
+            
+
+        </view>
+    </view>
+    
+
+    <view wx:if="{{isloadover}}" class='tip_center' style='margin-bottom:30px'>别拉了，没有啦</view>
+</view>

@@ -1,0 +1,22 @@
+<view class='er'>
+    <view class='title'>
+      <image src='/images/chonggou/tuiguang.png' mode='widthFix'></image>
+    </view>
+    
+    <view class='zhong'>
+        <view class='pj'>
+            <view>0</view>
+            <view>今日新增</view>
+        </view>
+        <view class='pj'>
+            <view>0</view>
+            <view>本周新增</view>
+        </view>
+        <view class='pj'>
+            <view>0</view>
+            <view>本月新增</view>
+        </view>
+    </view>
+</view>
+
+<view class='apply_button' style='margin-top:150rpx;' catchtap='apply_tg'>申请开通</view>

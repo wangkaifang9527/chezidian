@@ -1,0 +1,65 @@
+/* pages/market/area/area.wxss */
+.area{
+  padding: 20rpx;
+  color: #fff;
+  padding-bottom: 150rpx;
+}
+.dingwei {
+  width: 96%;
+  margin: 10rpx 0rpx;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20rpx 0rpx;
+  text-align: center;
+  max-width:250rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;  
+}
+.dingwei image{
+  width: 26rpx;
+  height: 26rpx;
+}
+.title{
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.title input{
+  background: rgba(255, 255, 255, 0.35);
+  width:100%;
+}
+.title text{
+  width: 60rpx;
+}
+.remen_view{
+  overflow: hidden;
+}
+
+.remen_view .chengshi{
+  float: left;
+  margin-top: 10rpx;
+  width: 33.33%;
+}
+
+
+.item {
+  width: 96%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20rpx 0rpx;
+  text-align: center;
+  max-width:250rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;  
+}
+.quanbu{
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+.shengfen{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  padding:30rpx 20rpx;
+}

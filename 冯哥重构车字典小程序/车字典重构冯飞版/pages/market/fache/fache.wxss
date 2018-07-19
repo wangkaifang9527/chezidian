@@ -1,0 +1,331 @@
+/* pages/market/fache/fache.wxss */
+
+ @import "../../../template/t-phone/t-phone.wxss"; 
+
+.fache{
+  color: #fff;
+  letter-spacing:2rpx;
+
+}
+.title{
+  overflow: hidden;
+  text-align: center;
+  margin: 20rpx 10%;
+}
+.title view{
+  width:49%;
+  float: left;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20rpx 0rpx;
+}
+
+
+.container{
+  color: #fff;
+  letter-spacing:2rpx;
+}
+.fa_title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding-left: 10%;
+  margin-top: 10rpx;
+}
+.fa_title view{
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 35%;
+  padding: 20rpx;
+  text-align: center;
+}
+
+
+
+.xing{
+  color: #FF0000;
+}
+.neirong{
+  margin: 20rpx 20rpx;
+}
+.fa_input {
+  border-radius: 10rpx;
+  color: #fff;
+  padding: 15rpx;
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 20rpx;
+}
+.fa_input1 {
+  border-radius: 10rpx;
+  color: #fff;
+  padding: 15rpx;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 20rpx 20rpx;
+}
+.fa_input2{
+  border-radius: 10rpx;
+  color: #fff;
+  padding: 15rpx 15rpx;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 20rpx 20rpx;
+}
+.fa_input3{
+  border-radius: 10rpx;
+  color: #fff;
+  padding: 10rpx 15rpx;
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 20rpx;
+}
+.fa_input4{
+  border-radius: 10rpx;
+  color: #fff;
+  padding: 10rpx 15rpx;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 20rpx 20rpx;
+}
+.cheliangsuozaidi{
+  margin-top: 0rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+
+}
+.cheliangsuozaidi button{
+
+}
+.fa_image{
+  background: rgba(255, 255, 255, 0);
+}
+.fa_image image{
+  height: 150rpx;
+  width:150rpx;
+  margin-right: 20rpx;
+}
+
+.fa_jichu{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+}
+.fa_jichu image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 10rpx;
+}
+.jichu_right{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.jichu_right view{
+  margin-right: 20rpx;
+}
+.picker image{
+  
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.input_left{
+  width:25%;
+}
+.input_right{
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  justify-content: space-between;
+}
+.input_right input{
+  text-align: right;
+}
+.picker{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20rpx;
+}
+
+.cheliangxinzhi{
+  margin-top: 30rpx;
+  
+}
+.cheliangdanxuan{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10rpx;
+}
+.cheliangdanxuan view{
+  width: 17.5%;
+  border: 1rpx solid rgba(255, 255, 255, 0.35);
+  text-align: center;
+  padding: 10rpx 0rpx;
+}
+.yingyun{
+  margin-left: 2.5%;
+}
+.chekuanggaiyaoxiangqing{
+  overflow: hidden;
+}
+.chekuanggaiyaoxiangqing view{
+  float: left;
+  padding: 10rpx;
+  border: 1rpx solid rgba(255, 255, 255, 0.35);
+  margin-right: 25rpx;
+  margin-top: 20rpx
+}
+
+
+textarea {
+  width: 100%;
+  padding: 25rpx 0;
+  margin-top: 20rpx;
+  height: 5em
+}
+
+.textarea-wrp {
+  padding: 0 25rpx;
+  background: rgba(255, 255, 255, 0.1);
+  
+}
+
+.fabu{
+  margin-top: 80rpx;
+}
+.fabuanniu{
+  border: 1rpx solid rgba(255, 255, 255, 0.35);
+  text-align: center;
+  font-size: 35rpx;
+  letter-spacing: 5rpx;
+}
+.fabuanniu button{
+  background: rgba(255, 255, 255, 0);
+  color: #fff;
+}
+button::after{
+  border: none;
+}
+
+.yulan{
+  overflow: hidden;
+  margin-top: -20rpx;
+}
+.yulan view{
+  width: 25%;
+  float: left;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.yulan image{
+  height: 150rpx;
+  width:150rpx;
+  margin-top: -48rpx; 
+}
+.shanchu{
+  position:  relative;
+  left: 58rpx; 
+  z-index: 900;
+}
+.yulan video{
+  height: 150rpx;
+  width:150rpx;
+  margin-top: -48rpx; 
+}
+
+/*省份*/
+.province_array{
+  overflow: hidden;
+  font-size: 35rpx;
+  margin-left: 20rpx;
+}
+.province_array_name{
+  float: left;
+  width: 16.6%;
+  margin-top: 20rpx;
+  text-align: center;
+}
+.province_array_name view{
+  background: rgba(255, 255, 255, 0.3);
+  padding: 20rpx 0rpx;
+  margin-right: 20rpx;
+}
+
+.btn{
+  background: rgba(255, 255, 255, 0.45) ;
+  color: #fff;
+  width: 114rpx;
+  height: 54rpx;
+  font-size: 28rpx;
+  text-align: left;
+  letter-spacing: 0rpx;
+  line-height: 56rpx;
+}
+
+
+/*车况自证 2018-7-4*/
+.ck_title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+  margin-top: 37rpx;
+  margin-bottom: 8rpx;
+}
+.ck_title view{
+  width: 340rpx;
+  height: 74rpx;
+  text-align: center;
+  border: 1rpx solid rgba(255, 255, 255, 0.3);
+  font-size: 28rpx;
+  line-height: 74rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+  max-width: 340rpx;
+}
+
+.ck_list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+  height: 74rpx;
+  border: 1rpx solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  line-height: 74rpx;
+  margin-top: 15rpx;
+  border-radius: 10rpx;
+  padding: 0 20rpx;
+}
+.ck_list image{
+  width: 37rpx;
+  height: 37rpx;
+}
+.ck_list_li{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+.ck_list_li view{
+  margin-right: 20rpx;
+  
+}
+.ck_list_list{
+  overflow: hidden;
+}
+.ck_list_list view{
+  border:  1rpx solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  width: 130rpx;
+  margin-right: 20rpx;
+  float: left;
+  height: 74rpx;
+  line-height: 74rpx;
+  margin-top: 20rpx;
+
+}
+

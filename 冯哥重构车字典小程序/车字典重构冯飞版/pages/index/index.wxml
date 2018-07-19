@@ -1,0 +1,163 @@
+<import src="../../template/t-phone/t-phone.wxml" />
+<view class='kf_zhezhao' hidden="{{!flag}}">
+    <template is="t-order-list" data='{{flag}}' />  
+</view>
+
+
+
+<!-- banner-->
+<view class='banner'>
+    <swiper class='swiper-box'  autoplay="true" interval="4000" duration="500" circular="true" indicator-color="#fff" indicator-active-color="#bfbfbf" previous-margin='0rpx' next-margin='30rpx'>
+        <block wx:for="{{banners}}" wx:key="" wx:for-index="i">
+            <swiper-item>
+                <image src='{{item.url}}' data-index="{{i+1}}" catchtap='dianjitupian' mode="widthFix" style='width:100%'></image>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+
+<view class='vin_image'> 
+    <image src='{{vin_image}}' mode="aspectFill" catchtap='shanchutupian'></image>
+</view>
+
+
+<!-- 排行榜 -->
+<view class='jiangbei-view1'>
+    <view class='jiangbei-view2' catchtap='paihangbang'>
+        <image src='../../images/chonggou/jiangbei.png'></image>
+        <text>免费查询榜</text>
+    </view>
+    <view class='jiangbei-view2' catchtap='onGirls'>
+        <image src='/images/chonggou/my/girls.png'></image>
+        <text>赚车模免费查</text>
+    </view>
+</view>
+
+<form  bindsubmit='formSubmitVin' report-submit='true'>
+    <view  class='input_photo kf_input_photo'>
+        <input name='vin' maxlength='17' placeholder-style='color:#fff' placeholder='输入17位VIN码或者上传行驶证照片' value='{{vin}}' bindblur="binput2"  bindinput='verification2'/>
+        <image src='../../images/chonggou/xiangji.png' mode='aspectFit' class='ico_photo' catchtap='onPhotograph'></image>
+    </view>
+
+    <view class="tip_rule">
+        <view  bindtap='claim'>
+            <image src='../../images/chonggou/denglan.png'></image>
+            <text> 查看案例</text>
+        </view>
+         <view catchtap='onRuleUser'>
+            <image src='../../images/chonggou/ckecked.png'></image>
+            <text>默认《用户协议》</text>
+        </view>
+    </view>
+    
+    <view class=''>
+        <view class='btn_area'>
+            <button id='onQueryMaintainLog' form-type='submit' >4S维修记录查询</button>
+            <button id='onQueryAccidentLog' form-type='submit'>车险定损记录查询</button>
+        </view> 
+    </view>
+
+    <view  class='input_photo kf_cheliang1'>
+        <input name='license'  placeholder-style='color:#fff' placeholder='请输入当前车牌号码 例:沪HKF188' maxlength='8' value='{{plate_num}}' bindblur="binput" bindinput='verification'/>
+    </view>
+    <view  class='input_photo  kf_cheliang'>
+        <picker name="cartype" mode='selector' placeholder='请选择车型' bindchange="bindCarTypeChange" value="{{picker_cartype_index}}" range="{{picker_cartype_arr}}">
+            <view class="picker">
+                {{picker_cartype_arr[picker_cartype_index]}}
+            </view>
+          <image src='../../images/chonggou/xiala.png' mode='aspectFit' class='ico_photo'></image>
+        </picker>
+    </view>
+
+    <view class=''>
+        <view class='btn_area kf_btn_area'>
+            <button id='onQueryinfoLog' form-type='submit'>车辆状态查询</button>
+        </view> 
+    </view>
+    
+</form> 
+
+
+<view class='kongbai' catchtap='canvas'></view>
+
+<view class='kf_zhezhao' hidden="{{payflag}}">
+    <view class='pay'>
+        <view class='pay_title'>
+            <view class='pay_title_left'>请选择支付方式</view>
+            <view class='pay_title_right' catchtap='closePay'>+</view>
+        </view>
+
+        <view class='selected' catchtap='onPayType1'>
+            <view class='selected_left'>
+                <view style='margin-left:30rpx'>
+                    <image src='../../images/chonggou/price.png'></image>
+                </view>
+                <view style='margin-left:34rpx;color: rgba(255,255,255,{{balancePrompt}});'>
+                    余额支付<text wx:if='{{balancePrompt==0.2}}'>(余额不足)</text>
+                </view>
+            </view>
+            <view class='selected_right'>
+                <view style='color: rgba(255,255,255,{{balancePrompt}}'>{{price}}</view>
+                <view style='margin: 0 20rpx'>
+                    <image wx:if='{{priceType}}' src='../../images/chonggou/yixuan.png'></image>
+                    <image wx:else src='../../images/chonggou/weixuan.png'></image>
+                </view> 
+            </view> 
+        </view>
+        <view class='selected' catchtap='onPayType2'>
+            <view class='selected_left'>
+                <view style='margin-left:30rpx'>
+                    <image src='../../images/chonggou/model.png'></image>
+                </view>
+                <view style='margin-left:34rpx;color: rgba(255,255,255,{{modelPrompt}});'>
+                    车模支付<text wx:if='{{modelPrompt==0.2}}'>(车模不足)</text>
+                </view>
+            </view>
+            <view class='selected_right'>
+                <view style='color: rgba(255,255,255,{{modelPrompt}}'>{{modelCarCountCost}}</view>
+                <view style='margin: 0 20rpx'>
+                    <image wx:if='{{modelType}}' src='../../images/chonggou/yixuan.png'></image>
+                    <image wx:else src='../../images/chonggou/weixuan.png'></image>
+                </view> 
+            </view> 
+        </view>
+        <view class='pay_btn' catchtap='onPay'>
+            <view>立即支付</view>
+        </view>
+
+    </view>
+</view>
+
+<view class='kf_zhezhao' hidden="{{userflag}}">
+    <view class='kf_zhezhaokuang'>
+        <view class='kf_zhezhaokuang_wenben'>
+            车字典需要获取你的公开
+        </view>
+        <view class='kf_zhezhaokuang_wenben'>
+            信息(昵称,头像等)
+        </view>
+        <view class='kf_zhezhaokuang_button'>
+            <!-- 需要使用 button 来授权登录 -->
+            <button wx:if="{{canIUse}}"  open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">允许</button>
+            <view wx:else>请升级微信版本</view>
+        </view>
+    </view>
+</view>
+
+<view class='kf_zhezhao' hidden="{{!flag}}">
+    <view class='kf_zhezhaokuang'>
+        <view class='kf_zhezhaokuang_wenben'>
+            需要获取您的手机号
+        </view>
+        <view class='kf_zhezhaokuang_wenben'>
+            才能进行一下操作
+        </view>
+        <view class='kf_zhezhaokuang_button'>
+            <button  open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">允许</button>
+        </view>
+    </view>
+</view>
+
+
+
+

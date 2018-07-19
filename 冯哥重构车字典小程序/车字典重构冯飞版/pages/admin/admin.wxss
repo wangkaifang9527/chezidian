@@ -1,0 +1,161 @@
+/* page {
+    background: #f8f8f8;
+} */
+
+.container {
+    position: relative;
+    color: #fff;
+}
+
+.kf{
+  color: #fff;
+}
+.kf_image{
+  margin-top: 80rpx;
+  
+}
+.kf_image image{
+    width: 200rpx;
+    height: 200rpx;
+}
+.kf_view{
+  text-align: center;
+}
+.kf_tuiguang{
+  font-size: 32rpx;
+  margin: 30rpx 0rpx;
+}
+.kf_money{
+  font-size: 80rpx;
+}
+.kf_button view{
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20rpx 0rpx;
+  font-size: 32rpx;
+  margin: 50rpx auto;
+  width: 70%;
+  border-radius: 10rpx;
+}
+.kongbai{
+  height: 100rpx;
+}
+
+
+
+.my_money {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.my_money .text_small {
+    margin-left: 30rpx;
+    margin-top: 55rpx;
+}
+
+.my_money .text_big {
+    font-size: 50px;
+    margin-left: 30rpx;
+    margin-top: 0px;
+}
+
+.my_money .text_big text {
+    font-size: 12px;
+}
+
+.my_money .btn_li {
+    font-size: 16px;
+    height: 100rpx;
+    line-height: 100rpx;
+    border-top: 1px solid #e5e5e5;
+    margin: 0 30rpx;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.my_money button {
+    width: 160rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    border: 1px solid #333;
+    border-radius: 100px;
+    text-align: center;
+    background: transparent;
+    position: absolute;
+    right: 37rpx;
+    top: 100rpx;
+    font-size: 16px;
+}
+
+.my_list {
+    margin-top: 15px;
+}
+
+.my_list_li {
+    font-size: 28rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 0 30rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.my_list_li:last-child {
+    border: none;
+}
+
+.my_list_left {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.my_list_left image {
+    height: 100rpx;
+    width: 36rpx;
+    margin-right: 20rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.my_list_left text {
+
+}
+
+.my_list_right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.my_list_right image, .btn_li image {
+    height: 100rpx;
+    width: 44rpx;
+    margin-left: 10rpx;
+}
+
+.my_list_right text {
+}
+/*  */
+.tips {
+    height: 88rpx;
+    line-height: 88rpx;
+    padding: 0 40rpx;
+}
+.red_cir{
+    display: inline-block;
+    background: #FB4242;
+    height: 44rpx;
+    line-height: 44rpx;
+    min-width: 22rpx;
+    padding:0 10rpx;
+    border-radius: 100px;
+}

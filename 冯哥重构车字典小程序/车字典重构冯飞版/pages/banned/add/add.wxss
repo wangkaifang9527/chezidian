@@ -1,0 +1,73 @@
+/* pages/banned/add/add.wxss */
+.add{
+  padding: 20rpx;
+  color: #fff;
+  letter-spacing: 2rpx;
+}
+.xinxi{
+  margin-top: 10rpx;
+}
+.shuru{
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20rpx;
+  margin-top: 10rpx;
+  border-radius: 10rpx;
+}
+.shuru textarea{
+  height: 150rpx;
+}
+.input-placeholder{
+  /* color: #fff; */
+}
+.zhengju{
+  margin-top: 20rpx;
+  margin-bottom:10rpx
+}
+.tupian image{
+  height: 150rpx;
+  width:150rpx;
+}
+.tijiaozhe{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+  margin-top: 20rpx;
+}
+.tijiaozhe image{
+  width: 20rpx;
+  height:20rpx;
+}
+button{
+  background: rgba(255, 255, 255, 0);
+  margin-top: 100rpx;
+  color: #fff;
+  border: 1rpx solid rgba(255, 255, 255, 0.2);
+}
+
+.neirong{
+  margin: 20rpx 0rpx;
+}
+.yulan{
+  overflow: hidden;
+  margin-top: 20rpx;
+}
+.yulan view{
+  width: 25%;
+  float: left;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.yulan image{
+  height: 150rpx;
+  width:150rpx;
+  margin-top: -48rpx; 
+}
+.shangchuantupian{
+  margin-top: 20rpx;
+}
+.shanchu{
+  position:  relative;
+  left: 58rpx; 
+  z-index: 10;
+}

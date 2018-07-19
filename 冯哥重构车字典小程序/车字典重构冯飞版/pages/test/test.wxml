@@ -1,0 +1,16 @@
+<view class="container">
+  <!-- 生成二维码 -->
+  <view class="input-row">
+      <label>内容</label>
+      <input value='{{qrcStr}}' class="qrcInput" bindblur="onQrcStrBlur" type="text" maxlength="255" 
+                placeholder="{{qrcPhld}}"/>
+  </view>
+  <button class="genQrcBtn" type="primary" bindtap="onGenQrc">生成二维码</button>
+ 
+  <view class="img-box">
+      <canvas bindtap="onPreviewQrc" hidden="{{canvasHidden}}" 
+                style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="qrcCanvas"/>
+  </view>
+</view> 
+<view hidden="{{maskHidden}}" class="mask"></view>
+<view class="canvas-box"></view>

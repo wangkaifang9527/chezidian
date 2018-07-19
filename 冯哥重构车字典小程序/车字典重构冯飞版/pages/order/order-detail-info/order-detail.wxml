@@ -1,0 +1,218 @@
+<view class='kf_weixin'>
+    <view class='left' catchtap='fanhui'>
+        <image src='/images/chonggou/fanhui.png'></image>
+    </view>
+    <view class='right'>
+        <button open-type="share">
+            <image src='/images/chonggou/zhuanfa.png'></image>
+        </button>
+    </view>
+</view> 
+<view class='container'>
+    <!-- 车辆信息 -->
+    <view class='title'>车辆信息</view>
+    <view class='box car_detail'>
+
+        <view class='line top'>
+            <text>车牌号码</text>
+            <text>{{car.result.plate}}</text>
+        </view>
+        <view class='line'>
+            <text>所有人</text>
+            <text>{{car.result.man}}</text>
+        </view>
+        <view class='line'>
+            <text>车辆型号</text>
+            <text>{{car.result.type}}</text>
+        </view>
+        <view class='line'>
+            <text>车辆品牌名称</text>
+            <text>{{car.result.brand}}</text>
+        </view>
+        <view class='line'>
+            <text>车架号</text>
+            <text>{{car.result.vin}}</text>
+        </view>
+        <!-- <view class='line'>
+            <text>Vin年份</text>
+            <text>{{car.result.vindate}}</text>
+        </view> -->
+        <view class='line'>
+            <text>初次登记日期</text>
+            <text>{{car.result.record}}</text>
+        </view>
+        <view class='line'>
+            <text>检验有效期止</text>
+            <text>{{car.result.validity}}</text>
+        </view>
+        <view class='line'>
+            <text>强制报废期止</text>
+            <text>{{car.result.retirement}}</text>
+        </view>
+    </view>
+    <view class='box car_detail'>
+        <!-- <view class='line top'>
+            <text>序号</text>
+            <text>{{car.result.number}}</text>
+        </view> -->
+        <view class='line top'>
+            <text>车辆类型</text>
+            <text>{{car.result.vehicletype}}</text>
+        </view>
+        <view class='line'>
+            <text>发动机号</text>
+            <text>{{car.result.engine}}</text>
+        </view>
+        <view class='line'>
+            <text>发动机型号</text>
+            <text>{{car.result.enginetype}}</text>
+        </view>
+        <view class='line'>
+            <text>机动车状态</text>
+            <text>{{car.result.state}}</text>
+        </view>
+        <view class='line'>
+            <text>使用性质</text>
+            <text>{{car.result.properties}}</text>
+        </view>
+        <view class='line'>
+            <text>号牌种类</text>
+            <text>{{car.result.variety}}</text>
+        </view>
+        <view class='line'>
+            <text>燃料种类</text>
+            <text>{{car.result.fuel}}</text>
+        </view>
+        <view class='line'>
+            <text>核定载客数</text>
+            <text>{{car.result.passengers}}</text>
+        </view>
+        <view class='line'>
+            <text>排量</text>
+            <text>{{car.result.cc}}</text>
+        </view>
+        <view class='line'>
+            <text>车身颜色</text>
+            <text>{{car.result.color}}</text>
+        </view>
+        <view class='line'>
+            <text>出厂日期</text>
+            <text>{{car.result.pps}}</text>
+        </view>
+        <!-- <view class='line'>
+            <text>变速器类型</text>
+            <text>{{car.result.shifttype}}</text>
+        </view> -->
+        <!-- <view class='line'>
+            <text>档位数</text>
+            <text>{{car.result.gearscount}}</text>
+        </view> -->
+        <!-- <view class='line'>
+            <text>排放标准</text>
+            <text>{{car.result.effluentnorm}}</text>
+        </view> -->
+        <!-- <view class='line'>
+            <text>车辆代码</text>
+            <text>{{car.result.carcode}}</text>
+        </view> -->
+        <!-- <view class='line'>
+            <text>车系</text>
+            <text>{{car.result.demio}}</text>
+        </view> -->
+        <!-- <view class='line'>
+            <text>销售名称</text>
+            <text>{{car.result.sellname}}</text>
+        </view> -->
+        <!-- <view class='line'>
+            <text>车辆级别</text>
+            <text>{{car.result.carlevel}}</text>
+        </view> -->
+        <!-- <view class='line'>
+            <text>车身形式</text>
+            <text>{{car.result.carform}}</text>
+        </view> -->
+        <!-- <view class='line'>
+            <text>车门数</text>
+            <text>{{car.result.doorcount}}</text>
+        </view> -->
+        <!-- <view class='line'>
+            <text>发动机最大功率(KW)</text>
+            <text>{{car.result.maxpower}}</text>
+        </view> -->
+        <!-- <view class='line'>
+            <text>变速箱描述</text>
+            <text>{{car.result.shiftdesc}}</text>
+        </view> -->
+        <!-- <view class='line'>
+            <text>燃油标号</text>
+            <text>{{car.result.fuelcode}}</text>
+        </view> -->
+        <!-- <view class='line'>
+            <text>驱动方式</text>
+            <text>{{car.result.driverway}}</text>
+        </view> -->
+        <!-- <view class='line'>
+            <text>缸数</text>
+            <text>{{car.result.vatcount}}</text>
+        </view> -->
+    </view>
+    <view class='box car_detail'>
+         <view class='line top'>
+            <text>核定载客数</text>
+            <text>{{car.result.passengers}}</text>
+        </view>
+        <view class='line'>
+            <text>最大功率（kw）</text>
+            <text>{{car.result.maxjourney}}</text>
+        </view>  
+        <view class='line'>
+            <text>轴数</text>
+            <text>{{car.result.shaft}}</text>
+        </view>
+        <view class='line'>
+            <text>轴距</text>
+            <text>{{car.result.wheelbase}}</text>
+        </view> 
+        <view class='line '>
+            <text>前轮距</text>
+            <text>{{car.result.fronttread}}</text>
+        </view> 
+        <view class='line '>
+            <text>后轮距</text>
+            <text>{{car.result.reartread}}</text>
+        </view> 
+        <view class='line '>
+            <text>总质量</text>
+            <text>{{car.result.crossweight}}</text>
+        </view> 
+        <view class='line '>
+            <text>整备质量</text>
+            <text>{{car.result.curbweight}}</text>
+        </view> 
+        <!-- <view class='line top'>
+            <text>厂商名称</text>
+            <text>{{car.result.brandname}}</text>
+        </view> -->
+        <!-- <view class='line'>
+            <text>指导价格</text>
+            <text>{{car.result.guideprice}}</text>
+        </view> -->
+        
+        <!-- <view class='line'>
+            <text>上市年份</text>
+            <text>{{car.result.listdate}}</text>
+        </view> -->
+        <!-- <view class='line'>
+            <text>上市月份</text>
+            <text>{{car.result.listmonth}}</text>
+        </view> -->
+        <!-- <view class='line'>
+            <text>停产年份</text>
+            <text>{{car.result.stopdate}}</text>
+        </view> -->
+        <!-- <view class='line'>
+            <text>年款</text>
+            <text>{{car.result.mj}}</text>
+        </view> -->
+    </view>
+</view>

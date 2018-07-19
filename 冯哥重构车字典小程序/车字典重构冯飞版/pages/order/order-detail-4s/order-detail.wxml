@@ -1,0 +1,170 @@
+<view class='kf_weixin'>
+    <view class='left' catchtap='fanhui'>
+        <image src='/images/chonggou/fanhui.png'></image>
+    </view>
+    <view class='right'>
+        <button open-type="share">
+            <image src='/images/chonggou/zhuanfa.png'></image>
+        </button>
+    </view>
+</view> 
+<view class='container'>
+    <!-- 车辆概要 -->
+    <view class='title'>车辆概要</view>
+    <view class='box car_detail'>
+        <view class='line top'>
+            <text>车牌号码</text>
+            <text>{{License}}</text>
+        </view>
+       
+        <view class='line'>
+            <text>车辆品牌</text>
+            <text>{{car.data.car_brand}}</text>
+        </view>
+        <view class='line'>
+            <text>车架号</text>
+            <text>{{car.data.vin}}</text>
+        </view>
+        
+        <view class='line'>
+            <text>变速箱</text>
+            <text>{{car.data.gearbox_type}}</text>
+        </view>
+        <view class='line'>
+            <text>排量</text>
+            <text>{{car.data.displacement}} L</text>
+        </view>
+
+        <view class='line'>
+            <text>维保次数</text>
+            <text>{{car.data.wei_bao_ci_shu}} </text>
+        </view>
+        <view class='line'>
+            <text>维保周期</text>
+            <text>{{car.data.wei_bao_zhou_qi}} </text>
+        </view>
+        <view class='line'>
+            <text>最大里程</text>
+            <text>{{car.data.zui_da_li_cheng}} </text>
+        </view>
+
+        <view class='line'>
+            <text>发动机是否正常</text>
+            <text>{{car.data.engine}} </text>
+        </view>
+        <view class='line'>
+            <text>里程数是否正常</text>
+            <text>{{car.data.mileage}} </text>
+        </view>
+        <view class='line'>
+            <text>变速箱是否异常</text>
+            <text>{{car.data.tr}} </text>
+        </view>
+        <view class='line'>
+            <text>最后到店日期</text>
+            <text>{{car.data.lastdate}} </text>
+        </view>
+        <view class='line'>
+            <text>是否火烧</text>
+            <text>{{car.data.fire}} </text>
+        </view>
+        <view class='line'>
+            <text>是否水泡</text>
+            <text>{{car.data.water}} </text>
+        </view>
+        <view class='line'>
+            <text>重要部件是否维修</text>
+            <text>{{car.data.main}} </text>
+        </view>
+
+        <view class='line'>
+            <text>外观覆盖件是否维修</text>
+            <text>{{car.data.out}} </text>
+        </view>
+        <view class='line'>
+            <text>维修次数</text>
+            <text>{{car.data.repair_num}} </text>
+        </view>
+        <view class='line'>
+            <text>每年平均维修次数</text>
+            <text>{{car.data.repair_pre}} </text>
+        </view>
+        <view class='line'>
+            <text>总公里数</text>
+            <text>{{car.data.max_kilometer}} </text>
+        </view>
+
+    </view>
+
+    <!-- 报告详情 -->
+    <!-- <view class='title'>结果报告</view>
+    <view wx:if="{{car.data.result_report.length>0}}" class='box result_detail'>
+        <view class='top'>
+            <text class="h1">结果总概：</text>
+            <block wx:for="{{car.data.result_report}}" wx:for-item="item" wx:key="" wx:for-index="i">
+                <text>{{i+1}}、{{item}}</text>
+            </block>
+        </view>
+    </view>
+    <view wx:else class="tip_left">暂无结果报告内容</view> -->
+    <view wx:if="{{car.detail.length>0}}" class='box result_detail bg_502'>
+        <view class='top'>
+            <text class="h1">结果详细记录：</text>
+        </view>
+
+        <block wx:for="{{car.detail}}" wx:for-item="item" wx:key="">
+            <view class='line'>
+                <image class="left_img" src='/images/502.png'></image>
+                <image class="right_img" src='/images/502.png'></image>
+                <view class="table">
+                    <view class="tr">
+                        <text>日期</text>
+                        <text>公里数</text>
+                        <text>类型</text>
+                    </view>
+                    <view class="tr">
+                        <text>{{item.repair_date}}</text>
+                        <text>{{item.kilometer}}</text>
+                        <text>维修</text>
+                    </view>
+                    <view class="text_box">
+                        <view class="h2">维修保养内容：</view>
+                        <view class='p'>
+                            <text>项目：</text>
+                            <view>{{item.repair_project}}</view>
+                        </view>
+                        <view class='p'>
+                            <text>材料：</text>
+                            <view>{{item.repair_material}}</view>
+                        </view>
+                        <view class='p'>
+                            <text>备注：</text>
+                            <view>{{item.repair_detail}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+
+    </view>
+
+    <!-- 异常报告 -->
+    <!-- <view class='title'>异常报告</view>
+    <view wx:if="{{car.data.number_of_accidents>0}}" class='box accidents_detail'>
+        <view class='line top'>
+            <text>日期</text>
+            <text>异常描述</text>
+        </view>
+        <block wx:for="{{car.data.result_description}}" wx:for-item="item" wx:key="">
+            <view class='line'>
+                <text>{{item.date}}</text>
+                <text>{{item.content}}</text>
+            </view>
+        </block>
+
+
+    </view>
+    <view wx:else class="tip_left">暂无异常报告内容</view> -->
+
+
+</view>

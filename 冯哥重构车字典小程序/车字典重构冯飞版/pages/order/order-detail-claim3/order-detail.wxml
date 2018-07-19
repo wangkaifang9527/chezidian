@@ -1,0 +1,118 @@
+<view class='container'>
+    <!-- 车辆概要 -->
+    <view class='title'>理赔概要</view>
+    <view class='box car_detail'>
+        <view class='line top'>
+            <text>车牌号</text>
+            <text>{{car.data.License}}</text>
+        </view>
+        <view class='line'>
+            <text>理赔总金额</text>
+            <text>{{car.data.result.summarydata.claimmoney}} 元</text>
+        </view>
+        <view class='line'>
+            <text>维修总件数</text>
+            <text>{{car.data.result.summarydata.repaircount}} 件</text>
+        </view>
+        <view class='line'>
+            <text>维修总金额</text>
+            <text>{{car.data.result.summarydata.repairmoney}} 元</text>
+        </view>
+        <view class='line'>
+            <text>换件总件数</text>
+            <text>{{car.data.result.summarydata.renewcount}} 件</text>
+        </view>
+        <view class='line'>
+            <text>换件总金额</text>
+            <text>{{car.data.result.summarydata.renewmoney}} 元</text>
+        </view>
+    </view>
+
+    <!-- 出险报告 -->
+    <view wx:if="{{car.data.result.summarydata.claimcount>0}}" class='title'>出险报告
+        <text>{{car.data.result.summarydata.claimcount}}</text>
+    </view>
+    <view wx:if="{{car.data.result.summarydata.claimcount>0}}" class='box result_detail'>
+        <block wx:for="{{car.data.result.carclaimrecords}}" wx:for-item="item" wx:key="">
+            <view class='line'>
+                <image class="left_img" src='/images/502.png'></image>
+                <image class="right_img" src='/images/502.png'></image>
+                <view class='top'>
+                    <text class="h1">结果详细记录：</text>
+                    <view class="top_li">
+                        <text class="left">理赔车牌号</text>
+                        <text class="right">{{item.licenseno}}</text>
+                    </view>
+                    <view class="top_li">
+                        <text class="left">理赔车型</text>
+                        <text class="right">{{item.vehiclemodel}}</text>
+                    </view>
+                    <view class="top_li">
+                        <text class="left">理赔车架号</text>
+                        <text class="right">{{item.frameno}}</text>
+                    </view>
+                    <view class="top_li">
+                        <text class="left">理赔金额</text>
+                        <text class="right">{{item.damagemoney}} 元</text>
+                    </view>
+                    <view class="top_li">
+                        <text class="left">维修金额</text>
+                        <text class="right">{{item.repairamount}} 元</text>
+                    </view>
+                    <view class="top_li">
+                        <text class="left">换件金额</text>
+                        <text class="right">{{item.renewalamount}} 元</text>
+                    </view>
+                    <view class="top_li">
+                        <text class="left">其他金额</text>
+                        <text class="right">{{item.otheramount}} 元</text>
+                    </view>
+                    <view class="top_li">
+                        <text class="left">出险时间</text>
+                        <text class="right">{{item.dangertime}}</text>
+                    </view>
+                    <text class="h1" style='padding-top:15px;'>理赔项列表：</text>
+                    <view class='table'>
+                        <!-- <view class="tr theader"> -->
+                        <!-- <text>类型</text> -->
+                        <!-- <text>名称</text>
+                            <text>金额</text>
+                        </view> -->
+                        <block wx:for="{{item.claimdetails}}" wx:for-item="item2" wx:key="">
+                            <view class="tr">
+                                <!-- <text>{{item2.itemtype}}</text> -->
+                                <text>【{{item2.itemtype}}】{{item2.itemname}}</text>
+                                <text>{{item2.itemamount}} 元</text>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+
+            </view>
+        </block>
+
+    </view>
+
+    <!-- 保单报告 -->
+    <view wx:if="{{car.data.result.policycount>0}}" class='title'>保单报告</view>
+    <view wx:if="{{car.data.result.policycount>0}}" class='box accidents_detail'>
+        <view class='line top'>
+            <text>开始时间</text>
+            <text>结束时间</text>
+            <text>保单类型</text>
+        </view>
+        <block wx:for="{{car.data.result.policyrecords}}" wx:for-item="item" wx:key="">
+            <view class='line'>
+                <text>{{item.begindate}}</text>
+                <text>{{item.enddate}}</text>
+                <text wx:if="{{item.policytype=='FORCE'}}">交强</text>
+                <text wx:else>商业</text>
+            </view>
+        </block>
+
+
+    </view>
+
+
+</view>
+

@@ -1,0 +1,165 @@
+<view class='kf_weixin'>
+    <view class='left' catchtap='fanhui'>
+        <image src='/images/chonggou/fanhui.png'></image>
+    </view>
+    <view class='right'>
+        <button open-type="share">
+            <image src='/images/chonggou/zhuanfa.png'></image>
+        </button>
+    </view>
+</view> 
+ <view class='container'>
+    
+    <view class='title'>理赔概要</view>
+    <view class='box car_detail'>
+        <view class='line top'>
+            <text>车牌号</text>
+            <text>{{order_claim2.licenseNo}}</text>
+        </view>
+        <view class='line'>
+            <text>汽车品牌</text>
+            <text>{{order_claim2.brand}}</text>
+        </view>
+        <view class='line'>
+            <text>排放标准</text>
+            <text>{{order_claim2.emission}}</text>
+        </view>
+        <view class='line'>
+            <text>理赔记录</text>
+            <text>{{order_claim2.claimCount}}</text>
+        </view>
+        <view class='line'>
+            <text>过户次数</text>
+            <text>{{order_claim2.transferTimes}}</text>
+        </view>
+    </view>
+
+    <view  class='title'>历年保单信息</view>
+<view class='box result_detail'>
+    
+    <view class='line' >
+        <image class="left_img" src='/images/502.png'></image>
+        <image class="right_img" src='/images/502.png'></image>
+        <view class='top'>
+            <text class="h1">最近一年</text>
+            <view class="top_li">
+                <text class="right">{{order_claim2.insureDateline}}</text>
+            </view>
+            <view class="top_li">
+                <text class="right">{{order_claim2.insurer}}</text>
+            </view>
+            <view class="top_li">
+                <text class="right">{{order_claim2.insureNo}}</text>
+            </view>
+        </view>
+</view>
+
+    </view>
+    <view wx:if="{{order_claim2.insureInfos.length>0}}" class='box result_detail'>
+        <block wx:for="{{order_claim2.insureInfos}}" wx:key="" wx:for-item="item" wx:for-index="i">
+            
+            
+            <view class='line'>
+                <image class="left_img" src='/images/502.png'></image>
+                <image class="right_img" src='/images/502.png'></image>
+                <view class='top'>
+                    <text class="h1">{{item.year}}</text>
+                    <view class="top_li">
+                        <text class="right">{{item.insureDateline}}</text>
+                    </view>
+                    <view class="top_li">
+                        <text class="right">{{item.insurer}}</text>
+                    </view>
+                    <view class="top_li">
+                        <text class="right">{{item.insureNo}}</text>
+                    </view>
+                    <view class="top_li">
+                        <text class="right">{{item.insureDateline2}}</text>
+                    </view>
+                    <view class="top_li">
+                        <text class="right">{{item.insurer2}}</text>
+                    </view>
+                    <view class="top_li">
+                        <text class="right">{{item.insureNo2}}</text>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+
+    <!-- 出险报告 -->
+    <view wx:if="{{order_claim2.claimRecords.length>0}}" class='title'>出险报告
+        <text>{{order_claim2.claimRecords.length}}</text>
+    </view>
+    <view wx:if="{{order_claim2.claimRecords.length>0}}" class='box result_detail'>
+        <block wx:for="{{order_claim2.claimRecords}}" wx:for-item="item" wx:key="">
+            <view class='line'>
+                <image class="left_img" src='/images/502.png'></image>
+                <image class="right_img" src='/images/502.png'></image>
+                <view class='top'>
+                    <text class="h1">详情记录：</text>
+                    <view class="top_li">
+                        <text class="left">出险时间</text>
+                        <text class="right">{{item.claimDate}}</text>
+                    </view>
+                    <view class="top_li">
+                        <text class="left">保险类型</text>
+                        <text class="right">{{item.insureType}}</text>
+                    </view>
+                    <view class="top_li">
+                        <text class="left">保险公司</text>
+                        <text class="right">{{item.insurer}}</text>
+                    </view>
+                    <view class="top_li">
+                        <text class="right">{{item.insureNo}}</text>
+                    </view>
+                    <view class="top_li">
+                        <text class="left">理赔金额</text>
+                        <text class="right">{{item.totalAmount}}</text>
+                    </view>
+                    <text class="h1" style='padding-top:15px;'>理赔项列表：</text>
+                    <view class='table'>
+                       
+                        <block wx:for="{{item.claimItems}}" wx:for-item="item2" wx:key="">
+                            <view class="tr">
+                                <text>【{{item2.type}}】{{item2.item}}</text>
+                                <text>{{item2.price}} 元</text>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+
+            </view>
+        </block>
+
+    </view> 
+
+  <!-- 
+    <view wx:if="{{car.data.result.policycount>0}}" class='title'>保单报告</view>
+    <view wx:if="{{car.data.result.policycount>0}}" class='box accidents_detail'>
+        <view class='line top'>
+            <text>开始时间</text>
+            <text>结束时间</text>
+            <text>保单类型</text>
+        </view>
+        <block wx:for="{{car.data.result.policyrecords}}" wx:for-item="item" wx:key="">
+            <view class='line'>
+                <text>{{item.begindate}}</text>
+                <text>{{item.enddate}}</text>
+                <text wx:if="{{item.policytype=='FORCE'}}">交强</text>
+                <text wx:else>商业</text>
+            </view>
+        </block>
+
+
+    </view> -->
+
+
+</view>
+
+
+
+<!-- <web-view class ="kf-web" src="{{src}}">
+</web-view> -->
+
+

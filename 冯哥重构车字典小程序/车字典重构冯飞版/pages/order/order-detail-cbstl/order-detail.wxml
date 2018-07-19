@@ -1,0 +1,143 @@
+<view class='kf_weixin'>
+    <view class='left' catchtap='fanhui'>
+        <image src='/images/chonggou/fanhui.png'></image>
+    </view>
+    <view class='right'>
+        <button open-type="share">
+            <image src='/images/chonggou/zhuanfa.png'></image>
+        </button>
+    </view>
+</view> 
+<view class='container'>
+    <!-- 车辆概要 -->
+    <view class='title'>车辆详情</view>
+    <view class='box car_detail'>
+        <block wx:for="{{car.itemData[2].itemPropValue}}" wx:for-item="" wx:for-index="i" wx:key="">
+            <view wx:if='{{i==0}}' class='line top'>
+                <text>{{item.itemPropLabel}}</text>
+                <text>{{item.itemPropValue}}</text>
+            </view>
+            <view wx:else class='line'>
+                <text>{{item.itemPropLabel}}</text>
+                <text>{{item.itemPropValue}}</text>
+            </view>
+        </block>
+    </view>
+
+
+    <view class='title'>报告概要信息</view>
+    <view class='box car_detail'>
+        <block wx:for="{{car.itemData[0].itemPropValue}}" wx:for-item="" wx:for-index="i" wx:key="">
+            <view wx:if='{{i==0}}' class='line top'>
+                <text>{{item.itemPropLabel}}</text>
+                <text>{{item.itemPropValue}}</text>
+            </view>
+            <view wx:else class='line'>
+                <text>{{item.itemPropLabel}}</text>
+                <text>{{item.itemPropValue}}</text>
+            </view>
+        </block>
+
+        <!-- <view class='line top'>
+            <text>安全气囊异常次数</text>
+            <text>{{car.itemData[0].itemPropValue[0].itemPropValue}}</text>
+        </view>
+        <view class='line'>
+            <text>里程表异常次数</text>
+            <text>{{car.itemData[0].itemPropValue[1].itemPropValue}}</text>
+        </view>
+        <view class='line'>
+            <text>最大里程</text>
+            <text>{{car.itemData[0].itemPropValue[2].itemPropValue}}</text>
+        </view>
+        <view class='line'>
+            <text>维保次数</text>
+            <text>{{car.itemData[0].itemPropValue[3].itemPropValue}}</text>
+        </view>
+        <view class='line'>
+            <text>泡水次数</text>
+            <text>{{car.itemData[0].itemPropValue[4].itemPropValue}}</text>
+        </view>
+        <view class='line'>
+            <text>结构部件异常次数</text>
+            <text>{{car.itemData[0].itemPropValue[5].itemPropValue}}</text>
+        </view>
+        <view class='line'>
+            <text>重大事故次数</text>
+            <text>{{car.itemData[0].itemPropValue[6].itemPropValue}}</text>
+        </view>
+        <view class='line'>
+            <text>发动机异常次数</text>
+            <text>{{car.itemData[0].itemPropValue[7].itemPropValue}}</text>
+        </view>
+        <view class='line'>
+            <text>火烧次数</text>
+            <text>{{car.itemData[0].itemPropValue[8].itemPropValue}}</text>
+        </view>
+        <view class='line'>
+            <text>变速器类型</text>
+            <text>{{car.itemData[0].itemPropValue[9].itemPropValue}}</text>
+        </view>
+        <view class='line'>
+            <text>最后到店日期</text>
+            <text>{{car.itemData[0].itemPropValue[10].itemPropValue}}</text>
+        </view> -->
+     
+    </view>
+
+
+    <!-- 报告详情 -->
+    <view class='title'>外观覆盖件报告</view>
+
+    <view wx:if="{{car.itemData[1].itemPropValue.length>0}}" class='box result_detail bg_502'>
+        <block wx:for="{{car.itemData[1].itemPropValue}}" wx:for-item="item" wx:key="">
+            <view class='line'>
+                <image class="left_img" src='/images/502.png'></image>
+                <image class="right_img" src='/images/502.png'></image>
+                <view class="table">
+                    <view class="tr">
+                        <text>日期</text>
+                        <text>公里数</text>
+                        <text>类型</text>
+                    </view>
+                    <view class="tr">
+                        <text>{{item[2].itemPropValue}}</text>
+                        <text>{{item[0].itemPropValue}}</text>
+                        <text>{{item[6].itemPropValue}}</text>
+                    </view>
+                    <view class="text_box">
+                        <view class="h2">维修保养内容：</view>
+                        <view class='p'>
+                            <text>项目描述：</text>
+                            <view>{{item[3].itemPropValue}}</view>
+                        </view>
+                        <view class='p'>
+                            <text>材料：</text>
+                            <view>{{item[4].itemPropValue}}</view>
+                        </view>
+                        <view class='p'>
+                            <text>记录来源：</text>
+                            <view>{{item[1].itemPropValue}}</view>
+                        </view>
+                        <view class='p'>
+                            <text>记录是否异常：</text>
+                            <view>{{item[7].itemPropValue}}</view>
+                        </view>
+                        <view class='p'>
+                            <text class='beizhu'>备注：</text>
+                            <view>{{item[5].itemPropValue}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+
+    </view>
+
+    <view wx:else class="tip_left">暂无结果报告内容</view>
+
+
+   
+
+
+</view>

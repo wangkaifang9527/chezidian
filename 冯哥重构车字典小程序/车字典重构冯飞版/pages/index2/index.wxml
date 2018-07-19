@@ -1,0 +1,78 @@
+<!-- banner-->
+<view class='banner'>
+    <swiper indicator-dots="true" autoplay="true" interval="4000" duration="500" circular="true">
+        <block wx:for="{{banners}}" wx:key="">
+            <swiper-item>
+                <image src='{{item}}' mode='scaleToFill'></image>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+
+<form class='form' bindsubmit='formSubmit'>
+    <!--输入框-->
+    <view class='section' style='margin-top: 20px;'>
+        <view class='input_photo'>
+            <picker name="cartype" mode='selector' placeholder='请选择车型' bindchange="bindCarTypeChange" value="{{picker_cartype_index}}" range="{{picker_cartype_arr}}">
+                <view class="picker">
+                    {{picker_cartype_arr[picker_cartype_index]}}
+                </view>
+            </picker>
+             <!-- <input name='cartype' type='hidden' value='{{picker_cartype_arr[picker_cartype_index]}}' />  -->
+        </view>
+    </view>
+    <!--输入框-->
+    <view class='section' style='margin-top: 20px;'>
+        <!-- <view class='input_photo'>
+            <input name='vin' maxlength='17' placeholder-style='color:#7E7F8D' placeholder='输入17位VIN码或者上传行驶证照片' value='{{vin}}' />
+            <image src='../../images/ico/photo.png' mode='aspectFit' class='ico_photo' catchtap='onPhotograph'></image>
+        </view> -->
+        <view class='input_photo'>
+            <input name='license' placeholder-style='color:#7E7F8D' placeholder='请输入当前车牌号码' value='{{plate_num}}' />
+        </view>
+        <!-- <view class='input_photo'>
+            <picker mode="date" value="{{issueDate}}" start="1970-01-01" end="2099-12-31" bindchange="bindDateChange">
+                <input name="issueDate" placeholder-style='color:#7E7F8D' placeholder='请选择发证日期' value='{{issueDate}}'  disabled/>
+            </picker>
+        </view> -->
+        <!-- <view class='tips'>
+            <view class="tip_rule" catchtap='onRuleUser'>
+                <image src='/images/ico/ckecked.png'></image>
+                默认同意《用户协议》</view>
+        </view> -->
+    </view>
+
+    <view class='btn_area'>
+        <button id='onQueryMaintainLog' form-type='submit'>车辆状态查询</button>
+        <button id='onQueryAccidentLog' form-type='submit'>查询车辆及投保信息</button>
+    </view>
+    <!-- <view class='tip_center' style='margin-bottom:-5px;'>距离4S查询终身免费还有：{{times}}次</view> -->
+    <!-- <view class='tip_center' style='padding-bottom:30px'>距4S和车险查询免费还有 {{times}} 和 {{times_claim}} 次</view> -->
+    <!-- <canvas canvas-id="myCanvas"/> -->
+</form>
+
+
+
+<view class="b1" hidden="{{!flag}}"> 
+   <view class="t_w"> 
+     <!-- <view class="t_image"> 
+            <image class="t_image1" src="../images/ico/i2_man.png"></image> 
+     </view>   -->
+      <view class="b2"> 
+          
+        <view class="v1">方便用户更好体验，我们开启了一键注册，点击下方的快速登陆按钮，便可注册和登陆。</view> 
+        <view class="btn2" bindtap="b"> 
+            快速登陆
+            <button wx:if="{{!isphone}}" class='phone' open-type="getPhoneNumber"                   bindgetphonenumber="getPhoneNumber">快速登陆 </button>
+          <!-- <p class="p1">拨打电话</p> 
+          <p class="p2">可拨打电话直接与快递公司联系哦</p>  -->
+        </view> 
+         <!-- <view class="btn1" bindtap="b"> 
+          <p class="p1">网上预约快递公司</p> 
+          <p class="p2">快递公司可能无法及时响应，请耐心等待哦</p> 
+        </view>   -->
+      </view> 
+   </view> 
+</view> 
+  
+ <!-- <view bindtap="a">显示</view>  -->

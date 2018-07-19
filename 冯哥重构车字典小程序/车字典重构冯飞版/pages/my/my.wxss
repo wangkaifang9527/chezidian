@@ -1,0 +1,414 @@
+/* page {
+   background: #f8f8f8;
+   background: url("http://www.levau.com/banner/beijing4.png") ;
+   background-size: 100% 100%;
+   background-attachment: fixed;
+} */
+/*开放新增*/
+
+
+@import "../../template/t-phone/t-phone.wxss"; 
+.kf-quan{
+  background: #ffe226;
+  height: 230rpx;
+}
+.kf-kuai{
+  height: 600rpx;
+  width: 96%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-top: 80rpx;
+  margin-left: 2%;
+  background-image: url(https://guohubaoimage.oss-cn-shanghai.aliyuncs.com/mykuai); 
+
+}
+.kf-kuai image {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 100px;
+    margin-left: 60rpx;
+    margin-top: -40rpx;
+    
+}
+
+ .name {
+    font-size: 20px;
+    margin-left: 60rpx;
+    color: #333;
+    letter-spacing:1px
+}
+.agent {
+    font-size: 20rpx;
+    color: red;
+    border-radius: 100rpx;
+    border: 1px solid red;
+    opacity: 0.9;
+    margin-left: 15px;
+    padding: 0 5rpx
+}
+.kf_citys{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.kf_citys view1{
+  color: #aaa;
+  font-size: 20rpx;
+  border:1rpx solid #aaa;
+  border-radius: 100rpx;
+  height: 20rpx;
+  width:20rpx;
+  margin-top: -50rpx;
+  margin-left: 20rpx;
+}
+.kf_citys .dai{
+  height: 30rpx;
+  width: 30rpx;
+  margin-left: 20rpx;
+}
+.citys {
+    font-size: 20rpx;
+    color: #aaa;
+    height: 30rpx;
+    line-height: 30rpx;
+    padding: 0 3px;
+    margin-left: 5px;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+    max-width: 90rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.text_small {
+    margin-left: 60rpx;
+    margin-top:25rpx;
+    font-size: 11px;
+    letter-spacing:1px
+}
+.text_big {
+    font-size: 30px;
+    margin-left: 60rpx;
+    margin-top: 20rpx;
+    color: #bd4d20;
+}
+.text_big text {
+    font-size: 12px;
+    color: #bd4d20;
+}
+.kf-btn button{
+  width: 160rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    text-align: center;
+    color: #bd4d20;
+    position: absolute;
+    right: 37rpx;
+    top: 250rpx;
+    font-size: 16px;
+    background: #ffe226;
+    
+}
+button::after{
+ border: none; 
+}
+
+
+
+
+
+.container {
+    position: relative;
+    /* background: url("https://wx.qlogo.cn/mmopen/vi_32/xwjn2fxVgMw3EF4PQQyHpMiboYj4hNckLYibgqBRwKxbVBv8KYl7BKVjiaobwkaZjibbFksEvMsZe6JLuTYRqaq61g/0") no-repeat;
+    background-size: 100% 100%;
+    filter: sepia(100%);
+    filter:saturate(3);
+    filter:hue-rotate(90deg);
+    filter: invert(1);
+    filter: opacity(.2);
+    filter: brightness(.5); */
+}
+
+.my_money {
+    position: relative;
+    width: 100%;
+    height: 336rpx;
+    color: #fff;
+    overflow: hidden;
+    background-image: linear-gradient(220deg, #353c5b 3%, #070624 100%);
+}
+
+.my_money .text_small {
+    margin-left: 30rpx;
+    margin-top: 55rpx;
+}
+
+.my_money .text_big {
+    font-size: 50px;
+    margin-left: 30rpx;
+    margin-top: 0px;
+}
+
+.my_money .text_big text {
+    font-size: 12px;
+}
+
+.my_money button {
+    width: 160rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    text-align: center;
+    background: transparent;
+    color: #fff;
+    position: absolute;
+    right: 37rpx;
+    top: 100rpx;
+    font-size: 16px;
+}
+
+.my_info {
+    position: absolute;
+    top: 261rpx;
+    left: 0;
+    width: 720rpx;
+    height: 152rpx;
+    line-height: 152rpx;
+    background: #fff;
+    box-shadow: 0px 0px 25px rgba(70, 102, 244, 0.2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.my_info image {
+    width: 74rpx;
+    height: 74rpx;
+    border-radius: 100px;
+    margin-left: 30rpx;
+}
+
+.my_info .name {
+    font-size: 16px;
+    margin-left: 48rpx;
+    color: #333;
+}
+
+.my_info .agent {
+    font-size: 20rpx;
+    color: red;
+    width: 30rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    text-align: center;
+    border-radius: 100px;
+    border: 1px solid red;
+    opacity: 0.9;
+    margin-left: 5px;
+}
+
+.my_info .citys {
+    font-size: 20rpx;
+    color: #aaa;
+    height: 30rpx;
+    line-height: 30rpx;
+    padding: 0 3px;
+    margin-left: 5px;
+    border-radius: 4px;
+    /* background: #aaa; */
+    border: 1px solid #aaa;
+    max-width: 90rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.container .white {
+    width: 100%;
+    height: 100rpx;
+    display: inline-block;
+    margin-top: 100rpx;
+}
+
+.my_list {
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0);
+
+}
+
+.my_list_li {
+    font-size: 28rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 1);
+    margin: 0 30rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.contact_view {
+    background: #eee;
+    position: absolute; 
+    top: 10px;
+    left: 0;
+    /* width: 100%; */
+    /* height: 100%; */
+     opacity: 0; 
+    z-index: 100;
+}
+
+.my_list_li:last-child {
+    border: none;
+}
+
+.my_list_left {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.my_list_left image {
+    height: 100rpx;
+    width: 36rpx;
+    margin-right: 20rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
+.my_list_right {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.my_list_right image {
+    height: 30rpx;
+    width: 30rpx;
+    margin-left: 10rpx;
+}
+
+
+
+
+
+
+
+.phone{
+  opacity:1;
+  background: #5adad0;
+    color: #fff;
+    font-size: 16px;
+    border: 0;
+    height: 45px;
+    border-radius: 100rpx;
+}
+
+
+.kf_one{
+  margin-top: 60rpx;
+  margin-bottom: 40rpx;
+  text-align: center;
+}
+.kf_one image{
+  height: 160rpx;
+  width: 160rpx;
+  border-radius: 100rpx;
+}
+.kf_one_huiyuan{
+    margin-top: -55rpx;
+    margin-left: 100rpx;
+}
+.kf_one_huiyuan image{
+  height: 50rpx;
+  width: 50rpx;
+}
+
+.kf_one_nickName{
+  margin: 10rpx auto;
+  color: #fff;
+  font-size: 35rpx;
+}
+
+.kf_two{
+  padding: 0 10rpx;
+
+}
+.kf_two_view{
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30rpx 0rpx;
+  color: #fff;
+}
+.kf_two_view image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.kf_two_left{
+  width: 50%;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+.kf_two_left view{
+  margin: 5rpx auto;
+  text-align: center;
+}
+.kf_two_right{
+  width: 50%;
+}
+.kf_two_right view{
+  margin: 5rpx auto;
+  text-align: center;
+}
+
+.kf_three{
+  padding: 0 10rpx;
+}
+.kf_three_view{
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 60rpx 0rpx;
+  color: #fff;
+}
+.kf_three_view image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.kf_left{
+  width:33%;
+}
+
+.kf_left view{
+  margin: 5rpx auto;
+  text-align: center;
+}
+.kf_girls{
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 100rpx;
+  margin-left: 80rpx;
+  margin-bottom: 20rpx;
+  padding-left: 100rpx;
+  padding-right: 20rpx;
+
+
+}
+.kf_girls_image{
+  position: absolute;
+  top:760rpx;
+}
+

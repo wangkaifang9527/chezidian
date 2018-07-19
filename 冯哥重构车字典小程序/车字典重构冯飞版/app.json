@@ -1,0 +1,117 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index2/index",
+    "pages/index/doc-chassis-number/doc-chassis-number",
+    "pages/my/my",
+    "pages/my/my-qr/my-qr",
+    "pages/my/my-earnings/my-earnings",
+    "pages/my/agents-area/agents-area",
+    "pages/my/my-rankings/my-rankings",
+    "pages/my/my-yi/my-yi",
+    "pages/my/my-er/my-er",
+    "pages/my/my-homepage/my-homepage",
+    "pages/my/his-homepage/his-homepage",
+    "pages/my/my-fans/my-fans",
+    "pages/my/my-follow/my-follow",
+    "pages/my/follow/follow",
+    "pages/my/my-collection/my-collection",
+    "pages/my/apply-tg/apply-tg",
+    "pages/my/task/task",
+    "pages/my/poster/poster",
+    "pages/admin/admin",
+    "pages/admin/withdraw-audit/withdraw-audit",
+    "pages/admin/agent-audit/agent-audit",
+    "pages/admin/agent-update/agent-update",
+    "pages/admin/agents-detail/agents-detail",
+    "pages/admin/agent-list/agent-list",
+    "pages/admin/promoters-audit/promoters-audit",
+    "pages/admin/promoters/promoters",
+    "pages/order/order-list/order-list",
+    "pages/order/order-list-admin/order-list",
+    "pages/order/order-detail-4s/order-detail",
+    "pages/order/order-detail-cbs/order-detail",
+    "pages/order/order-detail-cbs2/order-detail",
+    "pages/order/order-detail-cbstl/order-detail",
+    "pages/order/order-detail-claim/order-detail",
+    "pages/order/order-detail-claim2/order-detail",
+    "pages/order/order-detail-claim3/order-detail",
+    "pages/order/order-detail-claimtl/order-detail",
+    "pages/order/order-detail-baodan/order-detail",
+    "pages/order/order-detail-baodan2/order-detail",
+    "pages/order/order-detail-baodantl/order-detail",
+    "pages/order/order-detail-info/order-detail",
+    "pages/order/order-detail-infotl/order-detail",
+    "pages/order/order-detail-infobaodan/order-detail",
+    "pages/withdraw/withdraw",
+    "pages/bill/bill",
+    "pages/rule/partner/partner",
+    "pages/rule/user/user",
+    "pages/admin/data-statistics/data-statistics",
+    "pages/anli/claim/claim",
+    "pages/my/kefu/kefu",
+    "pages/my/memberopening/memberopening",
+    "pages/my/mymember/mymember",
+    "pages/market/market",
+    "pages/market/fache/fache",
+    "pages/market/area/area",
+    "pages/market/details/details",
+    "pages/market/details-audit/details-audit",
+    "pages/market/search/search",
+    "pages/market/success/success",
+    "pages/market/canvas/canvas",
+    "pages/market/brand/brand",
+    "pages/banned/banned",
+    "pages/banned/add/add",
+    "pages/banned/success/success",
+    "pages/test/test",
+    "pages/recharge/recharge",
+    "pages/warrant/warrant"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1c2b3c",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "#fff",
+    "backgroundColor": "#ccc"
+    
+  },
+  "tabBar": {
+    "backgroundColor": "#1c2b3c",
+    "borderStyle": "block",
+    "color": "#445971",
+    "selectedColor": "#fff",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/chonggou/sy1.png",
+        "selectedIconPath": "images/chonggou/sy2.png"
+      },
+      {
+        "text": "批车",
+        "pagePath": "pages/market/market",
+        "iconPath": "images/chonggou/shichang1.png",
+        "selectedIconPath": "images/chonggou/shichang2.png"
+      },
+      {
+        "text": "发车",
+        "pagePath": "pages/market/fache/fache",
+        "iconPath": "images/chonggou/shichang/jiahao.png",
+        "selectedIconPath": "images/chonggou/shichang/jiahao.png"
+      },
+      {
+        "text": "订单",
+        "pagePath": "pages/order/order-list/order-list",
+        "iconPath": "images/chonggou/wodedingdan2.png",
+        "selectedIconPath": "images/chonggou/wodedingdan.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/my/my",
+        "iconPath": "images/chonggou/wd1.png",
+        "selectedIconPath": "images/chonggou/wd2.png"
+      }
+    ]
+  }
+}

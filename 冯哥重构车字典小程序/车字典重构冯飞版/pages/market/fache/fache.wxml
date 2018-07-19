@@ -1,0 +1,306 @@
+<!-- <import src="../../../template/t-phone/t-phone.wxml" />
+<view class='kf_zhezhao' hidden="{{!flag}}">
+    <template is="t-order-list" data='{{flag}}' />  
+</view> -->
+
+
+<view class='fache'>
+    <view class='title'>
+      <view style='background:rgba(255, 255, 255, {{putong}});' catchtap='putongfache'>普通发车</view>
+      <view style='background:rgba(255, 255, 255, {{jisu}});' catchtap='jisufache'>极速发车</view>
+    </view>
+
+    <form class='form' bindsubmit='formSubmitVin'>
+        <view class='neirong'>
+            <text class='xing'>*</text>
+            <text> 标题</text>
+            <view class='fa_input'>
+                <input name='biaoti' placeholder-style='color:#fff' placeholder='年月份+型号+排量 例: 2013年2月奥迪A6L 2.0T' value='{{biaoti}}' />
+            </view>
+        </view>
+        <view class='neirong'>
+            <text class='xing'>*</text>
+            <text> 批发价格</text>
+            <view class='fa_input'>
+                <input name='jiage' value='{{jiage}}' type='digit' placeholder-style='color:#fff' placeholder='车辆价格 单位(万元)' />
+            </view>
+        </view>
+
+        <view class='neirong'>
+            <text class='xing'>*</text>
+            <text> 车辆照片或视频</text>
+            <text style='color:red'>(第一张作为封面)</text>
+            <view class='fa_input fa_image'>
+                <image src='/images/chonggou/fache/xiangpian.png' catchtap='shangchuantupian' data-type='1'></image>
+                <image src='/images/chonggou/fache/shipin.png' catchtap='shangchuanshipin' data-type='2'></image>
+                
+            </view>
+        </view>
+
+        <!--打开上传图片 预览-->
+        <view class='neirong yulan'>
+            <block wx:for="{{yulan}}" wx:key="" wx:for-index="i">
+                <view class='shangchuantupian'>
+                        <image class='shanchu' catchtap='shanchutupian' data-i='{{i}}' src='/images/chonggou/shichang/shanchu.png' style='height:40rpx;width:40rpx;' ></image>
+                        <image  src='{{item}}' data-i='{{i}}'></image>
+                    <!-- <image  src='{{item}}' bindload="imageLoad" data-i='{{i}}'></image> -->
+                </view>
+            </block> 
+        </view>
+
+        <!-- 预览视频-->
+        <view class='neirong yulan'>
+            <block wx:for="{{videos}}" wx:key="" wx:for-index="i">
+                <view class='shangchuantupian'>
+                    <image class='shanchu' catchtap='shanchushipin' data-i='{{i}}' src='/images/chonggou/shichang/shanchu.png' style='height:35rpx;width:35rpx;'></image>
+                    <video objectFit='contain'  src="{{item}}"   enable-danmu danmu-btn controls></video>
+                </view>
+            </block> 
+        </view>
+       
+
+        <view class='neirong fa_jichu'>
+            <view>基础信息</view>
+            <view class='jichu_right'>
+                <view>可扫描行驶证读取</view>
+                <view><image src='/images/chonggou/xiangji.png'></image></view>
+            </view>
+        </view>
+
+        <view  class=' fa_input4'>
+            <view class="picker">  
+                <view class='input_left' style='min-width:160rpx;'>
+                  联系电话
+                  <text class='xing'>*</text>
+                </view>
+                <view class='input_right'>
+                  <input name='cellphoneNumber' value='{{phone}}' maxlength='11'></input>
+                </view>
+                <view style='text-align: right'>
+                    <button class='btn'  open-type="getPhoneNumber"                   bindgetphonenumber="getPhoneNumber">获取</button>
+                </view>
+            </view>
+        </view>
+        <!-- 上牌日期 -->
+        <view class=' fa_input1'>
+          <picker mode="date" value="{{date}}" start="1978-01-01" end="2055-1-23" bindchange="bindDateChange">  
+              <view class="picker">  
+                  <view>上牌日期<text class='xing'>*</text></view>
+                  <view>{{dates}}</view>
+              </view>  
+          </picker>
+        </view>
+
+        <view class=' fa_input4'>
+            <view class="picker">  
+                <view class='input_left'>公里数<text class='xing'>*</text></view>
+                <view class='input_right'>
+                  <input name='gonglishu' value='{{gonglishu}}' placeholder-style='color:#fff' placeholder='' />
+                </view>
+                <view style='width:25%;text-align: right'>万公里</view>
+            </view>
+        </view>
+
+        <!--城市选择器-->
+        <view class=' fa_input2'>
+          <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+            <view class="picker">
+              <view>车辆所在地<text class='xing'>*</text></view>
+              <view class='cheliangsuozaidi'>
+                <view wx:if='{{region[0]=="北京市"}}'>
+                  {{region[0]}}
+                </view>
+                <view wx:elif='{{region[0]=="上海市"}}'>
+                  {{region[0]}}
+                </view>
+                <view wx:elif='{{region[0]=="天津市"}}'>
+                  {{region[0]}}
+                </view>
+                <view wx:elif='{{region[0]=="重庆市"}}'>
+                  {{region[0]}}
+                </view>
+                <view wx:else>
+                  {{region[0]}}  {{region[1]}}
+                </view>
+                <image catchtap='weizhi' bindtouchstart='weizhistart' bindtouchend='weizhiend' src='/images/chonggou/shichang/weizhi.png' style='width: {{weizhiwidth}};height: {{weizhiheight}};'></image>
+              </view>
+            </view>
+          </picker>
+        </view>
+
+     
+        <view class='' wx:if='{{display}}'>
+            <!--牌照辖区-->
+            <view class='neirong fa_input'>
+              <!-- <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+                <view class="picker">
+                  <view>牌照辖区</view>
+                  <view>{{multiArray[0][multiIndex[0]]}}·{{multiArray[1][multiIndex[1]]}}</view>
+                </view>
+              </picker> -->
+              <view class="picker" catchtap='paizhaoxiaqu'>
+                <view>牌照辖区</view>
+                <view>{{multiArray[0][multiIndex[0]]}}·{{multiArray[1][multiIndex[1]]}}</view>
+              </view>
+            </view>
+
+            <view wx:if='{{provinceFlag}}' class='province_array'>
+                <block wx:for="{{multiArray[0]}}" wx:key="" wx:for-index="i">
+                    <view class='province_array_name' catchtap='dianjishengfen' data-i='{{i}}'>
+                        <view>{{item}}</view>
+                    </view>
+                </block>
+            </view>
+
+            <view wx:if='{{provinceCodeFlag}}' class='province_array'>
+                <block wx:for="{{multiArray[1]}}" wx:key="" wx:for-index="i">
+                    <view class='province_array_name' catchtap='dianjizimu' data-i='{{i}}'>
+                        <view>{{item}}</view>
+                    </view>
+                </block>
+            </view>
+            <!--出厂日期-->
+            <view class='neirong fa_input'>
+              <picker mode="date" value="{{date}}" start="1978-01-01" end="2055-1-23" bindchange="bindDateChange1">  
+                  <view class="picker">  
+                      <view>出厂日期</view>
+                      <view>{{dates1}}</view>
+                  </view>  
+              </picker>
+            </view>
+            <!--过户次数-->
+            <view class='neirong fa_input'>
+              <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                <view class="picker">
+                    <view>过户次数</view>
+                    <view>{{array[index]}} 次</view>
+                </view>
+              </picker>
+            </view>
+            <!--排量-->
+            <view class='neirong fa_input3'>
+                <view class="picker">  
+                    <view class='input_left'>排量</view>
+                    <view class='input_right'>
+                      <input name='pailiang' placeholder-style='color:#fff' ></input>
+                    </view>
+                </view>
+            </view>
+            <!--VIN码-->
+            <view class='neirong fa_input3'>
+                <view class="picker">  
+                    <view class='input_left'>VIN码</view>
+                    <view class='input_right'>
+                      <input name='vin' placeholder-style='color:#fff' maxlength='17'></input>
+                    </view>
+                </view>
+            </view>
+            <!--车辆性质-->
+            <view class='neirong cheliangxinzhi'>
+                <view><text class='xing'>*</text>车辆性质</view>
+                <view class='cheliangdanxuan'>
+                    <view style='background:rgba(255, 255, 255, {{yingyun}});' catchtap='yingyun'>
+                      营运
+                    </view>
+                    <view style='background:rgba(255, 255, 255, {{feiyingyun}});' catchtap='feiyingyun'class='yingyun'>
+                      非营运
+                    </view>
+
+                    <block wx:for="{{cheliangxingzhi}}" wx:key="" wx:for-index="i">
+                        <view data-i='{{i}}' class='yingyun' data-flag='{{item.flag}}' catchtap='xingzhi' style='background:rgba(255, 255, 255, {{item.flag}});'>
+                          {{item.name}}
+                        </view>
+                    </block>
+                    
+                </view>
+            </view>
+            <!--车况自证-->
+            <view class='neirong cheliangxinzhi'>
+                <view>车况自证</view>
+                <!-- <view class='chekuanggaiyaoxiangqing'>
+                    <block wx:for="{{chekuang}}" wx:key="" wx:for-index="i">
+                        <view data-i='{{i}}' data-chekuangflag='{{item.chekuang_flag}}' catchtap='chekuanggaiyao' style='background:rgba(255, 255, 255, {{item.chekuang_flag}});'>{{item.name}}</view>
+                    </block>
+                </view> -->
+                <view class='ck_title'>
+                    <view style='background: rgba(255, 255, 255, {{self_title_one}});' catchtap='onFeijingpin'>非精品车</view>
+                    <view style='background: rgba(255, 255, 255, {{self_title_two}});' catchtap='onJinpin'>精品车全车原版螺丝未动</view>
+                </view>
+
+                <block wx:for="{{self_proof}}" wx:key="" wx:for-index="i" wx:for-item="">
+                    <view class='ck_list'  catchtap='onXiaShangla' data-i='{{i}}'>
+                        <view>{{item.name}}</view>
+                        <view class='ck_list_li'>
+                            <block wx:for="{{item.self_list}}" wx:key="" wx:for-index="ii" wx:for-item="item1">
+                                <view wx:if='{{item1.self_list_flag}}'>{{item1.name}}</view>
+                            </block>
+                            <image wx:if='{{item.list_flag}}' src='/images/chonggou/fache/shangla.png'></image>
+                            <image wx:else src='/images/chonggou/fache/xiala.png'></image>
+                        </view>
+                    </view>
+                    <view wx:if='{{item.list_flag}}' class='ck_list_list'>
+                        <block wx:for="{{item.self_list}}" wx:key="" wx:for-index="iii" wx:for-item="item1">
+                            <view catchtap='onXuanze' data-i='{{i}}' data-iii='{{iii}}'  style='background: rgba(255, 255, 255, {{item1.ratio}});' >
+                              {{item1.name}}
+                            </view>
+                        </block>
+                    </view>
+                </block>
+
+                <view wx:if='{{self_title_one==0.3}}'>
+                    <block wx:for="{{self_proof_fei}}" wx:key="" wx:for-index="i" wx:for-item="">
+                        <view class='ck_list'  catchtap='onXiaShanglafei' data-i='{{i}}'>
+                            <view>{{item.name}}</view>
+                            <view class='ck_list_li'>
+                                <view class='ck_list_li' style='overflow: hidden;text-overflow: ellipsis;white-space: nowrap; max-width: 340rpx;'>
+                                  <block wx:for="{{item.self_list}}" wx:key="" wx:for-index="ii" wx:for-item="item1">
+                                      <view wx:if='{{item1.self_list_flag}}'>{{item1.name}}</view>
+                                  </block>
+                                </view>
+                                <image wx:if='{{item.list_flag}}' src='/images/chonggou/fache/shangla.png'></image>
+                                <image wx:else src='/images/chonggou/fache/xiala.png'></image>
+                            </view>
+                        </view>
+                        <view wx:if='{{item.list_flag}}' class='ck_list_list'>
+                            <block wx:for="{{item.self_list}}" wx:key="" wx:for-index="iii" wx:for-item="item1">
+                                <view catchtap='onXuanzefei' data-i='{{i}}' data-iii='{{iii}}'  style='background: rgba(255, 255, 255, {{item1.ratio}});' >
+                                  {{item1.name}}
+                                </view>
+                            </block>
+                        </view>
+                    </block>
+                </view>
+                
+
+              
+
+
+            </view>
+            <!--车辆简述-->
+            <view class='neirong cheliangxinzhi'>
+                <view>车辆简述</view>
+                <view class="textarea-wrp">
+                  <textarea name='jiansu' show-confirm-bar='{{show}}' placeholder-style='color:#fff' placeholder='请简单描您要发布的车辆...' maxlength='250'/>
+                </view>
+            </view>
+            
+        </view>
+
+
+
+        <!--发布按钮-->
+        <view class='neirong fabu'>
+            <view wx:if='{{display}}' class='fabuanniu'>
+                <button id='putongfache' form-type='submit' hover-class='hover'>发布</button>
+            </view>
+            <view wx:else class='fabuanniu'>
+                <button id='jisufache' form-type='submit' hover-class='hover'>发布</button>
+            </view>
+        </view>
+
+        <!--留白-->
+        <view style='height:350rpx;'></view>
+    </form>
+</view>
+
+

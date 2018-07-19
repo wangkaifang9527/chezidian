@@ -1,0 +1,101 @@
+page {
+    background: #f8f8f8;
+}
+
+.container {
+    margin: 0 30rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .title {
+    font-size: 17px;
+    margin: 15px 0;
+}
+.top_tips{
+    /* width:100%; */
+    padding: 5px 10px;
+    line-height: 180%;
+    font-size: 20rpx;
+    color: #e86800;
+    margin-bottom: 20px;
+    background: #eee;
+}
+.box {
+    margin-bottom: 10px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 0 30rpx;
+    overflow: hidden;
+}
+
+/* 车辆概要 */
+
+.car_detail {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    /* background: url("http://www.levau.com/banner/shuiyin.png") no-repeat;    
+    background-size:  100% 100%;  */
+}
+.text_box{
+    /* background: url("http://www.levau.com/banner/shuiyin.png") no-repeat;    
+    background-size:  100% 100%;  */
+}
+
+.car_detail .line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.car_detail .line text:nth-child(1) {
+    color: #666;
+}
+
+.car_detail .line text:nth-child(2) {
+    color: #333;
+}
+
+.car_detail .line.top {
+    padding: 5px 0 20px 0;
+    border-bottom: 1px solid #dedede;
+}
+
+.car_detail .line.top text:nth-child(1) {
+    font-size: 15px;
+}
+
+.kf_weixin{
+  width: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+  bottom:150rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  font-size: 35rpx;
+  color: #fff;
+  padding: 10rpx;
+  z-index: 999;
+}
+.kf_weixin view{
+  width: 50%;
+}
+.right button{
+  background: rgba(0, 0, 0, 0);
+  color: #fff;
+  font-size: 35rpx;
+  line-height: 35rpx;
+}
+.kf_weixin image{
+  height: 80rpx;
+  width: 80rpx;
+}
+button::after{
+ border: none; 
+}
+.left{
+  border-right: 1rpx solid #fff;
+}

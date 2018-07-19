@@ -1,0 +1,102 @@
+/* pages/my/task/task.wxss */
+
+.task{
+  color: #fff;
+  padding: 20rpx;
+  letter-spacing: 2rpx;
+}
+.title{
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10rpx;
+}
+
+.title_san{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+  font-size: 22rpx;
+  padding: 20rpx 20rpx;
+}
+.title_yi {
+   padding: 20rpx 0rpx;
+}
+.title_er {
+   padding: 0rpx 0rpx;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center; 
+}
+
+.chenghao{
+  transform: rotate(45deg);
+  font-size: 40rpx;
+  margin-left: 10rpx;
+}
+
+
+
+/*任务列表*/
+.my_list_title{
+  font-size: 50rpx;
+  margin-top: 50rpx;
+}
+.my_list_con{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  margin-top: 30rpx;
+}
+.my_list_right{
+  background: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  width: 146rpx;
+  line-height: 56rpx;
+  border-radius: 5rpx;
+  font-size: 26rpx;
+  height: 56rpx;
+}
+.my_list_left view{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+  /* max-width: 500rpx; */
+}
+.share{
+  background: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  width: 146rpx;
+  line-height: 60rpx;
+  border-radius: 5rpx;
+  font-size: 26rpx;
+  height: 56rpx;
+  color: #fff;
+}
+button::after{
+  border: none;
+}
+
+/*进度条*/
+.progress{
+  background: rgba(255, 255, 255, 0.2);
+  padding: 32rpx 37rpx 32rpx 37rpx;
+  border-radius: 10rpx;
+}
+.progress_day{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+  margin-top: -20rpx;
+  font-size: 23rpx;
+}
+.progress_day view{
+  background:  rgba(255, 255, 255, 0.2);
+  border-radius: 100rpx;
+  width:35rpx;
+  height: 35rpx;
+  text-align: center;
+  
+}

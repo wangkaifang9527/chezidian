@@ -1,0 +1,243 @@
+page {
+    background: #f8f8f8;
+}
+
+.container {
+    margin: 0 30rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .title {
+    font-size: 17px;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center
+}
+.container .title text {
+    font-size: 20rpx;
+    margin-left: 5px;
+    border-radius: 100px;
+    background: #999;
+    color: #fff;
+    min-width: 10px;height: 18px;line-height: 18px;
+    padding:0 4px;
+    text-align: center
+}
+
+.box {
+    margin-bottom: 15px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 0 30rpx;
+    overflow: hidden;
+}
+
+/* 车辆概要 */
+
+.car_detail {
+    padding-bottom: 15px;
+    /* background: url("http://www.levau.com/banner/shuiyin.png") no-repeat;    
+    background-size:  100% 100%;  */
+}
+
+.car_detail .line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.car_detail .line text:nth-child(1) {
+    color: #666;
+}
+
+.car_detail .line text:nth-child(2) {
+    color: #333;
+}
+
+.car_detail .line.top {
+    padding: 20px 0;
+    border-bottom: 1px solid #dedede;
+}
+
+.car_detail .line.top text:nth-child(1) {
+    font-size: 15px;
+}
+
+/* 出险报告 */
+
+.result_detail {
+    background: transparent;
+    padding: 0;
+}
+
+.result_detail .line {
+    margin-bottom: 15px;
+    background: #fff;
+    border-radius: 10px;
+    position: relative;
+    padding: 15px;
+    /* background: url("http://www.levau.com/banner/shuiyin.png") no-repeat;    
+    background-size:  100% 100%;  */
+}
+
+.result_detail .line image {
+    position: absolute;
+    width: 8px;
+    height: 37px;
+    top: -23px;
+}
+
+.result_detail .line:first-child image {
+    display: none;
+}
+
+.result_detail .line .left_img {
+    left: 15px;
+}
+
+.result_detail .line .right_img {
+    right: 15px;
+}
+
+.result_detail .line .top {
+}
+
+.result_detail .line .top .h1 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.result_detail .line .top .top_li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.result_detail .line .top .top_li .left {
+    color: #666;
+}
+
+.result_detail .line .top .top_li .right {
+}
+
+.result_detail .line .table {
+    /* text-align: center */
+}
+
+.result_detail .line .table .tr {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-top: 1px solid #dedede;
+}
+
+.result_detail .line .table .tr.theader {
+    font-size: 16px;
+}
+
+.result_detail .line .table .tr.theader text {
+    color: #333 !important;
+}
+
+.result_detail .line .table .tr text {
+    color: #666;
+}
+
+.result_detail .line .table .tr text:first-child {
+    flex: 1;
+}
+
+.result_detail .line .table .tr text:nth-child(2) {
+    width:160rpx;
+    text-align: right;
+    margin-left: 15px;
+    font-size: 13px;
+}
+
+.result_detail .line .table .tr text:last-child {
+}
+
+/* 保单报告 */
+
+.accidents_detail {
+}
+
+.accidents_detail .line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 0;
+    border-top: 1px solid #e6e6e6;
+}
+
+.accidents_detail .line text {
+    flex: 1;
+    color: #666;
+    text-align: center;
+}
+
+.accidents_detail .line.top {
+    font-size: 16px !important;
+    text-align: center;
+    padding: 15px 0;
+    border: 0;
+}
+
+.accidents_detail .line.top text {
+    color: #333;
+}
+
+
+
+.kf-web{
+  z-index:0;
+  
+  background-image: url(https://guohubaoimage.oss-cn-shanghai.aliyuncs.com/mykuai);
+  height: 600rpx;
+  width: 96%;
+  background-size: 100%;
+}
+.kf-anniu{
+  height:100000rpx
+}
+.kf_weixin{
+  width: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+  bottom:150rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  font-size: 35rpx;
+  color: #fff;
+  padding: 10rpx;
+  z-index: 999
+}
+.kf_weixin view{
+  width: 50%;
+}
+.right button{
+  background: rgba(0, 0, 0, 0);
+  color: #fff;
+  font-size: 35rpx;
+  line-height: 35rpx;
+}
+.kf_weixin image{
+  height: 80rpx;
+  width: 80rpx;
+}
+button::after{
+ border: none; 
+}
+.left{
+  border-right: 1rpx solid #fff;
+}

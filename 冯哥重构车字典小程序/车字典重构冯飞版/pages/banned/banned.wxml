@@ -1,0 +1,134 @@
+<!--pages//banned/banned.wxml-->
+<view class='banned'>
+      <view class='title'>
+          <image src='/images/chonggou/banned/juesha.png'></image>
+          <view>封杀查询</view>
+      </view>
+
+      <view class='search'>
+          <view class='input'>
+            <input  placeholder="输入手机号/微信号查询" bindinput="bindKeyInput" ></input>
+          </view>
+          <view class='chazhao' catchtap='search'>查找</view>
+      </view>
+
+      <view class='woyaofengsha' catchtap='woyaofengsha'>
+          <image src='/images/chonggou/banned/juesha.png'></image>
+          <view>我要封杀</view>
+      </view>
+
+      <view style='font-size:25rpx;margin-top:20rpx;'>近期封杀</view>
+
+      <!-- <view class='list'>
+          <view class='list_title'>
+              <view class='yi'>微信</view>
+              <view class='er'>电话</view>
+              <view class='san'>提交时间</view>
+              <view class='si'>原因</view>
+              <view class='wu' style='color:#fff'>操作</view>
+          </view>
+         <swiper class='swiper-box'  autoplay="true" interval="3000" duration="3000" circular="false" indicator-color="#fff" indicator-active-color="#bfbfbf" vertical='true' previous-margin='260rpx' next-margin='260rpx' style='height:600rpx'>
+          <block wx:for="{{list}}" wx:key="" wx:for-index="i">
+            <swiper-item>
+              <view class='list_table' catchtap='xiangqing' data-i='{{i}}'>
+                    <view class='yi'>sjas121931231</view>
+                    <view class='er'>17282898760</view>
+                    <view class='san'>2017.10.27</view>
+                    <view class='si'>骗押金</view>
+                    <view class='wu'>详情</view>
+              </view>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view> -->
+      <block wx:for="{{list}}" wx:key="" wx:for-index="i">
+          <view class='list'>
+              <view class='list_left' catchtap='xiangqing' data-i='{{i}}' >
+                  <view class='list_left_one'>
+                      <image wx:if='{{anonymous==1}}' src='/images/bg_gary.png'></image>
+                      <image wx:else src='{{item.avatarUrl}}'></image>
+                  </view>
+                  <view class='list_left_two'>
+                      <view wx:if='{{anonymous==1}}' class=''>匿名</view>
+                      <view wx:else class=''>{{item.nickName}}</view>
+                      <view class='list_left_time'>{{item.createTime}}</view>
+                  </view>
+              </view>
+              <view class='list_right'>
+                  <view class='list_right_cause' catchtap='xiangqing' data-i='{{i}}' >{{item.description}}</view>
+                  <view class='list_right_pic' catchtap='xiangqing' data-i='{{i}}' >
+                      <block wx:for="{{item.images}}" wx:key="" wx:for-item="pic"  wx:for-index="ii">
+                          <image wx:if='{{ii<3}}' mode="aspectFill" src='{{pic}}' data-i='{{ii}}' catchtap='lookImg' data-images='{{item.images}}'></image>
+                      </block>
+                  </view>
+                  <view class='list_right_icon'>
+                      <view class='list_right_icon_one'>  
+                          <button class='share' open-type="share" data-id='{{item.id}}'>
+                              <view  class='share_image'>
+                                  <image src='/images/chonggou/banned/share.png'></image>
+                              </view>
+                          </button>
+                          <image catchtap='pinglun' data-i='{{i}}' src='/images/chonggou/banned/comment.png'></image>
+                      </view>
+                  </view>
+                  <view wx:if='{{item.comments.length>0}}' class='list_right_message' catchtap='pinglun' data-i='{{i}}'  >
+                      <view>昵称：哒哒哒哒哒苏打水大111111111111111111111111111</view>
+                  </view>
+              </view>
+
+          </view>
+
+      </block>
+      
+
+
+
+      <view wx:if="{{isloadover}}" class='tip_center' style='margin-bottom:30px'>别拉了，没有啦</view>
+      
+</view>
+
+<view wx:if='{{zhezhao}}' class='kf_zhezhao' catchtap='zhezhao'>
+    <view class='zhezhao_title'>
+          <image class='fengsha' src='/images/chonggou/banned/fengsha.png' mode='widthFix'></image>
+      <view>
+          <image class='guanbi' src='/images/chonggou/banned/guanbi.png'></image>
+      </view>
+    </view>
+
+    <view class='zhezhao_table'>
+        <view class='tr'>
+            <view>微信号</view>
+            <view>{{xiangqing.wxId}}</view>
+        </view>
+        <view class='tr'>
+            <view>手机号</view>
+            <view>{{xiangqing.cellphoneNumber}}</view>
+        </view>
+        <view class='tr'>
+            <view>提交人</view>
+            <view wx:if='{{anonymous==1}}'>匿名</view>
+            <view wx:else>{{xiangqing.nickName}}</view>
+        </view>
+        <view class='tr'>
+            <view>提交时间</view>
+            <view>{{xiangqing.createTime}}</view>
+        </view>
+        <view class='tr'>
+            <view>原因</view>
+            <view>{{xiangqing.description}}</view>
+        </view>
+        <view class=''>
+            <view class='zhengju_up'>证据</view>
+            <view class='zhengju_down'>
+                <block wx:for="{{xiangqing.images}}" wx:key="" wx:for-index="i">
+                    <view class='zhezhao_zhengyu'>
+                        <image src='{{item}}'></image>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </view>
+
+</view>
+
+<input class='pinglun_input' confirm-type='send' bindblur='bindblur' bindconfirm='bindconfirm' focus='{{focus}}' value='{{pinglun_value}}' placeholder='说说您的看法'  adjust-position='true' bindinput='bindinput' hidden='{{hidden}}'></input>

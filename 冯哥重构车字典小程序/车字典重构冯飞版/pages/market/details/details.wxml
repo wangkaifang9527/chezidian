@@ -1,0 +1,300 @@
+<!--pages/market/details/details.wxml-->
+<view class='details'>
+  <!-- 图片轮播图-->
+  <view class='market_tuwenliebiao_image'>
+      <swiper class='swiper-box'  indicator-color="#fff" indicator-active-color="#bfbfbf" previous-margin='0rpx' next-margin='0rpx' style=' height:490rpx'>
+          <block wx:for="{{vehicle.images}}" wx:key="" wx:for-item="item" wx:for-index="ii">
+              <swiper-item>
+                  <image  data-images='{{vehicle.images}}' data-i='{{ii}}' catchtap='lookImg' src='{{item}}'mode="aspectFill" style='width:100%;' ></image>
+              </swiper-item>
+          </block>
+      </swiper>
+  </view>
+
+
+  <view class='content'>
+    <view class='title'>
+        {{vehicle.title}}
+    </view>
+    <view class='price'>
+      <view class='price_one'>
+          <text>{{vehicle.price}}万元</text> ·
+          <text>{{vehicle.mileage}}万公里</text> ·
+          <image wx:if='{{vehicle.property==1}}' src='/images/chonggou/shichang/fei.png'></image>
+          <image wx:else src='/images/chonggou/shichang/ying.png'></image>
+      </view>
+      <view class='zhizuohaibao' catchtap='onZhiZuoHaiBao'>
+          分享有收益
+      </view>
+    </view>
+
+    <view class='jibencanshu' style='margin-top:20rpx'>
+      <view class='xiangqing' catchtap='miaoshu' data-res='{{vehicle.description}}'>
+        <view class='miaosu'>卖家描述: </view>
+         <view class='miaosu_content'>{{vehicle.description}}</view> 
+        <view><image src='/images/chonggou/right.png'></image></view>
+      </view>
+      <view class='xiangqing' catchtap='peizhi' data-res='{{vehicle.peizhi}}'>
+        <view class='miaosu'>车辆信息: </view>
+         <view class='miaosu_content'>{{vehicle.peizhi}}</view> 
+        <view><image src='/images/chonggou/right.png'></image></view>
+      </view>
+      <view class='xiangqing' catchtap='chekuang' data-res='{{vehicle.brief}}' style='border-bottom:0rpx' >
+        <view class='miaosu'>车况简述: </view>
+         <view class='miaosu_content'>{{vehicle.ratio_name}}</view> 
+        <view><image src='/images/chonggou/right.png'></image></view>
+      </view>
+    </view>
+
+  
+
+      <view wx:if='{{!isadmin}}'>
+        <view class='fenxiang' >
+            <view>
+              <image src='/images/chonggou/shichang/details/tongjiawei.png'></image>
+              <view>同价位</view>
+            </view>
+            <view>
+              <image src='/images/chonggou/shichang/details/tongpinpai.png'></image>
+              <view>同品牌</view>
+            </view>
+            <view catchtap='jiaoyidanbao'>
+                <image src='/images/chonggou/shichang/details/jiaoyidanbao.png'></image>
+                <view>交易担保</view>
+            </view>
+            <view class='share_view'>
+              <button open-type="share" class='share'>
+                <image src='/images/chonggou/shichang/details/zhuanfa.png'></image>
+                <view>分享</view>
+              </button>
+            </view>
+        </view>
+      </view>
+      <view wx:else>
+        <view class='fenxiang' >
+            <view  catchtap='bianji'>
+              <image src='/images/chonggou/shichang/details/bianji.png'></image>
+              <view>编辑</view>
+            </view>
+            <view catchtap='shanchu'>
+              <image src='/images/chonggou/shichang/details/shanchu.png'></image>
+              <view>删除</view>
+            </view>
+            <view catchtap='shichangzhiding'>
+                <image src='/images/chonggou/shichang/details/jiaoyidanbao.png'></image>
+                <view>置顶</view>
+            </view>
+            <view wx:if='{{vehicle.status==1}}' catchtap='zaishou' >
+                <image src='/images/chonggou/shichang/details/zaishou.png' ></image>
+                <view  >在售</view>
+            </view >
+            <view wx:elif='{{vehicle.status==2}}' catchtap='chengjiao'>
+                <image src='/images/chonggou/shichang/details/yichengjiao.png' ></image>
+                <view >已售</view>
+            </view>
+
+        </view>
+      </view>
+
+    <view wx:if='{{vehicle.openid_flag}}' class='icon'>
+        <view style='border-right: 1rpx solid rgba(255, 255, 255, 0.3)'>
+          <image src='/images/chonggou/shichang/details/bianji.png' catchtap='bianji'></image>
+          <view class='weizi'>编辑</view>
+        </view>
+        <view style='border-right: 1rpx solid rgba(255, 255, 255, 0.3)' >
+          <image src='/images/chonggou/shichang/details/shanchu.png' catchtap='shanchu'></image>
+          <view class='weizi'>删除</view>
+        </view>
+        <view wx:if='{{vehicle.status==1}}' catchtap='zaishou' >
+            <image src='/images/chonggou/shichang/details/zaishou.png' ></image>
+            <view class='weizi'>在售</view>
+        </view>
+        <view wx:elif='{{vehicle.status==2}}' catchtap='chengjiao'>
+            <image src='/images/chonggou/shichang/details/yichengjiao.png' ></image>
+            <view  class='weizi'>已售</view>
+        </view>
+    </view>
+    <view wx:else class='icon'>
+      <view catchtap='shoucang' data-favorite='{{vehicle.favorite}}' style='border-right: 1rpx solid rgba(255, 255, 255, 0.3)'>
+        <image wx:if='{{vehicle.favorite}}' src='/images/chonggou/shichang/details/yishoucang.png'></image>
+        <image wx:else src='/images/chonggou/shichang/details/weishoucang.png'></image>
+        <view class='weizi'>收藏</view>
+      </view>
+      <view style='border-right: 1rpx solid rgba(255, 255, 255, 0.3)'>
+        <image src='/images/chonggou/shichang/details/sixin.png'></image>
+        <view class='weizi'>私信</view>
+      </view>
+      <view catchtap='dianhua' data-phone='{{vehicle.cellphoneNumber}}'>
+        <image src='/images/chonggou/shichang/details/dianhua.png'></image>
+        <view class='weizi'>电话</view>
+      </view>
+    </view>
+
+    
+    <view  wx:if='{{!vehicle.openid_flag}}' class='jichu'>
+        <view catchtap='zhuye' data-openid='{{vehicle.openId}}' class='jichu_left'>
+            <view>
+                <image src='{{vehicle.avatarUrl}}'></image>
+            </view>
+            <view class='mingzi'>{{vehicle.nickName}}</view>
+        </view>
+        <view class='jichu_rigth' catchtap='guanzhu' data-relationship='{{vehicle.relationship}}' data-targetopenid='{{vehicle.openId}}'>
+            <image wx:if='{{vehicle.relationship == 3}}' src='/images/chonggou/zhuye/yiguanzhu.png' mode='aspectFit'></image>
+            <image wx:elif='{{vehicle.relationship == 2}}' src='/images/chonggou/zhuye/yiguanzhu.png' mode='aspectFit'></image>
+            <image wx:elif='{{vehicle.relationship == 1}}' src='/images/chonggou/zhuye/guanzhu.png' mode='aspectFit'></image>
+            <image wx:elif='{{vehicle.relationship == 0}}' src='/images/chonggou/zhuye/guanzhu.png' mode='aspectFit'></image>
+            <image wx:else src='/images/chonggou/zhuye/guanzhu.png' mode='aspectFit'></image>
+        </view>
+     
+    </view>
+    <!-- 打赏车模 -->
+    <view  wx:if='{{!vehicle.openid_flag}}' style='margin-bottom:48rpx'>
+        <view class='reward_model' catchtap='onRewardModel'>
+            <view class='reward_model_left'>
+                <image mode='aspectFit' src='/images/chonggou/my/girls.png' style='height: 150rpx;width: 150rpx;'></image>
+            </view>
+            <view class='reward_title'>
+                打赏一个车模
+            </view>
+        </view>
+        <view class='reward_avatarUrl'>
+            <image src='{{userInfo.avatarUrl}}'></image>
+            
+        </view>
+    </view>
+    
+
+
+
+
+    <view class='pinglun'>
+      <view class='pinglun1' style=''>
+          <view class='pinglun1_left'>
+            <image catchtap='zhuye' data-openid='{{openid}}' src='{{userInfo.avatarUrl}}'></image>
+          </view>
+          <view class='shurukuang'>
+            <input  placeholder='说说您的看法' placeholder-style='color:#fff;' bindinput='bindinput'></input>
+          </view>
+          <view class='pl' catchtap='pinglun'>评论</view>
+      </view>
+    </view>
+
+    <view wx:if='{{vehicle.comments.length>0}}' style='padding:0rpx 20rpx'>
+      <block wx:for="{{vehicle.comments}}" wx:key="" wx:for-item="comment" wx:for-index="i">
+          <view style='padding:10rpx 0rpx'>
+            <view class='libiao'>
+              <view class='left'>
+                <image catchtap='zhuye' data-openid='{{comment.openId}}' src='{{comment.avatarUrl}}'></image>
+              </view>
+              <view class='right'>
+                <view>{{comment.nickName}}</view>
+                <view catchtap='dianzan' data-hasthumbup='{{comment.hasThumbUp}}' data-i='{{i}}' data-commentid='{{comment.commentId}}'>
+                  <image wx:if='{{comment.hasThumbUp}}' src='/images/chonggou/shichang/details/yidianzan.png'></image>
+                  <image wx:else src='/images/chonggou/shichang/details/dianzan.png'></image>
+                  <text style='margin-left:20rpx;'>{{comment.thumbUpCount}}</text>
+                </view>
+              </view>
+            </view>
+            <view  data-i='{{i}}' catchtap='reply'>
+              <view class='plnr'>{{comment.content}}</view>
+              <view class='time'>{{comment.commentTime}}</view>
+            </view>
+          </view>
+          <!-- 回复区-->
+          <view wx:if='{{comment.commentList.length>0}}' >
+              <view class='xiaosanjiao1'>
+                  <image src='/images/chonggou/shichang/xiaosanjiao.png'></image>
+              </view>
+              <view  class='market_tuwenliebiao_pinglunqu'>
+                  <block wx:for="{{comment.commentList}}" wx:key="" wx:for-item="item">
+                        <view>
+                            <image src='{{item.avatarUrl}}'></image>
+                            {{item.nickName}}回复{{comment.nickName}}:
+                            {{item.content}}
+                        </view>
+                  </block>
+
+              </view>
+          </view>
+      </block>
+    </view>
+
+  </view>
+
+
+  <view wx:if="{{isloadover}}" class='tip_center' style='margin-bottom:30px'>别拉了，没有啦</view>
+
+  <movable-area style="height: 1100rpx; width: 1rpx; background: rgba(255,255,255,0);" class='fanhui'>
+    
+    <movable-view style="height: 1px; width: 700rpx;" x="300" y="400" direction="all">
+          <image catchtap='fanhui' src='/images/chonggou/shichang/details/fanhui.png'></image>
+    </movable-view>
+  </movable-area>
+  
+
+  <input class='pinglun_input' confirm-type='send' bindblur='bindblur' bindconfirm='bindconfirm' focus='{{focus}}' value='{{pinglun_value2}}' placeholder='回复当前评论'  adjust-position='true' bindinput='bindinput2' hidden='{{hidden}}'></input>
+
+
+
+  <view wx:if='{{zhezhao}}' class='kf_zhezhao' catchtap='zhezhao'>
+       <view wx:if='{{miaoshu}}' class='miaoshu'>
+        <view class='one'>描述</view>
+        <view class='two'>{{vehicle.description}}</view>
+      </view> 
+
+      <view wx:if='{{peizhi}}' class='peizhi'>
+        <view class='one'>配置</view>
+        <view class='two'>
+          <view class='tt'>
+            <view>上牌日期:</view>
+            <view>{{vehicle.licenseDate}}</view>
+          </view>
+          <view class='tt'>
+            <view>公里数:</view>
+            <view>{{vehicle.mileage}}</view>
+          </view>
+          <view class='tt'>
+            <view>车辆所在地:</view>
+            <view>{{vehicle.location}}</view>
+          </view>
+          <view class='tt'>
+            <view>牌照辖区:</view>
+            <view>{{vehicle.licenseLocation}}</view>
+          </view>
+          <view class='tt'>
+            <view>出厂日期:</view>
+            <view>{{vehicle.dateOfManufacture}}</view>
+          </view>
+          <view class='tt'>
+            <view>过户次数:</view>
+            <view>{{vehicle.transferTimes}}</view>
+          </view>
+          <view class='tt'>
+            <view>排量:</view>
+            <view>{{vehicle.cc}}</view>
+          </view>
+          <view class='tt'>
+            <view>vin</view>
+            <view>{{vehicle.vin}}</view>
+          </view>
+          <view class='tt'>
+            <view>车辆性质</view>
+            <view> 
+              <text wx:if='{{vehicle.property == 1}}'>非营运,</text>
+              <text wx:elif='{{vehicle.property == 2}}'>非营运,</text>
+              {{vehicle.type}}
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view wx:if='{{chekuang}}' class='chekuang'>
+        <view class='one'>车况</view>
+        <view class='two'>
+          <block wx:for="{{chekuang_array}}" wx:key="" wx:for-index="i">
+            <view class='chekuangxiangqing'>{{item}}</view>
+          </block>
+        </view>
+      </view>
+  </view>
+</view>

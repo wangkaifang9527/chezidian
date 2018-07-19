@@ -1,0 +1,68 @@
+/* pages/my/my-collection/my-collection.wxss */
+@import "/pages/my/my-homepage/my-homepage.wxss";
+.collection{
+  color: #fff;
+  letter-spacing: 2rpx;
+}
+.tab{
+  padding: 30rpx 20rpx;
+  border-bottom: 1rpx solid rgba(255, 255, 255, 0.3)
+}
+.tab image{
+  height: 40rpx;
+  width:40rpx;
+}
+.content_left image{
+  width: 30rpx;
+  height: 30rpx;
+}
+
+/*9宫格重构 2018-7-3*/
+.market_jiugongge{
+  overflow: hidden;
+  padding:0 20rpx;
+}
+.market_list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20rpx 0rpx;
+  border-bottom: 1rpx solid rgba(255, 255, 255, 0.35);
+}
+.list_left image{
+  width: 226rpx;
+  height: 159rpx;
+}
+.list_right{
+  margin-left: 31rpx;
+  height: 159rpx;
+  max-width: 450rpx;
+  width: 450rpx;
+}
+.list_right_yi{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+  font-size: 30rpx;
+  margin-top: -10rpx;
+}
+.list_right_er{
+  margin-top: 15rpx;
+  font-size: 24rpx;
+  opacity: 0.4;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.list_right_san{
+  margin-top: 40rpx;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+}
+.location{
+  font-size: 24rpx;
+  opacity: 0.4
+}

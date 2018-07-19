@@ -1,0 +1,29 @@
+<view class='kf_weixin'>
+    <view class='left' catchtap='fanhui'>
+        <image src='/images/chonggou/fanhui.png'></image>
+    </view>
+    <view class='right'>
+        <button open-type="share">
+            <image src='/images/chonggou/zhuanfa.png'></image>
+        </button>
+    </view>
+</view> 
+<view class='container'>
+    <!-- 车辆信息 -->
+    <view class='title'>车辆信息</view>
+    <view class='box car_detail'>
+        <block wx:for="{{car}}" wx:for-item="order" wx:key="" wx:for-index="i">
+            <view wx:if='{{i==0}}' class='line top'>
+                <text>{{order.itemPropLabel}}</text>
+                <text>{{order.itemPropValue}}</text>
+            </view>
+            <view wx:else class='line'>
+                <text>{{order.itemPropLabel}}</text>
+                <text>{{order.itemPropValue}}</text>
+            </view>
+
+        </block>
+            
+
+    </view>
+</view>

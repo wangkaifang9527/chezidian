@@ -1,0 +1,68 @@
+<view class='kf_weixin'>
+    <view class='left' catchtap='fanhui'>
+        <image src='/images/chonggou/fanhui.png'></image>
+    </view>
+    <view class='right'>
+        <button open-type="share">
+            <image src='/images/chonggou/zhuanfa.png'></image>
+        </button>
+    </view>
+</view> 
+<view class='container'>
+    <!-- 车辆概要 -->
+    <view class='title'>理赔概要</view>
+    <view class='box car_detail'>
+        <view class='line top'>
+            <text>车牌号</text>
+            <text>{{car.License}}</text>
+        </view>
+        <block wx:for="{{car.data.itemData[0].itemPropValue}}" wx:for-item="item" wx:key="">
+            <view class='line'>
+            <text>{{item.itemPropLabel}}</text>
+            <text>{{item.itemPropValue}}</text>
+        </view>
+        </block>
+    </view>
+     
+
+    <!-- 出险报告 -->
+    <view wx:if="{{car.data.itemData[1].itemPropValue.length>0}}" class='title'>出险报告</view>
+
+    <view wx:if="{{car.data.itemData[1].itemPropValue.length>0}}" class='box result_detail'>
+        <block wx:for="{{car.data.itemData[1].itemPropValue}}" wx:for-item="item" wx:key="">
+            <view class='line'>
+                <image class="left_img" src='/images/502.png'></image>
+                <image class="right_img" src='/images/502.png'></image>
+                <view class='top'>
+                    
+                    <text class="h1">结果详情记录：</text>
+                    <block wx:for="{{item}}" wx:for-item="item2" wx:key="" wx:for-index="i">
+                      
+                      <view wx:if="{{i>0}}" class="top_li">
+                          <text class="left">{{item2.itemPropLabel}}</text>
+                          <text class="right">{{item2.itemPropValue}}</text>
+                      </view>
+
+                      <view wx:elif="{{i==0}}" >
+                          <text class="h1">理赔项列表：</text>
+                          <view class='table'>
+                            <block wx:for="{{item2.itemPropValue}}" wx:for-item="item3" wx:key="">
+                                <view class="tr">
+                                    <text>【{{item3.dangerSingleType}}】{{item3.dangerSingleName}}</text>
+                                    <text>{{item3.dangerSingleMoney}} 元</text>
+                                </view>
+                            </block>
+                          </view>
+                      </view>
+                    </block>
+                    
+                </view>
+
+            </view>
+        </block>
+
+    </view>
+
+
+
+</view>

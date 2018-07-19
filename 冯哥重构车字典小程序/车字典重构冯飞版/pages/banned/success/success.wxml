@@ -1,0 +1,26 @@
+<view class='success'>
+    <view class='image'>
+        <image src='/images/chonggou/shichang/success.png'></image>
+    </view>
+
+    <view class='fabuchenggong'>提交成功</view>
+
+    <view>感谢您为全网封杀名单进行完善</view>
+
+    <!-- <view class='wx_pyq'>
+        <view>
+          <button class='share' open-type="share" >
+            <image src='/images/chonggou/shichang/wx.png'></image>
+            <view class='share_view'>
+              分享给朋友
+            </view>
+          </button>
+        </view>
+        <view class='pyq'>
+            <image src='/images/chonggou/shichang/pyq.png'></image>
+            <view class='share_pyq'>分享到朋友圈</view>
+        </view>
+    </view> -->
+    <view class='fanhuishouye' style='margin-top:150rpx;' catchtap='jixutijiao'>继续提交</view>
+    <view class='fanhuishouye'  style='margin-top:50rpx;' catchtap='fanhuishouye'>返回首页</view>
+</view>

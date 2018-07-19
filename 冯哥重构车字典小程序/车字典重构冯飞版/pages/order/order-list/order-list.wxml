@@ -1,0 +1,36 @@
+<!-- 引入模版 -->
+<import src="../../../template/t-order-list/t-order-list.wxml" />
+
+<!-- <camera device-position="back" flash="off" binderror="error" style="width: 100%; height: 100px;"></camera>
+<button type="primary" bindtap="takePhoto">拍照</button>
+<view>预览</view>
+<image mode="widthFix" src="{{src}}"></image> -->
+
+<!-- html -->
+<view class='container'>
+    <view class="order_box">
+        <block wx:for="{{orders}}" wx:for-item="order" wx:for-index="i" wx:key="">
+            <template is="t-order-list" data="{{...order,i}}" />
+        </block>
+    </view>
+    <!-- 提示 -->
+    <view wx:if="{{isloadover}}" class='tip_center' style='margin-bottom:30px'>别拉了，没有啦</view>
+</view>
+
+
+<!-- 静态 -->
+<!-- <view class="order_box">
+        <view class='order_li' catchtap='onHrefOrderDetail'>
+            <view class='order_head'>
+                <view class='head_left'>浙A32121
+                    <text>理赔查询</text>
+                </view>
+                <view class='head1_right'>
+                    <image src='/images/ico/success.png'></image>查询成功</view>
+            </view>
+            <view class='chassis_number'>车架号：1778 2617 2919 921</view>
+            <view class='order_time'>2017-03-12 21:12:32
+                <text>¥24.88</text>
+            </view>
+        </view>
+    </view> -->
