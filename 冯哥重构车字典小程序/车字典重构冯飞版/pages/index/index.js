@@ -2,6 +2,16 @@
 var app = getApp();
 var url = require("../../utils/url.js");//服务列表
 var util = require("../../utils/util.js");
+
+var olddistance = 0;  //这个是上一次两个手指的距离
+var newdistance;      //本次两手指之间的距离，两个一减咱们就知道了滑动了多少，以及放大还是缩小（正负嘛）
+var oldscale = 1;     //这个是上一次动作留下的比例
+var diffdistance;     //这个是新的比例，新的比例一定是建立在旧的比例上面的，给人一种连续的假象
+var baseHeight;       //上一次触摸完之后的高
+var baseWidth;        //上一次触摸完之后的宽
+var windowWidth = 0;  //咱们屏幕的宽
+var windowHeight = 0; //咱们屏幕的高
+
 Page({
 
     /**
@@ -158,6 +168,10 @@ Page({
      */
     onLoad: function (options) {
         var that = this;
+        var res = wx.getSystemInfoSync();  //获取系统信息的同步方法，我用了异步里面提示我this.setData错了
+        windowWidth = res.windowWidth;
+        windowHeight = res.windowHeight;
+        console.log('屏幕的宽度', windowWidth);
         // 请求banner
         url.ajaxPost(false, url.banner2, {}, function (data) {
           console.log("服务器返回banner:", data);
@@ -935,7 +949,8 @@ Page({
               shanchutupian.push(data.key);
               that.setData({
                 vin_image: vin_image,
-                shanchutupian: shanchutupian
+                shanchutupian: shanchutupian,
+                vin_image_flag:true,
               });
             },
             fail(error) {
@@ -961,19 +976,80 @@ Page({
         shanchutupian.splice(0, 1)
         that.setData({
           vin_image: '',
-          shanchutupian: shanchutupian
+          shanchutupian: shanchutupian,
+          vin_image_flag: false,
         });
       });
     },
+
+
+    //图片显示完后执行 
+    imgload: function (e) {
+      console.log('e1', e);
+      var originalWidth = e.detail.width;//图片原始宽
+      var originalHeight = e.detail.height;//图片原始高
+      var originalScale = originalHeight / originalWidth;//图片高宽比
+      var windowscale = windowHeight / windowWidth;//屏幕高宽比
+      if (originalScale < windowscale) {//图片高宽比小于屏幕高宽比
+        //图片缩放后的宽为屏幕宽
+        baseWidth = windowWidth;
+
+        baseHeight = (windowWidth * originalHeight) / originalWidth;
+      } else {//图片高宽比大于屏幕高宽比
+        //图片缩放后的高为屏幕高
+        baseHeight = windowHeight;
+        baseWidth = (windowHeight * originalWidth) / originalHeight;
+      }
+      console.log(originalWidth, originalHeight);
+      this.setData({
+        scaleWidth: 750,
+        scaleHeight: originalHeight,
+      });
+    },
+    //放大图片
+    movetap: function (e) {
+      console.log('e2', e);
+      if (e.touches.length == 2) {
+        var xMove = e.touches[1].clientX - e.touches[0].clientX;
+        var yMove = e.touches[1].clientY - e.touches[0].clientY;
+        var distance = Math.sqrt(xMove * xMove + yMove * yMove);//两手指之间的距离 
+        console.log(xMove, yMove, distance);
+        if (olddistance == 0) {
+          olddistance = distance; //要是第一次就给他弄上值，什么都不操作
+          console.log('要是第一次就给他弄上值，什么都不操作', olddistance);
+        }
+        else {
+          newdistance = distance; //第二次就可以计算它们的差值了
+          diffdistance = newdistance - olddistance;
+          olddistance = newdistance; //计算之后更新
+          console.log('第二次就可以计算它们的差值了1', diffdistance);
+          var newScale = oldscale + 0.005 * diffdistance;  //比例
+          console.log('第二次就可以计算它们的差值了2', newScale);
+          //刷新.wxml
+          if (newScale * baseWidth > 750) {
+            this.setData({
+              scaleHeight: newScale * baseHeight,
+              scaleWidth: newScale * baseWidth
+            })
+          }
+          oldscale = newScale;
+          //更新比例
+
+        }
+      }
+    },
+
+
+    endtap: function (e) {
+      console.log('e3', e);
+      olddistance = 0;
+    },
+
     //canvas
     canvas:function(){
       wx.navigateTo({
         url: '/pages/market/canvas/canvas',
-        //url: '/pages/warrant/warrant',
-        //url: '/pages/warrant/warrant',
-        //url: '/pages/my/task/task'
-        //url:'/pages/market/fache/fache',
-        //url: '/pages/banned/banned',
+        
       })
       // wx.navigateToMiniProgram({
       //   appId: 'wx859b51eba0479db2',

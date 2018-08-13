@@ -225,9 +225,8 @@
   <view wx:if="{{isloadover}}" class='tip_center' style='margin-bottom:30px'>别拉了，没有啦</view>
 
   <movable-area style="height: 1100rpx; width: 1rpx; background: rgba(255,255,255,0);" class='fanhui'>
-    
     <movable-view style="height: 1px; width: 700rpx;" x="300" y="400" direction="all">
-          <image catchtap='fanhui' src='/images/chonggou/shichang/details/fanhui.png'></image>
+        <image catchtap='fanhui' src='/images/chonggou/shichang/details/fanhui.png'></image>
     </movable-view>
   </movable-area>
   

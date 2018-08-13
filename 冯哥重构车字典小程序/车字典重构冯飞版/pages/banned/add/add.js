@@ -207,8 +207,6 @@ Page({
 
   //提交
   formSubmit:function(form){
-    
-
     console.log(form);
     var that = this;
     var form = form.detail.value;
@@ -260,8 +258,6 @@ Page({
       wx.navigateTo({
         url: '/pages/banned/success/success',
       })
-
-      
     });
 
     

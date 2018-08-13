@@ -422,7 +422,6 @@ Page({
     this.setData({
       pinglun_value: e.detail.value
     });
-
   },
 
   //评论

@@ -179,5 +179,17 @@ Page({
     wx.switchTab({
       url: '/pages/index/index',
     })
-  }
+  },
+
+  bindReport: function () {
+    var car_data = wx.getStorageSync('order_detail')
+    var report = "http://www.levau.com/query-mould/maintain/4S_tl.html?orderNo=" + car_data.orderNo
+    wx.setClipboardData({
+      data: report,
+      success: function (res) {
+        util.showToast("复制成功", "success", 500)
+      }
+    });
+  },
+
 })

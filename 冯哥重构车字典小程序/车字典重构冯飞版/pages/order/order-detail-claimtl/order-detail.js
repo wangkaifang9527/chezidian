@@ -206,5 +206,17 @@ Page({
     wx.switchTab({
       url: '/pages/index/index',
     })
-  }
+  },
+
+  //生成报告
+  bindReport: function () {
+    var car_data = wx.getStorageSync('order_detail')
+    var report = "http://www.levau.com/query-mould/claim/claim_tl.html?orderNo=" + car_data.orderNo
+    wx.setClipboardData({
+      data: report,
+      success: function (res) {
+        util.showToast("复制成功", "success", 500)
+      }
+    });
+  },
 })

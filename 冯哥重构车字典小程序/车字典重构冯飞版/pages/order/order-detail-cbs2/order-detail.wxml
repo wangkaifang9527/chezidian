@@ -1,3 +1,5 @@
+<import src="../../../template/ad/ad.wxml" />
+<template is="ad"></template>
 <view class='kf_weixin'>
     <view class='left' catchtap='fanhui'>
         <image src='/images/chonggou/fanhui.png'></image>
@@ -10,7 +12,10 @@
 </view> 
 <view class='container'>
     <!-- 车辆概要 -->
-    <view class='title'>车辆概要</view>
+    <view class='title'>
+        <view>车辆概要</view>
+        <view class='report' catchtap='bindReport'>复制链接</view>
+    </view>
     <view class='box car_detail'>
         <view class='line top'>
             <text>车牌号码</text>
@@ -157,7 +162,7 @@
                         </view>
                         <view class='p'>
                             <text>材料：</text>
-                            <view>{{item.materal}}</view>
+                            <view>{{item.cailiao}}</view>
                         </view>
                         <view class='p'>
                             <text>备注：</text>

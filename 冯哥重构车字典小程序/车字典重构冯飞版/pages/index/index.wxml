@@ -3,21 +3,23 @@
     <template is="t-order-list" data='{{flag}}' />  
 </view>
 
-
-
 <!-- banner-->
 <view class='banner'>
     <swiper class='swiper-box'  autoplay="true" interval="4000" duration="500" circular="true" indicator-color="#fff" indicator-active-color="#bfbfbf" previous-margin='0rpx' next-margin='30rpx'>
         <block wx:for="{{banners}}" wx:key="" wx:for-index="i">
             <swiper-item>
-                <image src='{{item.url}}' data-index="{{i+1}}" catchtap='dianjitupian' mode="widthFix" style='width:100%'></image>
+                <image  src='{{item.url}}' data-index="{{i+1}}" catchtap='dianjitupian' mode="widthFix" style='width:100%'></image>
+                
             </swiper-item>
         </block>
+        <!-- <view class='ad'>
+            <ad class='gg' unit-id="adunit-729753b27e1deed2"></ad>
+        </view> -->
     </swiper>
 </view>
-
-<view class='vin_image'> 
-    <image src='{{vin_image}}' mode="aspectFill" catchtap='shanchutupian'></image>
+<!-- catchtap='shanchutupian' -->
+<view class='vin_image' wx:if='{{vin_image_flag}}'> 
+    <image src='{{vin_image}}' mode="aspectFill" bindload='imgload' bindtouchmove='movetap' bindtouchend='endtap' style='width:{{scaleWidth}}rpx;height:{{scaleHeight}}rpx'></image>
 </view>
 
 
@@ -104,7 +106,7 @@
                 </view> 
             </view> 
         </view>
-        <view class='selected' catchtap='onPayType2'>
+        <!-- <view class='selected' catchtap='onPayType2'>
             <view class='selected_left'>
                 <view style='margin-left:30rpx'>
                     <image src='../../images/chonggou/model.png'></image>
@@ -120,7 +122,7 @@
                     <image wx:else src='../../images/chonggou/weixuan.png'></image>
                 </view> 
             </view> 
-        </view>
+        </view> -->
         <view class='pay_btn' catchtap='onPay'>
             <view>立即支付</view>
         </view>

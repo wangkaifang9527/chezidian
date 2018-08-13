@@ -337,7 +337,7 @@ Page({
     console.log(car_data);
     var that = this;
     // 隐藏用户信息
-    car_data.data.itemData[11].itemPropValue = util.encryptionStr(car_data.data.itemData[11].itemPropValue, 1);
+    //car_data.data.itemData[11].itemPropValue = util.encryptionStr(car_data.data.itemData[11].itemPropValue, 1);
     that.setData({
       car: car_data.data.itemData
     })
@@ -412,5 +412,17 @@ Page({
     wx.switchTab({
       url: '/pages/index/index',
     })
-  }
+  },
+
+  //生成报告
+  bindReport: function(){
+    var car_data = wx.getStorageSync('order_detail')
+    var report = "http://www.levau.com/query-mould/info/info_tl.html?orderNo=" + car_data.orderNo
+    wx.setClipboardData({
+      data: report,
+      success: function (res) {
+        util.showToast("复制成功", "success", 500)
+      }
+    });
+  },
 })

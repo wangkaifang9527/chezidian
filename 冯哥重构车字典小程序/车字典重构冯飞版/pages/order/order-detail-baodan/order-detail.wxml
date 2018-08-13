@@ -1,3 +1,6 @@
+
+<import src="../../../template/ad/ad.wxml" />
+<template is="ad"></template>
 <view class='kf_weixin'>
     <view class='left' catchtap='fanhui'>
         <image src='/images/chonggou/fanhui.png'></image>

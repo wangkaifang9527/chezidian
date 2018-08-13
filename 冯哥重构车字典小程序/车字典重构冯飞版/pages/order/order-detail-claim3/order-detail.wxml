@@ -1,3 +1,5 @@
+<import src="../../../template/ad/ad.wxml" />
+<template is="ad"></template>
 <view class='container'>
     <!-- 车辆概要 -->
     <view class='title'>理赔概要</view>

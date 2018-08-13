@@ -217,7 +217,7 @@ Page({
   //后台管理
   onHrefMGR: function (e) {
     wx.navigateTo({
-      url: '../admin/admin?balence=' + e.currentTarget.dataset.balence,
+      url: '../admin/admin?balence=' + e.currentTarget.dataset.balence + '&withdrawAbleBalance=' + this.data.withdrawAbleBalance,
     })
   },
 

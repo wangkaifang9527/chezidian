@@ -26,6 +26,7 @@ Page({
      */
     onLoad: function (options) {
         wx.hideShareMenu()//隐藏转发按钮
+        console.log(options);
         var that= this;
         that.setData({
           balence: options.balence,

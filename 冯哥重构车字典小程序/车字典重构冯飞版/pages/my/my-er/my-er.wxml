@@ -2,7 +2,7 @@
 
 <view class='er'>
     <view class='title'>
-      <image src='/images/chonggou/tuiguang.png' mode='widthFix'></image>
+      <image src='http://www.levau.com/chezidian/tuiguang.png' mode='widthFix'></image>
     </view>
     
     <view class='zhong'>

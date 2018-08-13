@@ -13,7 +13,18 @@ page {
     margin: 15px 0;
     display: flex;
     flex-direction: row;
-    align-items: center
+    align-items: center;
+    justify-content: space-between; 
+    
+}
+.container .title .report{
+  background: #14AC67;
+  color: #fff;
+  border-radius: 5rpx;
+  height: 65rpx;
+  width: 165rpx;
+  text-align: center;
+  line-height: 65rpx;
 }
 .container .title text {
     font-size: 20rpx;

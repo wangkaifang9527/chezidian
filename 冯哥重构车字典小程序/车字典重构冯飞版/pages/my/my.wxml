@@ -33,15 +33,15 @@
                 <view>
                     <image mode='aspectFit' src='/images/chonggou/zhanghuyue.png'></image>
                 </view>
-                <view>余额</view>
+                <view>余额(提现)</view>
                 <view>{{balence}}元</view>
             </view>
             <view wx:if='{{ismember==0}}' class='kf_two_right' catchtap='wodehuiyuan'>
                 <view>
                     <image mode='aspectFit' src='/images/chonggou/wodehuiyuan.png'></image>
                 </view>
-                <view>开通会员</view>
-                <view>(开通会员尊享查询折扣)</view>
+                <view>我要充值</view>
+                <view>(部分充值尊享查询折扣)</view>
             </view>
             <view wx:else class='kf_two_right' catchtap='wodehuiyuan'>
                 <view>
@@ -124,7 +124,7 @@
                 <text></text>
                 <image mode='aspectFit' src='/images/chonggou/right.png'></image>
             </view>
-        </view>   -->
+        </view>    -->
         
         <view class='my_list_li' data-tel="15800636267" bindtap="onPhoneCall">
           <view class='my_list_left'>
